@@ -8,109 +8,22 @@ namespace DSPTree.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        public HomeController() { }
 
         public IActionResult Index()
         {
-            List<Item> Items = new();
+            //Build the DSP graph
+            DSPGraph dSPGraph = new();
+            List<Item> Items = dSPGraph.Items;
 
-            //Level 1 items (all mined ore)
-            Items.Add(new Item()
-            {
-                Name = "Iron Ore",
-                Image = "Icon_Iron_Ore.png",
-                ManufactoringMethod = "Arc Smelter",
-                Level = 1
-            });
-
-            Items.Add(new Item()
-            {
-                Name = "Copper Ore",
-                Image = "Icon_Copper_Ore.png",
-                ManufactoringMethod = "Arc Smelter",
-                Level = 1
-            });
-
-            //Level 2 items
-            Items.Add(new Item()
-            {
-                Name = "Iron Ingot",
-                Image = "Icon_Iron_Ingot.png",
-                Recipe = new Dictionary<string, int>()
-                {
-                    { "Iron Ore", 1 }
-                },
-                ManufactoringMethod = "Arc Smelter",
-                Level = 2
-            });
-            Items.Add(new Item()
-            {
-                Name = "Magnet",
-                Image = "Icon_Magnet.png",
-                Recipe = new Dictionary<string, int>()
-                {
-                    { "Iron Ore", 1 }
-                },
-                ManufactoringMethod = "Arc Smelter",
-                Level = 2
-            });
-            Items.Add(new Item()
-            {
-                Name = "Copper Ingot",
-                Image = "Icon_Copper_Ingot.png",
-                Recipe = new Dictionary<string, int>()
-                {
-                    { "Copper Ore", 1 }
-                },
-                ManufactoringMethod = "Arc Smelter",
-                Level = 2
-            });
-
-            //Level 3 items
-            Items.Add(new Item()
-            {
-                Name = "Magnetic Coil",
-                Image = "Icon_Magnetic_Coil.png",
-                Recipe = new Dictionary<string, int>()
-                {
-                    { "Copper Ingot", 1 },
-                    { "Magnet", 2 }
-                },
-                ManufactoringMethod = "Assembling Machine",
-                Level = 3
-            });
-            Items.Add(new Item()
-            {
-                Name = "Circuit Board",
-                Image = "Icon_Circuit_Board.png",
-                Recipe = new Dictionary<string, int>()
-                {
-                    { "Copper Ingot", 1 },
-                    { "Iron Ingot", 2 }
-                },
-                ManufactoringMethod = "Assembling Machine",
-                Level = 3
-            });
-
-            //Build the graph object
+            //Convert the DSP graph to a D3 graph object
             Graph graph = CreateGraph(Items);
 
             //Convert to Json and return the result
             string result = JsonConvert.SerializeObject(graph);
             return View(model: result);
-
-
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
