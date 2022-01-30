@@ -14,4 +14,8 @@
     <PackageReference Include="coverlet.collector" Version="3.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DSPTree\DSPTree.csproj" />
+  </ItemGroup>
+
 </Project>

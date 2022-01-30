@@ -14,16 +14,14 @@ namespace DSPTree.Web.Controllers
         {
             //Build the DSP graph
             DSPGraph dSPGraph = new();
-            List<Item> Items = dSPGraph.Items;
 
             //Convert the DSP graph to a D3 graph object
-            Graph graph = CreateGraph(Items);
+            Graph graph = CreateGraph(dSPGraph.Items);
 
             //Convert to Json and return the result
             string result = JsonConvert.SerializeObject(graph);
             return View(model: result);
         }
-
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
@@ -35,7 +33,6 @@ namespace DSPTree.Web.Controllers
         private Graph CreateGraph(List<Item> data)
         {
             Graph newGraph = new();
-            data.OrderBy(b => b.Level);
 
             //Build the graph
             foreach (Item item in data)
