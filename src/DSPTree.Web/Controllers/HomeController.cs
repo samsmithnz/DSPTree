@@ -1,6 +1,7 @@
 ﻿using DSPTree.Models;
 using DSPTree.Web.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Diagnostics;
 
 namespace DSPTree.Web.Controllers
@@ -96,9 +97,14 @@ namespace DSPTree.Web.Controllers
                 Level = 3
             });
 
+            //Build the graph object
             Graph graph = CreateGraph(Items);
 
-            return View(graph);
+            //Convert to Json and return the result
+            string result = JsonConvert.SerializeObject(graph);
+            return View(model: result);
+
+
         }
 
         public IActionResult Privacy()
@@ -124,13 +130,13 @@ namespace DSPTree.Web.Controllers
                 //Create first item
                 Node newNode = new()
                 {
-                    Id = item.Name.Replace(" ", "_"),
-                    Group = 1
+                    id = item.Name.Replace(" ", "_"),
+                    group = item.Level
                 };
                 //Add the node if it has an ID and the graph doesn't already contain an Id of that name
-                if (newNode.Id != null && !newGraph.Nodes.Any(n => n.Id == newNode.Id))
+                if (newNode.id != null && !newGraph.nodes.Any(n => n.id == newNode.id))
                 {
-                    newGraph.Nodes.Add(newNode);
+                    newGraph.nodes.Add(newNode);
                 }
 
                 //Create a link between this item and any pre-reqs
@@ -140,13 +146,13 @@ namespace DSPTree.Web.Controllers
                     {
                         Link newLink = new()
                         {
-                            Source = item.Name.Replace(" ", "_"),
-                            Target = prereqItem.Key,
-                            Value = prereqItem.Value //The width of the connection
+                            source = item.Name.Replace(" ", "_"),
+                            target = prereqItem.Key.Replace(" ", "_"),
+                            value = prereqItem.Value //The width of the connection
                         };
-                        if (newLink.Source != null && newLink.Target != null && !newGraph.Links.Any(n => n.Source == newLink.Source && n.Target == newLink.Target))
+                        if (newLink.source != null && newLink.target != null && !newGraph.links.Any(n => n.source == newLink.source && n.target == newLink.target))
                         {
-                            newGraph.Links.Add(newLink);
+                            newGraph.links.Add(newLink);
                         }
                     }
                 }

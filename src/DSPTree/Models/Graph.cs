@@ -2,13 +2,13 @@
 {
     public class Graph
     {
-        public List<Node> Nodes;
-        public List<Link> Links;
+        public List<Node> nodes;
+        public List<Link> links;
 
         public Graph()
         {
-            Nodes = new();
-            Links = new();
+            nodes = new();
+            links = new();
         }
     }
 }
