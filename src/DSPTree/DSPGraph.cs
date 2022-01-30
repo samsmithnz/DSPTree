@@ -88,7 +88,7 @@ namespace DSPTree
             });
 
             //Sort the items by level
-            Items = (List<Item>)Items.OrderBy(b => b.Level);
+            Items = Items.OrderBy(b => b.Level).ToList();
         }
     }
 }
