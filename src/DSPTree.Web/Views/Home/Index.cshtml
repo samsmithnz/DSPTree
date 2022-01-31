@@ -6,7 +6,8 @@
 <h2>Index</h2>
 
 @*From: https://bl.ocks.org/mbostock/4062045*@
-<script src="https://d3js.org/d3.v4.min.js"></script>
+@*<script src="https://d3js.org/d3.v4.min.js"></script>*@
+<script src="~/lib/d3/d3.min.js"></script>
 <style>
     .links line {
         stroke: #999;
@@ -18,7 +19,7 @@
         stroke-width: 1.5px;
     }
 </style>
-<svg width="1200" height="800"></svg>
+<svg width="600" height="800"></svg>
 <script>
 
     function UpdateGraph(graph) {
@@ -31,7 +32,7 @@
         var simulation = d3.forceSimulation()
             .force("link", d3.forceLink().id(function (d) { return d.id; }))
             .force("charge", d3.forceManyBody())
-            .force("center", d3.forceCenter(width / 2, height / 2));        
+            .force("center", d3.forceCenter(width / 2, height / 2));
 
         var link = svg.append("g")
             .attr("class", "links")
@@ -55,6 +56,11 @@
                 else if (d.group == 4) { return "rgb(214, 39, 40)"; } //Systems-red
                 else { return color(d.group); }
             })
+            //.attr("xlink:href", function(d) {
+            //    var imagePath = "https://localhost:7015/images/" + "Icon_Iron_Ingot.png"; //d.image;
+            //    console.log(imagePath);
+            //    return imagePath;
+            //})
             .call(d3.drag()
                 .on("start", dragstarted)
                 .on("drag", dragged)
@@ -78,7 +84,7 @@
                 .attr("y2", function (d) { return d.target.y; });
             node
                 .attr("cx", function (d) { return d.x; })
-                .attr("cy", function (d) { return d.y; });            
+                .attr("cy", function (d) { return d.y; });
         }
 
         function dragstarted(d) {

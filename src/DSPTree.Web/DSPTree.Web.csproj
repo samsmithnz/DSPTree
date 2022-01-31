@@ -7,23 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\Images\Icon_Circuit_Board.png" />
-    <Content Remove="wwwroot\Images\Icon_Copper_Ingot.png" />
-    <Content Remove="wwwroot\Images\Icon_Copper_Ore.png" />
-    <Content Remove="wwwroot\Images\Icon_Iron_Ingot.png" />
-    <Content Remove="wwwroot\Images\Icon_Iron_Ore.png" />
-    <Content Remove="wwwroot\Images\Icon_Magnet.png" />
-    <Content Remove="wwwroot\Images\Icon_Magnetic_Coil.png" />
+    <Content Remove="wwwroot\images\Icon_Circuit_Board.png" />
+    <Content Remove="wwwroot\images\Icon_Copper_Ingot.png" />
+    <Content Remove="wwwroot\images\Icon_Copper_Ore.png" />
+    <Content Remove="wwwroot\images\Icon_Iron_Ingot.png" />
+    <Content Remove="wwwroot\images\Icon_Iron_Ore.png" />
+    <Content Remove="wwwroot\images\Icon_Magnet.png" />
+    <Content Remove="wwwroot\images\Icon_Magnetic_Coil.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\Images\Icon_Circuit_Board.png" />
-    <None Include="wwwroot\Images\Icon_Copper_Ingot.png" />
-    <None Include="wwwroot\Images\Icon_Copper_Ore.png" />
-    <None Include="wwwroot\Images\Icon_Iron_Ingot.png" />
-    <None Include="wwwroot\Images\Icon_Iron_Ore.png" />
-    <None Include="wwwroot\Images\Icon_Magnet.png" />
-    <None Include="wwwroot\Images\Icon_Magnetic_Coil.png" />
+    <None Include="wwwroot\images\Icon_Circuit_Board.png" />
+    <None Include="wwwroot\images\Icon_Copper_Ingot.png" />
+    <None Include="wwwroot\images\Icon_Copper_Ore.png" />
+    <None Include="wwwroot\images\Icon_Iron_Ingot.png" />
+    <None Include="wwwroot\images\Icon_Iron_Ore.png" />
+    <None Include="wwwroot\images\Icon_Magnet.png" />
+    <None Include="wwwroot\images\Icon_Magnetic_Coil.png" />
   </ItemGroup>
 
   <ItemGroup>

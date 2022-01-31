@@ -17,11 +17,38 @@ namespace DSPTree
                 ManufactoringMethod = "Arc Smelter",
                 Level = 1
             });
-
             Items.Add(new Item()
             {
                 Name = "Copper Ore",
                 Image = "Icon_Copper_Ore.png",
+                ManufactoringMethod = "Arc Smelter",
+                Level = 1
+            });
+            Items.Add(new Item()
+            {
+                Name = "Titanium Ore",
+                Image = "Icon_Titanium_Ore.png",
+                ManufactoringMethod = "Arc Smelter",
+                Level = 1
+            });
+            Items.Add(new Item()
+            {
+                Name = "Water",
+                Image = "Icon_Water.png",
+                ManufactoringMethod = "Pump",
+                Level = 1
+            });
+            Items.Add(new Item()
+            {
+                Name = "Unrefined Oil",
+                Image = "Icon_Unrefined_Oil.png",
+                ManufactoringMethod = "Oil Extractor",
+                Level = 1
+            });
+            Items.Add(new Item()
+            {
+                Name = "Stone Ore",
+                Image = "Icon_Stone_Ore.png",
                 ManufactoringMethod = "Arc Smelter",
                 Level = 1
             });
@@ -60,6 +87,61 @@ namespace DSPTree
                 ManufactoringMethod = "Arc Smelter",
                 Level = 2
             });
+            Items.Add(new Item()
+            {
+                Name = "Titanium Ingot",
+                Image = "Icon_Titanium_Ingot.png",
+                Recipe = new Dictionary<string, int>()
+                {
+                    { "Titanium Ore", 1 }
+                },
+                ManufactoringMethod = "Arc Smelter",
+                Level = 2
+            });
+            Items.Add(new Item()
+            {
+                Name = "Refined Oil",
+                Image = "Icon_Refined_Oil.png",
+                Recipe = new Dictionary<string, int>()
+                {
+                    { "Unrefined Oil", 1 }
+                },
+                ManufactoringMethod = "Oil Refinery",
+                Level = 2
+            });
+            Items.Add(new Item()
+            {
+                Name = "Hydrogen",
+                Image = "Icon_Hydrogen.png",
+                Recipe = new Dictionary<string, int>()
+                {
+                    { "Unrefined Oil", 1 }
+                },
+                ManufactoringMethod = "Oil Refinery",
+                Level = 2
+            });
+            Items.Add(new Item()
+            {
+                Name = "Stone Slabs",
+                Image = "Icon_Stone_Slabs.png",
+                Recipe = new Dictionary<string, int>()
+                {
+                    { "Stone Ore", 2 }
+                },
+                ManufactoringMethod = "Arc Smelter",
+                Level = 2
+            });
+            Items.Add(new Item()
+            {
+                Name = "Silicon Ore",
+                Image = "Icon_Silicon_Ore.png",
+                Recipe = new Dictionary<string, int>()
+                {
+                    { "Stone Ore", 3 }
+                },
+                ManufactoringMethod = "Arc Smelter",
+                Level = 2
+            });
 
             //Level 3 items
             Items.Add(new Item()
@@ -85,6 +167,55 @@ namespace DSPTree
                 },
                 ManufactoringMethod = "Assembling Machine",
                 Level = 3
+            });
+            Items.Add(new Item()
+            {
+                Name = "Steel",
+                Image = "Icon_Steel.png",
+                Recipe = new Dictionary<string, int>()
+                {
+                    { "Iron Ingot", 2 }
+                },
+                ManufactoringMethod = "Arc Smelter",
+                Level = 3
+            });
+            Items.Add(new Item()
+            {
+                Name = "Glass",
+                Image = "Icon_Glass.png",
+                Recipe = new Dictionary<string, int>()
+                {
+                    { "Silicon Ore", 2 }
+                },
+                ManufactoringMethod = "Arc Smelter",
+                Level = 3
+            });
+
+            //Level 4 items
+            Items.Add(new Item()
+            {
+                Name = "Concrete",
+                Image = "Icon_Concrete.png",
+                Recipe = new Dictionary<string, int>()
+                {
+                    { "Iron Ingot", 2 },
+                    { "Steel", 1 }
+                },
+                ManufactoringMethod = "Assembling Machine",
+                Level = 4
+            });
+            Items.Add(new Item()
+            {
+                Name = "Solar Panels",
+                Image = "Icon_Solar_Panel.png",
+                Recipe = new Dictionary<string, int>()
+                {
+                    { "Iron Ingot", 1 },
+                    { "Glass", 2 },
+                    { "Circuit Board", 1 }
+                },
+                ManufactoringMethod = "Assembling Machine",
+                Level = 4
             });
 
             //Sort the items by level
