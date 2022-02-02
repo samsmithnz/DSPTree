@@ -410,6 +410,19 @@ namespace DSPTree
                 ManufactoringMethod = "Chemical Plant",
                 Level = 4
             });
+            items.Add(new Item()
+            {
+                Name = "Organic Crystal",
+                Image = "Icon_Organic_Crystal.png",
+                Recipe = new()
+                {
+                    { "Plastic", 2 },
+                    { "Refined Oil", 1 },//0.5m }
+                    { "Water", 1 }//0.5m }
+                },
+                ManufactoringMethod = "Chemical Plant",
+                Level = 4
+            });
 
             //Level 5 items
             items.Add(new Item()
@@ -471,6 +484,18 @@ namespace DSPTree
                     { "Microcrystalline Component", 2 }
                 },
                 ManufactoringMethod = "Assembling Machine",
+                Level = 5
+            });
+            items.Add(new Item()
+            {
+                Name = "Carbon Nanotube",
+                Image = "Icon_Carbon_Nanotube.png",
+                Recipe = new()
+                {
+                    { "Titanium Ingot", 1 },//0.5m },
+                    { "Graphene", 2 } // 1.5m }
+                },
+                ManufactoringMethod = "Chemical Plant",
                 Level = 5
             });
 
