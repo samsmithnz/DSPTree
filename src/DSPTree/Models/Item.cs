@@ -12,7 +12,7 @@
         public Dictionary<string,decimal> Recipe { get; set; }
         public string ManufactoringMethod { get; set; }
         public int Level { get; set; }
-        public bool AlternativeRareSource { get; set; }
+        public bool HasAlternativeRareSource { get; set; }
 
     }
 }

@@ -261,7 +261,7 @@ namespace DSPTree
                     { "Refined Oil", 1.5m }
                 },
                 ManufactoringMethod = "Chemical Plant",
-                AlternativeRareSource = true,
+                HasAlternativeRareSource = true,
                 Level = 3
             });
             items.Add(new Item()
@@ -282,10 +282,22 @@ namespace DSPTree
                 Image = "Icon_Hydrogen_Fuel_Rod.png",
                 Recipe = new()
                 {
-                    { "Titanium Ingot", 1}, //0.5m },
+                    { "Titanium Ingot", 1 }, //0.5m },
                     { "Hydrogen", 5 }
                 },
                 ManufactoringMethod = "Assembling Machine",
+                Level = 3
+            });
+            items.Add(new Item()
+            {
+                Name = "Diamond",
+                Image = "Icon_Diamond.png",
+                Recipe = new()
+                {
+                    { "Energetic Graphite", 1 }
+                },
+                ManufactoringMethod = "Arc Smelter",
+                HasAlternativeRareSource = true,
                 Level = 3
             });
 
@@ -338,6 +350,19 @@ namespace DSPTree
                 ManufactoringMethod = "Matrix Lab",
                 Level = 4
             });
+            items.Add(new Item()
+            {
+                Name = "Electric Motor",
+                Image = "Icon_Electric_Motor.png",
+                Recipe = new()
+                {
+                    { "Magnetic Coil", 1 },
+                    { "Gear", 1 },
+                    { "Iron Ingot", 2 }
+                },
+                ManufactoringMethod = "Assembling Machine",
+                Level = 4
+            });
 
             //Level 5 items
             items.Add(new Item()
@@ -363,6 +388,33 @@ namespace DSPTree
                 },
                 ManufactoringMethod = "Assembling Machine",
                 Level = 5
+            });
+            items.Add(new Item()
+            {
+                Name = "Electromagnetic Turbine",
+                Image = "Icon_Electromagnetic_Turbine.png",
+                Recipe = new()
+                {
+                    { "Magnetic Coil", 2 },
+                    { "Electric Motor", 2 },
+                },
+                ManufactoringMethod = "Assembling Machine",
+                Level = 5
+            });
+
+            //Level 6
+            items.Add(new Item()
+            {
+                Name = "Super-Magnetic Ring",
+                Image = "Icon_Super-Magnetic_Ring.png",
+                Recipe = new()
+                {
+                    { "Electromagnetic Turbine", 2 },
+                    { "Magnet", 3 },
+                    { "Energetic Graphite", 1 }
+                },
+                ManufactoringMethod = "Assembling Machine",
+                Level = 6
             });
 
             //Sort the items by level
