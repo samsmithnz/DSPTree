@@ -498,6 +498,18 @@ namespace DSPTree
                 ManufactoringMethod = "Chemical Plant",
                 Level = 5
             });
+            items.Add(new Item()
+            {
+                Name = "Titanium Crystal",
+                Image = "Icon_Titanium_Crystal.png",
+                Recipe = new()
+                {
+                    { "Titanium Ingot", 3 },
+                    { "Organic Crystal", 1 }
+                },
+                ManufactoringMethod = "Assembling Machine",
+                Level = 5
+            });
 
             //Level 6
             items.Add(new Item()
