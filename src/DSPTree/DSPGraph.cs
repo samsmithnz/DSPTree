@@ -525,6 +525,18 @@ namespace DSPTree
                 ManufactoringMethod = "Assembling Machine",
                 Level = 6
             });
+            items.Add(new Item()
+            {
+                Name = "Structure Matrix",
+                Image = "Icon_Structure_Matrix.png",
+                Recipe = new()
+                {
+                    { "Diamond", 1 },
+                    { "Titanium Crystal", 1 }
+                },
+                ManufactoringMethod = "Matrix Lab",
+                Level = 6
+            });
 
             //Sort the items by level
             items = items.OrderBy(b => b.Level).ToList();
