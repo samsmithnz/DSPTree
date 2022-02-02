@@ -401,6 +401,19 @@ namespace DSPTree
                 ManufactoringMethod = "Assembling Machine",
                 Level = 5
             });
+            items.Add(new Item()
+            {
+                Name = "Titanium Alloy",
+                Image = "Icon_Titanium_Alloy.png",
+                Recipe = new()
+                {
+                    { "Titanium Ingot", 1 },
+                    { "Steel", 1 },
+                    { "Sulfuric Acid", 2 }
+                },
+                ManufactoringMethod = "Arc Smelter",
+                Level = 5
+            });
 
             //Level 6
             items.Add(new Item()
