@@ -34,21 +34,21 @@ namespace DSPTree
             {
                 Name = "Iron Ore",
                 Image = "Icon_Iron_Ore.png",
-                ManufactoringMethod = "Arc Smelter",
+                ManufactoringMethod = "Mining Machine",
                 Level = 1
             });
             items.Add(new Item()
             {
                 Name = "Copper Ore",
                 Image = "Icon_Copper_Ore.png",
-                ManufactoringMethod = "Arc Smelter",
+                ManufactoringMethod = "Mining Machine",
                 Level = 1
             });
             items.Add(new Item()
             {
                 Name = "Titanium Ore",
                 Image = "Icon_Titanium_Ore.png",
-                ManufactoringMethod = "Arc Smelter",
+                ManufactoringMethod = "Mining Machine",
                 Level = 1
             });
             items.Add(new Item()
@@ -69,7 +69,14 @@ namespace DSPTree
             {
                 Name = "Stone",
                 Image = "Icon_Stone.png",
-                ManufactoringMethod = "Arc Smelter",
+                ManufactoringMethod = "Mining Machine",
+                Level = 1
+            });
+            items.Add(new Item()
+            {
+                Name = "Coal",
+                Image = "Icon_Coal.png",
+                ManufactoringMethod = "Mining Machine",
                 Level = 1
             });
 
@@ -162,6 +169,17 @@ namespace DSPTree
                 ManufactoringMethod = "Arc Smelter",
                 Level = 2
             });
+            items.Add(new Item()
+            {
+                Name = "Energetic Graphite",
+                Image = "Icon_Energetic_Graphite.png",
+                Recipe = new()
+                {
+                    { "Coal", 1 } //0.5m }
+                },
+                ManufactoringMethod = "Arc Smelter",
+                Level = 2
+            });
 
             //Level 3 items
             items.Add(new Item()
@@ -244,6 +262,18 @@ namespace DSPTree
                 },
                 ManufactoringMethod = "Chemical Plant",
                 AlternativeRareSource = true,
+                Level = 3
+            });
+            items.Add(new Item()
+            {
+                Name = "Energy Matrix",
+                Image = "Icon_Energy_Matrix.png",
+                Recipe = new()
+                {
+                    { "Energetic Graphite", 2 },
+                    { "Hydrogen", 2 }
+                },
+                ManufactoringMethod = "Matrix Lab",
                 Level = 3
             });
 
