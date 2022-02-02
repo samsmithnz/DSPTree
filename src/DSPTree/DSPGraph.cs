@@ -12,7 +12,7 @@ namespace DSPTree
 
         public List<Item> CalculateRawMaterialNeeds(Item item)
         {
-            if (Items == null )
+            if (Items == null)
             {
                 throw new InvalidOperationException("Items list is not initialized - something bad happened given this is initialized in the class constructor");
             }
@@ -55,7 +55,7 @@ namespace DSPTree
             {
                 Name = "Water",
                 Image = "Icon_Water.png",
-                ManufactoringMethod = "Pump",
+                ManufactoringMethod = "Water Pump",
                 Level = 1
             });
             items.Add(new Item()
@@ -279,9 +279,21 @@ namespace DSPTree
                 Image = "Icon_Prism.png",
                 Recipe = new()
                 {
-                    { "Glass", 1}// 0.67m },
+                    { "Glass", 1 }// 0.67m },
                 },
                 ManufactoringMethod = "Assembling Machine",
+                Level = 4
+            });
+            items.Add(new Item()
+            {
+                Name = "Electromagnetic Matrix",
+                Image = "Icon_Electromagnetic_Matrix.png",
+                Recipe = new()
+                {
+                    { "Magnetic Coil", 1 }, // 0.1m },
+                    { "Circuit Board", 1 } // 0.1m }
+                },
+                ManufactoringMethod = "Matrix Lab",
                 Level = 4
             });
 
