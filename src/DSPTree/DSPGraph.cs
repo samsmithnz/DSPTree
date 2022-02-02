@@ -300,6 +300,18 @@ namespace DSPTree
                 HasAlternativeRareSource = true,
                 Level = 3
             });
+            items.Add(new Item()
+            {
+                Name = "Plastic",
+                Image = "Icon_Plastic.png",
+                Recipe = new()
+                {
+                    { "Energetic Graphite", 1 },
+                    { "Refined Oil", 2 }
+                },
+                ManufactoringMethod = "Chemical Plant",
+                Level = 3
+            });
 
             //Level 4 items
             items.Add(new Item()
@@ -363,6 +375,29 @@ namespace DSPTree
                 ManufactoringMethod = "Assembling Machine",
                 Level = 4
             });
+            items.Add(new Item()
+            {
+                Name = "Crystal Silicon",
+                Image = "Icon_Crystal_Silicon.png",
+                Recipe = new()
+                {
+                    { "High-Purity Silicon", 1 }
+                },
+                ManufactoringMethod = "Arc Smelter",
+                Level = 4
+            });
+            items.Add(new Item()
+            {
+                Name = "Microcrystalline Component",
+                Image = "Icon_Microcrystalline_Component.png",
+                Recipe = new()
+                {
+                    { "High-Purity Silicon", 2 },
+                    { "Copper Ingot", 1 }
+                },
+                ManufactoringMethod = "Assembling Machine",
+                Level = 4
+            });
 
             //Level 5 items
             items.Add(new Item()
@@ -412,6 +447,18 @@ namespace DSPTree
                     { "Sulfuric Acid", 2 }
                 },
                 ManufactoringMethod = "Arc Smelter",
+                Level = 5
+            });
+            items.Add(new Item()
+            {
+                Name = "Processor",
+                Image = "Icon_Processor.png",
+                Recipe = new()
+                {
+                    { "Circuit Board", 2 },
+                    { "Microcrystalline Component", 2 }
+                },
+                ManufactoringMethod = "Assembling Machine",
                 Level = 5
             });
 
