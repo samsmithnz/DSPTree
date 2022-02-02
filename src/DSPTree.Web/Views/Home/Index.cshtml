@@ -50,10 +50,15 @@
             .attr("fill", function (d) {
                 //console.log(d.id + ":" + d.group);
                 //https://bl.ocks.org/pstuffa/3393ff2711a53975040077b7453781a9
-                if (d.group == 1) { return "rgb(31, 119, 180)"; } //Systems-blue
-                else if (d.group == 2) { return "rgb(255, 127, 14)"; } //Systems-orange
-                else if (d.group == 3) { return "rgb(44, 160, 44)"; } //Systems-green
-                else if (d.group == 4) { return "rgb(214, 39, 40)"; } //Systems-red
+                if (d.group == 1) { return "rgb(31, 119, 180)"; } //blue
+                else if (d.group == 2) { return "rgb(255, 127, 14)"; } //orange
+                else if (d.group == 3) { return "rgb(44, 160, 44)"; } //green
+                else if (d.group == 4) { return "rgb(214, 39, 40)"; } //red
+                else if (d.group == 5) { return "rgb(204, 204, 0)"; } //dirty-yellow
+                else if (d.group == 6) { return "rgb(102, 0, 204)"; } //purple
+                else if (d.group == 7) { return "rgb(0, 204, 204)"; } //Aqua
+                else if (d.group == 8) { return "rgb(204, 0, 102)"; } //pink
+                else if (d.group == 9) { return "rgb(96, 96, 96)"; } //charcoal
                 else { return color(d.group); }
             })
             //.attr("xlink:href", function(d) {

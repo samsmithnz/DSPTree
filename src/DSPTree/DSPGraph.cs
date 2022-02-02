@@ -298,6 +298,18 @@ namespace DSPTree
                 ManufactoringMethod = "Assembling Machine",
                 Level = 5
             });
+            items.Add(new Item()
+            {
+                Name = "Photon Combiner",
+                Image = "Icon_Photon_Combiner.png",
+                Recipe = new()
+                {
+                    { "Circuit Board", 1 }, //0.5m },
+                    { "Prism", 1 },
+                },
+                ManufactoringMethod = "Assembling Machine",
+                Level = 5
+            });
 
             //Sort the items by level
             items = items.OrderBy(b => b.Level).ToList();
