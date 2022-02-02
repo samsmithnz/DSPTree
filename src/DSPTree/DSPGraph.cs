@@ -276,6 +276,18 @@ namespace DSPTree
                 ManufactoringMethod = "Matrix Lab",
                 Level = 3
             });
+            items.Add(new Item()
+            {
+                Name = "Hydrogen Fuel Rod",
+                Image = "Icon_Hydrogen_Fuel_Rod.png",
+                Recipe = new()
+                {
+                    { "Titanium Ingot", 1}, //0.5m },
+                    { "Hydrogen", 5 }
+                },
+                ManufactoringMethod = "Assembling Machine",
+                Level = 3
+            });
 
             //Level 4 items
             items.Add(new Item()
