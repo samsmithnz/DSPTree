@@ -16,6 +16,11 @@ namespace DSPTree
             {
                 throw new InvalidOperationException("Items list is not initialized - something bad happened given this is initialized in the class constructor");
             }
+            List<Item> rawMaterials = new();
+            foreach (KeyValuePair<string, decimal> prereqItem in item.Recipe)
+            {
+                //get each items materials recursively, summing up all of the items
+            }
 
             return null;
         }
