@@ -52,13 +52,13 @@ namespace DSPTree.Web.Controllers
                 //Create a link between this item and any pre-reqs
                 if (item.Recipe.Count > 0)
                 {
-                    foreach (KeyValuePair<string, int> prereqItem in item.Recipe)
+                    foreach (KeyValuePair<string, decimal> prereqItem in item.Recipe)
                     {
                         Link newLink = new()
                         {
                             source = item.Name.Replace(" ", "_"),
                             target = prereqItem.Key.Replace(" ", "_"),
-                            value = prereqItem.Value //The width of the connection
+                            value = (int)(prereqItem.Value) //The width of the connection
                         };
                         if (newLink.source != null && newLink.target != null && !newGraph.links.Any(n => n.source == newLink.source && n.target == newLink.target))
                         {
