@@ -398,6 +398,18 @@ namespace DSPTree
                 ManufactoringMethod = "Assembling Machine",
                 Level = 4
             });
+            items.Add(new Item()
+            {
+                Name = "Graphene",
+                Image = "Icon_Graphene.png",
+                Recipe = new()
+                {
+                    { "Energetic Graphite", 2 },//1.5m },
+                    { "Sulfuric Acid", 1 }//0.5m }
+                },
+                ManufactoringMethod = "Chemical Plant",
+                Level = 4
+            });
 
             //Level 5 items
             items.Add(new Item()
