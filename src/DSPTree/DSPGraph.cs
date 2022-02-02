@@ -14,7 +14,7 @@ namespace DSPTree
         {
             if (Items == null )
             {
-                throw new InvalidOperationException("Items list is not initialized - something bad happened given this is initialized in the class constructor")
+                throw new InvalidOperationException("Items list is not initialized - something bad happened given this is initialized in the class constructor");
             }
 
             return null;
