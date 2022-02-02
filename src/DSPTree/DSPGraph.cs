@@ -170,7 +170,7 @@ namespace DSPTree
                 Image = "Icon_Magnetic_Coil.png",
                 Recipe = new()
                 {
-                    { "Copper Ingot", 0.5m },
+                    { "Copper Ingot", 1 },//0.5m },
                     { "Magnet", 1 }
                 },
                 ManufactoringMethod = "Assembling Machine",
@@ -182,7 +182,7 @@ namespace DSPTree
                 Image = "Icon_Circuit_Board.png",
                 Recipe = new()
                 {
-                    { "Copper Ingot", 0.5m },
+                    { "Copper Ingot", 1 },//0.5m },
                     { "Iron Ingot", 1 }
                 },
                 ManufactoringMethod = "Assembling Machine",
@@ -194,7 +194,7 @@ namespace DSPTree
                 Image = "Icon_Steel.png",
                 Recipe = new()
                 {
-                    { "Iron Ingot", 0.33m }
+                    { "Iron Ingot", 1 }//0.33m }
                 },
                 ManufactoringMethod = "Arc Smelter",
                 Level = 3
@@ -272,6 +272,31 @@ namespace DSPTree
                 },
                 ManufactoringMethod = "Assembling Machine",
                 Level = 4
+            });
+            items.Add(new Item()
+            {
+                Name = "Prism",
+                Image = "Icon_Prism.png",
+                Recipe = new()
+                {
+                    { "Glass", 1}// 0.67m },
+                },
+                ManufactoringMethod = "Assembling Machine",
+                Level = 4
+            });
+
+            //Level 5 items
+            items.Add(new Item()
+            {
+                Name = "Plasma Exciter",
+                Image = "Icon_Plasma_Exciter.png",
+                Recipe = new()
+                {
+                    { "Magnetic Coil", 4 },
+                    { "Prism", 2 },
+                },
+                ManufactoringMethod = "Assembling Machine",
+                Level = 5
             });
 
             //Sort the items by level
