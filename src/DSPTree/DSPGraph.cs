@@ -47,8 +47,8 @@ namespace DSPTree
             });
             Items.Add(new Item()
             {
-                Name = "Stone Ore",
-                Image = "Icon_Stone_Ore.png",
+                Name = "Stone",
+                Image = "Icon_Stone.png",
                 ManufactoringMethod = "Arc Smelter",
                 Level = 1
             });
@@ -122,11 +122,11 @@ namespace DSPTree
             });
             Items.Add(new Item()
             {
-                Name = "Stone Slabs",
-                Image = "Icon_Stone_Slabs.png",
+                Name = "Stone Brick",
+                Image = "Icon_Stone_Brick.png",
                 Recipe = new Dictionary<string, int>()
                 {
-                    { "Stone Ore", 2 }
+                    { "Stone", 1 }
                 },
                 ManufactoringMethod = "Arc Smelter",
                 Level = 2
@@ -137,7 +137,7 @@ namespace DSPTree
                 Image = "Icon_Silicon_Ore.png",
                 Recipe = new Dictionary<string, int>()
                 {
-                    { "Stone Ore", 3 }
+                    { "Stone", 10 }
                 },
                 ManufactoringMethod = "Arc Smelter",
                 Level = 2
@@ -174,15 +174,37 @@ namespace DSPTree
                 Image = "Icon_Steel.png",
                 Recipe = new Dictionary<string, int>()
                 {
-                    { "Iron Ingot", 2 }
+                    { "Iron Ingot", 3 }
                 },
                 ManufactoringMethod = "Arc Smelter",
                 Level = 3
             });
             Items.Add(new Item()
             {
+                Name = "Gear",
+                Image = "Icon_Gear.png",
+                Recipe = new Dictionary<string, int>()
+                {
+                    { "Iron Ingot", 1 }
+                },
+                ManufactoringMethod = "Assembling Machine",
+                Level = 3
+            });
+            Items.Add(new Item()
+            {
                 Name = "Glass",
                 Image = "Icon_Glass.png",
+                Recipe = new Dictionary<string, int>()
+                {
+                    { "Stone", 2 }
+                },
+                ManufactoringMethod = "Arc Smelter",
+                Level = 3
+            });
+            Items.Add(new Item()
+            {
+                Name = "High-Purity Silicon",
+                Image = "High-Purity Silicon.png",
                 Recipe = new Dictionary<string, int>()
                 {
                     { "Silicon Ore", 2 }
@@ -194,12 +216,12 @@ namespace DSPTree
             //Level 4 items
             Items.Add(new Item()
             {
-                Name = "Concrete",
-                Image = "Icon_Concrete.png",
+                Name = "Foundation",
+                Image = "Icon_Foundation.png",
                 Recipe = new Dictionary<string, int>()
                 {
-                    { "Iron Ingot", 2 },
-                    { "Steel", 1 }
+                    { "Stone Brick", 3 },
+                    { "Steel", 1 },
                 },
                 ManufactoringMethod = "Assembling Machine",
                 Level = 4
