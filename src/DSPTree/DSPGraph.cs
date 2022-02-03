@@ -34,6 +34,15 @@ namespace DSPTree
             {
                 Name = "Iron Ore",
                 Image = "Icon_Iron_Ore.png",
+                ProcessingTimeInSeconds = 2,
+                Inputs = new()
+                {
+                    { "Iron Ore Vein", 1 }
+                },
+                Outputs = new()
+                {
+                    { "Iron Ore", 1 }
+                },
                 ManufactoringMethod = "Mining Machine",
                 Level = 1
             });
@@ -41,6 +50,15 @@ namespace DSPTree
             {
                 Name = "Copper Ore",
                 Image = "Icon_Copper_Ore.png",
+                ProcessingTimeInSeconds = 2,
+                Inputs = new()
+                {
+                    { "Copper Ore Vein", 1 }
+                },
+                Outputs = new()
+                {
+                    { "Copper Ore", 1 }
+                },
                 ManufactoringMethod = "Mining Machine",
                 Level = 1
             });
@@ -48,6 +66,15 @@ namespace DSPTree
             {
                 Name = "Titanium Ore",
                 Image = "Icon_Titanium_Ore.png",
+                ProcessingTimeInSeconds = 2,
+                Inputs = new()
+                {
+                    { "Titanium Ore Vein", 1 }
+                },
+                Outputs = new()
+                {
+                    { "Titanium Ore", 1 }
+                },
                 ManufactoringMethod = "Mining Machine",
                 Level = 1
             });
@@ -55,6 +82,11 @@ namespace DSPTree
             {
                 Name = "Water",
                 Image = "Icon_Water.png",
+                ProcessingTimeInSeconds = 1.2m,
+                Outputs = new()
+                {
+                    { "Water", 1 }
+                },
                 ManufactoringMethod = "Water Pump",
                 Level = 1
             });
@@ -62,6 +94,11 @@ namespace DSPTree
             {
                 Name = "Crude Oil",
                 Image = "Icon_Crude_Oil.png",
+                ProcessingTimeInSeconds = 1,
+                Outputs = new()
+                {
+                    { "Crude Oil", 1 }
+                },
                 ManufactoringMethod = "Oil Extractor",
                 Level = 1
             });
@@ -69,6 +106,15 @@ namespace DSPTree
             {
                 Name = "Stone",
                 Image = "Icon_Stone.png",
+                ProcessingTimeInSeconds = 2,
+                Inputs = new()
+                {
+                    { "Stone Vein", 1 }
+                },
+                Outputs = new()
+                {
+                    { "Stone", 1 }
+                },
                 ManufactoringMethod = "Mining Machine",
                 Level = 1
             });
@@ -76,8 +122,33 @@ namespace DSPTree
             {
                 Name = "Coal",
                 Image = "Icon_Coal.png",
+                ProcessingTimeInSeconds = 2,
+                Inputs = new()
+                {
+                    { "Coal Vein", 1 }
+                },
+                Outputs = new()
+                {
+                    { "Coal", 1 }
+                },
                 ManufactoringMethod = "Mining Machine",
                 Level = 1
+            });
+            items.Add(new Item()
+            {
+                Name = "Silicon Ore",
+                Image = "Icon_Silicon_Ore.png",
+                ProcessingTimeInSeconds = 2,
+                Inputs = new()
+                {
+                    { "Silicon Ore Vein", 1}
+                },
+                Outputs = new()
+                {
+                    { "Silicon Ore", 1 }
+                },
+                ManufactoringMethod = "Mining Machine",
+                Level = 2
             });
 
             //Level 2 items
@@ -537,6 +608,87 @@ namespace DSPTree
                 ManufactoringMethod = "Matrix Lab",
                 Level = 6
             });
+            items.Add(new Item()
+            {
+                Name = "Particle Broadband",
+                Image = "Icon_Structure_Matrix.png",
+                Recipe = new()
+                {
+                    { "Carbon Nanotube", 2 },
+                    { "Titanium Crystal", 2 },
+                    { "Plastic", 1 }
+                },
+                ManufactoringMethod = "Assembling Machine",
+                Level = 6
+            });
+            items.Add(new Item()
+            {
+                Name = "Particle Container",
+                Image = "Icon_Particle_Container.png",
+                Recipe = new()
+                {
+                    { "Electromagnetic Turbine", 2 },
+                    { "Graphene", 2 },
+                    { "Copper Ingot", 2 }
+                },
+                ManufactoringMethod = "Matrix Lab",
+                Level = 6
+            });
+
+            //Level 7
+            items.Add(new Item()
+            {
+                Name = "Information Matrix",
+                Image = "Icon_Information_Matrix.png",
+                Recipe = new()
+                {
+                    { "Processor", 2 },
+                    { "Particle Broadband", 1 }
+                },
+                ManufactoringMethod = "Matrix Lab",
+                Level = 7
+            });
+            items.Add(new Item()
+            {
+                Name = "Strange Matter",
+                Image = "Icon_Strange_Matter.png",
+                Recipe = new()
+                {
+                    { "Particle Container", 1 },
+                    { "Iron Ingot", 1 },
+                    { "Hydrogen", 5 }
+                },
+                ManufactoringMethod = "Miniature Particle Collider",
+                Level = 7
+            });
+
+            //Level 8
+            items.Add(new Item()
+            {
+                Name = "Graviton Lens",
+                Image = "Icon_Graviton_Lens.png",
+                Recipe = new()
+                {
+                    { "Diamond", 4 },
+                    { "Strange Matter", 1 }
+                },
+                ManufactoringMethod = "Assembling Machine",
+                Level = 8
+            });
+
+            ////Level 9
+            //items.Add(new Item()
+            //{
+            //    Name = "Gravity Matrix",
+            //    Image = "Icon_Gravity_Matrix.png",
+            //    Recipe = new()
+            //    {
+            //        { "Graviton Lens", 1 },
+            //        { "Quantum Chip", 1 }
+            //    },
+            //    ManufactoringMethod = "Matrix Lab",
+            //    Level = 9
+            //});
 
             //Sort the items by level
             items = items.OrderBy(b => b.Level).ToList();
