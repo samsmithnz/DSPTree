@@ -25,6 +25,22 @@ namespace DSPTree
             return null;
         }
 
+        private List<Item2> BuildDSPTree2()
+        {
+            List<Item2> items = new()
+            {
+                //Level 1 items (mostly mined ore)
+                ItemPool.IronOre(),
+                ItemPool.CopperOre(),
+
+                //Level 2 items
+                ItemPool.IronIngot(),
+                ItemPool.Magnet(),
+            };
+
+            return items;
+        }
+
         private List<Item> BuildDSPTree()
         {
             List<Item> items = new();
@@ -34,14 +50,22 @@ namespace DSPTree
             {
                 Name = "Iron Ore",
                 Image = "Icon_Iron_Ore.png",
-                ProcessingTimeInSeconds = 2,
-                Inputs = new()
+                Recipes =
                 {
-                    { "Iron Ore Vein", 1 }
-                },
-                Outputs = new()
-                {
-                    { "Iron Ore", 1 }
+                    new Recipe()
+                    {
+                        ProcessingTimeInSeconds = 2,
+                        Inputs = new()
+                        {
+                            { "Iron Ore Vein", 1 }
+                        },
+                        Outputs = new()
+                        {
+                            { "Iron Ore", 1 }
+                        },
+                        ManufactoringMethod = ManufactoringMethodType.Gathered,
+                        PrimaryMethodOfManufacture = true
+                    }
                 },
                 ManufactoringMethod = "Mining Machine",
                 Level = 1
@@ -51,14 +75,14 @@ namespace DSPTree
                 Name = "Copper Ore",
                 Image = "Icon_Copper_Ore.png",
                 ProcessingTimeInSeconds = 2,
-                Inputs = new()
-                {
-                    { "Copper Ore Vein", 1 }
-                },
-                Outputs = new()
-                {
-                    { "Copper Ore", 1 }
-                },
+                //Inputs = new()
+                //{
+                //    { "Copper Ore Vein", 1 }
+                //},
+                //Outputs = new()
+                //{
+                //    { "Copper Ore", 1 }
+                //},
                 ManufactoringMethod = "Mining Machine",
                 Level = 1
             });
@@ -67,14 +91,14 @@ namespace DSPTree
                 Name = "Titanium Ore",
                 Image = "Icon_Titanium_Ore.png",
                 ProcessingTimeInSeconds = 2,
-                Inputs = new()
-                {
-                    { "Titanium Ore Vein", 1 }
-                },
-                Outputs = new()
-                {
-                    { "Titanium Ore", 1 }
-                },
+                //Inputs = new()
+                //{
+                //    { "Titanium Ore Vein", 1 }
+                //},
+                //Outputs = new()
+                //{
+                //    { "Titanium Ore", 1 }
+                //},
                 ManufactoringMethod = "Mining Machine",
                 Level = 1
             });
@@ -83,10 +107,10 @@ namespace DSPTree
                 Name = "Water",
                 Image = "Icon_Water.png",
                 ProcessingTimeInSeconds = 1.2m,
-                Outputs = new()
-                {
-                    { "Water", 1 }
-                },
+                //Outputs = new()
+                //{
+                //    { "Water", 1 }
+                //},
                 ManufactoringMethod = "Water Pump",
                 Level = 1
             });
@@ -95,10 +119,10 @@ namespace DSPTree
                 Name = "Crude Oil",
                 Image = "Icon_Crude_Oil.png",
                 ProcessingTimeInSeconds = 1,
-                Outputs = new()
-                {
-                    { "Crude Oil", 1 }
-                },
+                //Outputs = new()
+                //{
+                //    { "Crude Oil", 1 }
+                //},
                 ManufactoringMethod = "Oil Extractor",
                 Level = 1
             });
@@ -107,14 +131,14 @@ namespace DSPTree
                 Name = "Stone",
                 Image = "Icon_Stone.png",
                 ProcessingTimeInSeconds = 2,
-                Inputs = new()
-                {
-                    { "Stone Vein", 1 }
-                },
-                Outputs = new()
-                {
-                    { "Stone", 1 }
-                },
+                //Inputs = new()
+                //{
+                //    { "Stone Vein", 1 }
+                //},
+                //Outputs = new()
+                //{
+                //    { "Stone", 1 }
+                //},
                 ManufactoringMethod = "Mining Machine",
                 Level = 1
             });
@@ -123,14 +147,14 @@ namespace DSPTree
                 Name = "Coal",
                 Image = "Icon_Coal.png",
                 ProcessingTimeInSeconds = 2,
-                Inputs = new()
-                {
-                    { "Coal Vein", 1 }
-                },
-                Outputs = new()
-                {
-                    { "Coal", 1 }
-                },
+                //Inputs = new()
+                //{
+                //    { "Coal Vein", 1 }
+                //},
+                //Outputs = new()
+                //{
+                //    { "Coal", 1 }
+                //},
                 ManufactoringMethod = "Mining Machine",
                 Level = 1
             });
@@ -139,14 +163,14 @@ namespace DSPTree
                 Name = "Silicon Ore",
                 Image = "Icon_Silicon_Ore.png",
                 ProcessingTimeInSeconds = 2,
-                Inputs = new()
-                {
-                    { "Silicon Ore Vein", 1}
-                },
-                Outputs = new()
-                {
-                    { "Silicon Ore", 1 }
-                },
+                //Inputs = new()
+                //{
+                //    { "Silicon Ore Vein", 1}
+                //},
+                //Outputs = new()
+                //{
+                //    { "Silicon Ore", 1 }
+                //},
                 ManufactoringMethod = "Mining Machine",
                 Level = 2
             });

@@ -10,24 +10,24 @@
 
     //Item's have multiple recipes.
     //These recipes have types (Gathered/mined, manufactured) 
+    //Specify a Default recipe, and alternative recipes, and a rare resource recipe
 
     public class Item
     {
         public Item()
         {
             Recipe = new();
-            Inputs = new();
-            Outputs = new();
+            Recipes = new();
         }
 
         public string Name { get; set; }
         public string Image { get; set; }
+        public List<Recipe> Recipes { get; set; }
         public Dictionary<string, decimal> Recipe { get; set; }
         public string ManufactoringMethod { get; set; }
         public int Level { get; set; }
         public bool HasAlternativeRareSource { get; set; }
-        public Dictionary<string, int> Inputs { get; set; }
-        public Dictionary<string, int> Outputs { get; set; }
+
         public decimal ProcessingTimeInSeconds { get; set; }
     }
 }
