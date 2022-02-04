@@ -5,9 +5,11 @@ namespace DSPTree
     public class DSPGraph
     {
         public List<Item> Items { get; set; }
+        public List<Item2> Items2 { get; set; }
         public DSPGraph()
         {
             Items = BuildDSPTree();
+            Items2 = BuildDSPTree2();
         }
 
         public List<Item> CalculateRawMaterialNeeds(Item item)
