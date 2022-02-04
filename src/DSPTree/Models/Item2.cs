@@ -2,17 +2,16 @@
 {
     public class Item2
     {
-        public Item2(string name, string image, int level)
+        public Item2(int level, string name, string image)
         {
+            Level = level;
             Name = name;
             Image = image;
             Recipes = new();
-            Level = level;
         }
-
+        public int Level { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
         public List<Recipe2> Recipes { get; set; }
-        public int Level { get; set; }
     }
 }

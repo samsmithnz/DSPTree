@@ -38,6 +38,11 @@ namespace DSPTree
                 //Level 2 items
                 ItemPool.IronIngot(),
                 ItemPool.Magnet(),
+                ItemPool.CopperIngot(),
+
+                //Level 3 items
+                ItemPool.MagneticCoil()
+
             };
 
             return items;
