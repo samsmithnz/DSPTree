@@ -33,7 +33,7 @@ public class DSPGraphTests
         Item2 startingItem = ItemPool.MagneticCoil();
 
         //Act
-        Dictionary<string, int> rawMaterials = graph.CalculateRawMaterialNeeds(startingItem);
+        Dictionary<string, int> rawMaterials = graph.CalculateRawMaterials(startingItem);
 
         //Assert
         Assert.AreEqual(2, rawMaterials.Count);

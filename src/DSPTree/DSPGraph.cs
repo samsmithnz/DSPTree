@@ -12,7 +12,7 @@ namespace DSPTree
             Items2 = BuildDSPTree2();
         }
 
-        public Dictionary<string, int> CalculateRawMaterialNeeds(Item2 item)
+        public Dictionary<string, int> CalculateRawMaterials(Item2 item)
         {
             if (Items == null)
             {
