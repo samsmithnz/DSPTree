@@ -1,7 +1,6 @@
 using DSPTree.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace DSPTree.Tests;
 
@@ -17,7 +16,7 @@ public class RawMaterialsTests
         Item2 startingItem = ItemPool.CopperIngot();
 
         //Act
-        Dictionary<string, int> rawMaterials = graph.CalculateRawMaterials(startingItem);
+        Dictionary<string, int> rawMaterials = RawMaterials.CalculateRawMaterials(graph.Items2, startingItem);
 
         //Assert
         //1 Copper Ore -> Copper Ingot
@@ -34,7 +33,7 @@ public class RawMaterialsTests
         Item2 startingItem = ItemPool.MagneticCoil();
 
         //Act
-        Dictionary<string, int> rawMaterials = graph.CalculateRawMaterials(startingItem);
+        Dictionary<string, int> rawMaterials = RawMaterials.CalculateRawMaterials(graph.Items2, startingItem);
 
         //Assert
         //2 Iron Ore-> 2 Magnets
