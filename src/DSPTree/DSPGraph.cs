@@ -23,15 +23,16 @@ namespace DSPTree
             //If the input is not a gathered input, look at those items inputs,
             //adding together all of the resource totals until we find the gatherer.
             int count = 0;
-            foreach (Recipe2 recipe in item.Recipes)
-            {
-                if (recipe.PrimaryMethodOfManufacture == true)
-                {
-                    count = recipe.Outputs[item.Name];
-                }
-            }
-
-            Dictionary<string, int> rawMaterials = rawMaterials = GetRawMaterials(item, 2);
+            //foreach (Recipe2 recipe in item.Recipes)
+            //{
+            //    if (recipe.PrimaryMethodOfManufacture == true)
+            //    {
+            //        count = recipe.Outputs[item.Name];
+            //    }
+            //}
+            //For the initial raw materials, we always want to use a factor of 1, as it's already part of the outputs calculation
+            count = 1;
+            Dictionary<string, int> rawMaterials = GetRawMaterials(item, count);
 
             return rawMaterials;
         }
@@ -77,7 +78,7 @@ namespace DSPTree
                                                 //get each items materials recursively, summing up all of the items
                                                 if (detailedRecipe.PrimaryMethodOfManufacture == true)
                                                 {
-                                                    detailedCount = detailedRecipe.Outputs[detailedItem.Name];
+                                                    detailedCount = recipe.Inputs[detailedItem.Name];
                                                 }
                                             }
                                             Dictionary<string, int>? rawMaterialsNextLevel = GetRawMaterials(detailedItem, detailedCount);
