@@ -12,19 +12,62 @@ namespace DSPTree
             Items2 = BuildDSPTree2();
         }
 
-        public List<Item> CalculateRawMaterialNeeds(Item item)
+        public Dictionary<string, int> CalculateRawMaterialNeeds(Item2 item)
         {
             if (Items == null)
             {
                 throw new InvalidOperationException("Items list is not initialized - something bad happened given this is initialized in the class constructor");
             }
-            List<Item> rawMaterials = new();
-            foreach (KeyValuePair<string, decimal> prereqItem in item.Recipe)
+            Dictionary<string, int> rawMaterials = new();
+
+            //In this recipe, look at the inputs. If the input is not a level 1 input, look at that inputs, inputs, adding together all of the resource totals.
+            foreach (Recipe2 recipe in item.Recipes)
             {
                 //get each items materials recursively, summing up all of the items
-            }
+                if (recipe.PrimaryMethodOfManufacture == true)
+                {
+                    foreach (KeyValuePair<string, int> input in recipe.Inputs)
+                    {
+                        Item2? inputItem = FindItem(input.Key);
+                        if (inputItem != null)
+                        {
+                            foreach (Recipe2 inputItemRecipe in inputItem.Recipes)
+                            {
+                                if (inputItemRecipe.PrimaryMethodOfManufacture == true)
+                                {
+                                    if (inputItemRecipe.ManufactoringMethod == ManufactoringMethodType.Gathered)
+                                    {
+                                        if (rawMaterials.ContainsKey(input.Key))
+                                        {
+                                            rawMaterials[input.Key] += input.Value;
+                                        }
+                                        else
+                                        {
+                                            rawMaterials.Add(input.Key, input.Value);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        //We need to dig deeper
+                                    }
+                                }
+                            }
+                        }
 
-            return null;
+                    }
+                }
+            }
+            return rawMaterials;
+        }
+
+        private Item2? FindItem(string name)
+        {
+            Item2? item = null;
+            if (Items2 != null)
+            {
+                item = Items2.Where(x => x.Name == name).FirstOrDefault();
+            }
+            return item;
         }
 
         private List<Item2> BuildDSPTree2()
