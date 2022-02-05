@@ -18,9 +18,28 @@ namespace DSPTree
             {
                 throw new InvalidOperationException("Items list is not initialized - something bad happened given this is initialized in the class constructor");
             }
+
+            //For the primary recipe, look at the inputs.
+            //If the input is not a gathered input, look at those items inputs,
+            //adding together all of the resource totals until we find the gatherer.
+            int count = 0;
+            foreach (Recipe2 recipe in item.Recipes)
+            {
+                if (recipe.PrimaryMethodOfManufacture == true)
+                {
+                    count = recipe.Outputs[item.Name];
+                }
+            }
+
+            Dictionary<string, int> rawMaterials = rawMaterials = GetRawMaterials(item, 2);
+
+            return rawMaterials;
+        }
+
+        private Dictionary<string, int> GetRawMaterials(Item2 item, int count)
+        {
             Dictionary<string, int> rawMaterials = new();
 
-            //In this recipe, look at the inputs. If the input is not a level 1 input, look at that inputs, inputs, adding together all of the resource totals.
             foreach (Recipe2 recipe in item.Recipes)
             {
                 //get each items materials recursively, summing up all of the items
@@ -49,13 +68,42 @@ namespace DSPTree
                                     else
                                     {
                                         //We need to dig deeper
+                                        Item2? detailedItem = FindItem(input.Key);
+                                        if (detailedItem != null)
+                                        {
+                                            int detailedCount = 0;
+                                            foreach (Recipe2 detailedRecipe in detailedItem.Recipes)
+                                            {
+                                                //get each items materials recursively, summing up all of the items
+                                                if (detailedRecipe.PrimaryMethodOfManufacture == true)
+                                                {
+                                                    detailedCount = detailedRecipe.Outputs[detailedItem.Name];
+                                                }
+                                            }
+                                            Dictionary<string, int>? rawMaterialsNextLevel = GetRawMaterials(detailedItem, detailedCount);
+                                            foreach (KeyValuePair<string, int> rawMaterialNextLevel in rawMaterialsNextLevel)
+                                            {
+                                                if (rawMaterials.ContainsKey(rawMaterialNextLevel.Key))
+                                                {
+                                                    rawMaterials[rawMaterialNextLevel.Key] += rawMaterialNextLevel.Value;
+                                                }
+                                                else
+                                                {
+                                                    rawMaterials.Add(rawMaterialNextLevel.Key, rawMaterialNextLevel.Value);
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
                         }
-
                     }
                 }
+            }
+            //Now apply the counts
+            foreach (KeyValuePair<string, int> rawMaterial in rawMaterials)
+            {
+                rawMaterials[rawMaterial.Key] *= count;
             }
             return rawMaterials;
         }

@@ -26,40 +26,6 @@ public class DSPGraphTests
     }
 
     [TestMethod]
-    public void RawMaterialsTest()
-    {
-        //Arrange
-        DSPGraph graph = new();
-        Item2 startingItem = ItemPool.MagneticCoil();
-
-        //Act
-        Dictionary<string, int> rawMaterials = graph.CalculateRawMaterials(startingItem);
-
-        //Assert
-        Assert.AreEqual(2, rawMaterials.Count);
-        foreach (KeyValuePair<string, int> item in rawMaterials)
-        {
-            if (item.Key == "Copper Ore")
-            {
-                Assert.AreEqual("Copper Ore", item.Key);
-                Assert.AreEqual(1, item.Value);
-            }
-            //Assert.IsTrue(false);
-            else
-            {
-                Assert.AreEqual("", item.Key);
-            }
-        }
-        //Assert.IsTrue(true);
-
-        //2 Iron Ore-> 2 Magnets
-        //1 Copper Ore -> Copper Ingot
-        //2 Magnets + 1 Copper Ingot -> 2 Magnetic coils
-        //Therefore, 2 iron ore + 1 copper ore. Potentially 1 iron ore and 1/2 Copper ore, if we are really just talking about 1 magnetic coil
-
-    }
-
-    [TestMethod]
     public void MatrixTest()
     {
         //Arrange
