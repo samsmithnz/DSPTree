@@ -91,6 +91,48 @@ namespace DSPTree.Helpers
                 }
             };
         }
+        public static Item2 Stone()
+        {
+            return new Item2(1, "Stone", "Icon_Stone.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(2,
+                        new()
+                        {
+                            { "Stone Vein", 1 }
+                        },
+                        new()
+                        {
+                            { "Stone", 1 }
+                        },
+                        BuildingType.MiningMachine,
+                        MethodType.Gathered
+                    )
+                }
+            };
+        } 
+        public static Item2 Coal()
+        {
+            return new Item2(1, "Coal", "Icon_Coal.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(2,
+                        new()
+                        {
+                            { "Coal Vein", 1 }
+                        },
+                        new()
+                        {
+                            { "Coal", 1 }
+                        },
+                        BuildingType.MiningMachine,
+                        MethodType.Gathered
+                    )
+                }
+            };
+        }       
 
         //Level 2
         public static Item2 IronIngot()
@@ -186,6 +228,26 @@ namespace DSPTree.Helpers
                             {"Hydrogen",1 }
                         },
                         BuildingType.OilRefinery)
+                }
+            };
+        }
+
+        public static Item2 EnergeticGraphite()
+        {
+            return new Item2(2, "Energetic Graphite", "Icon_Energetic_Graphite.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(1,
+                        new()
+                        {
+                            { "Coal", 1 }
+                        },
+                        new()
+                        {
+                            {"Energetic Graphite",1 }
+                        },
+                        BuildingType.Smelter)
                 }
             };
         }

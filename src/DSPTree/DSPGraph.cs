@@ -22,6 +22,8 @@ namespace DSPTree
                 ItemPool.CopperOre(),
                 ItemPool.Water(),
                 ItemPool.CrudeOil(),
+                ItemPool.Stone(),
+                ItemPool.Coal(),
 
                 //Level 2 items
                 ItemPool.IronIngot(),
@@ -29,6 +31,7 @@ namespace DSPTree
                 ItemPool.CopperIngot(),
                 ItemPool.RefinedOil(),
                 ItemPool.Hydrogen(),
+                ItemPool.EnergeticGraphite(),
 
                 //Level 3 items
                 ItemPool.MagneticCoil(),
@@ -36,6 +39,7 @@ namespace DSPTree
                 ItemPool.Gear(),
                 ItemPool.Steel(),
                 ItemPool.SulfuricAcid(),
+                ItemPool.EnergyMatrix(),
 
                 //Level 4 items
                 ItemPool.ElectromagneticMatrix()
