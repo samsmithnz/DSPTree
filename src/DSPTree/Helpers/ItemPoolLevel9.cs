@@ -7,40 +7,27 @@ namespace DSPTree.Helpers
     public static class ItemPoolLevel9
     {
         //Level 9
-        public static Item2 ElectromagneticMatrix()
+        public static Item2 GravityMatrix()
         {
-            return new Item2(9, "Electromagne", "Icon_Electromagnetic_Matrix.png")
+            return new Item2(9, "Gravity Matrix", "Icon_Gravity_Matrix.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe2(24,
                         new()
                         {
-                            { "MagneticCoil", 10 },
-                            { "CircuitBoard", 10 }
+                            { "Graviton Lens", 1 },
+                            { "Quantum Chip", 1 }
                         },
                         new()
                         {
-                            { "ElectromagneticMatrix", 1 }
+                            { "Gravity Matrix", 2 }
                         },
-                        BuildingType.AssemblingMachine)
+                        BuildingType.MatrixLab)
                 }
             };
         }
 
-        ////Level 9
-        //items.Add(new Item()
-        //{
-        //    Name = "Gravity Matrix",
-        //    Image = "Icon_Gravity_Matrix.png",
-        //    Recipe = new()
-        //    {
-        //        { "Graviton Lens", 1 },
-        //        { "Quantum Chip", 1 }
-        //    },
-        //    ManufactoringMethod = "Matrix Lab",
-        //    Level = 9
-        //});
     }
 
 }

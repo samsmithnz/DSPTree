@@ -136,7 +136,7 @@ namespace DSPTree.Helpers
 
         public static Item2 MicrocrystallineComponent()
         {
-            return new Item2(4, "Microcrystalline Component", "Icon_Crystal_Silicon.png")
+            return new Item2(4, "Microcrystalline Component", "Icon_Microcrystalline_Component.png")
             {
                 Recipes =
                 {
@@ -157,7 +157,7 @@ namespace DSPTree.Helpers
 
         public static Item2 Graphene()
         {
-            return new Item2(4, "Graphene", "Icon_Crystal_Silicon.png")
+            return new Item2(4, "Graphene", "Icon_Graphene.png")
             {
                 Recipes =
                 {

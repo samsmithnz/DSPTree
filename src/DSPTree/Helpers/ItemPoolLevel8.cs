@@ -7,39 +7,27 @@ namespace DSPTree.Helpers
     public static class ItemPoolLevel8
     {
         //Level 8
-        public static Item2 ElectromagneticMatrix()
+        public static Item2 GravitonLens()
         {
-            return new Item2(8, "Electromagne", "Icon_Electromagnetic_Matrix.png")
+            return new Item2(8, "Graviton Lens", "Icon_Graviton_Lens.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe2(6,
                         new()
                         {
-                            { "MagneticCoil", 10 },
-                            { "CircuitBoard", 10 }
+                            { "Diamond", 4 },
+                            { "Strange Matter", 1 }
                         },
                         new()
                         {
-                            { "ElectromagneticMatrix", 1 }
+                            { "Graviton Lens", 1 }
                         },
                         BuildingType.AssemblingMachine)
                 }
             };
         }
 
-        //items.Add(new Item()
-        //{
-        //    Name = "Graviton Lens",
-        //    Image = "Icon_Graviton_Lens.png",
-        //    Recipe = new()
-        //    {
-        //        { "Diamond", 4 },
-        //        { "Strange Matter", 1 }
-        //    },
-        //    ManufactoringMethod = "Assembling Machine",
-        //    Level = 8
-        //});
     }
 
 }

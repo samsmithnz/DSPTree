@@ -59,7 +59,19 @@ namespace DSPTree
                 ItemPoolLevel4.CrystalSilicon(),
                 ItemPoolLevel4.MicrocrystallineComponent(),
                 ItemPoolLevel4.Graphene(),
-                ItemPoolLevel4.OrganicCrystal()
+                ItemPoolLevel4.OrganicCrystal(),
+
+                //Level 5 items
+
+                //Level 6 items
+
+                //Level 7 items
+
+                //Level 8 items
+                ItemPoolLevel8.GravitonLens(),
+
+                //Level 9 items
+                ItemPoolLevel9.GravityMatrix()
             };
 
             return items;
