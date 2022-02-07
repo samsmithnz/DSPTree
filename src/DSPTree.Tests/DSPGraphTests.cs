@@ -70,4 +70,50 @@ public class DSPGraphTests
         }
         Assert.IsTrue(true);
     }
+
+    [TestMethod]
+    public void Tree2HasValidParentsAndChildrenTest()
+    {
+        //Arrange
+        DSPGraph graph = new();
+
+        //Act
+
+        //Assert
+        Dictionary<string, int> rawMaterials = new();
+        foreach (Item2 item in graph.Items2)
+        {
+            foreach (Recipe2 recipe in item.Recipes)
+            {
+                foreach (KeyValuePair<string, int> input in recipe.Inputs)
+                {
+                    if (recipe.ManufactoringMethod != ManufactoringMethodType.Gathered)
+                    {
+                        if (!rawMaterials.ContainsKey(input.Key) == true)
+                        {
+                            rawMaterials.Add(input.Key, input.Value);
+                        }
+                    }
+                }
+                foreach (KeyValuePair<string, int> output in recipe.Outputs)
+                {
+                    if (recipe.ManufactoringMethod != ManufactoringMethodType.Gathered)
+                    {
+                        if (!rawMaterials.ContainsKey(output.Key) == true)
+                        {
+                            rawMaterials.Add(output.Key, output.Value);
+                        }
+                    }
+                }
+            }
+        }
+        foreach (KeyValuePair<string, int> item in rawMaterials)
+        {
+            if (graph.Items2.Where(a => a.Name == item.Key).Count() == 0)
+            {
+                Assert.AreEqual("child not found", item.Key);
+            }
+        }
+        Assert.IsTrue(true);
+    }
 }

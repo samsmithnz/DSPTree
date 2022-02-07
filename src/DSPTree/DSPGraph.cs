@@ -34,8 +34,11 @@ namespace DSPTree
                 ItemPool.MagneticCoil(),
                 ItemPool.CircuitBoard(),
                 ItemPool.Gear(),
-                ItemPool.Steel()
+                ItemPool.Steel(),
+                ItemPool.SulfuricAcid(),
 
+                //Level 4 items
+                ItemPool.ElectromagneticMatrix()
             };
 
             return items;

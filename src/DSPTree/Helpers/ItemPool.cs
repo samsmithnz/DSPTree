@@ -292,5 +292,70 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item2 EnergyMatrix()
+        {
+            return new Item2(3, "Energy Matrix", "Icon_Energy_Matrix.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(1,
+                        new()
+                        {
+                            { "Energetic Graphite", 2 },
+                            { "Hydrogen", 2 }
+                        },
+                        new()
+                        {
+                            { "Energy Matrix", 1 }
+                        },
+                        BuildingType.MatrixLab)
+                }
+            };
+        }
+
+        //Level 4
+        public static Item2 ElectromagneticMatrix()
+        {
+            return new Item2(4, "Electromagnetic Matrix", "Icon_Electromagnetic_Matrix.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(1,
+                        new()
+                        {
+                            { "Magnetic Coil", 10 },
+                            { "Circuit Board", 10 }
+                        },
+                        new()
+                        {
+                            { "Electromagnetic Matrix", 1 }
+                        },
+                        BuildingType.MatrixLab)
+                }
+            };
+        }
+
+        public static Item2 ElectricMotor()
+        {
+            return new Item2(4, "Electric Motor", "Icon_Electric_Motor.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(1,
+                        new()
+                        {
+                            { "Magnetic Coil", 1 },
+                            { "Gear", 1 },
+                            { "Iron Ingot", 2 }
+                        },
+                        new()
+                        {
+                            { "Electric Motor", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }
