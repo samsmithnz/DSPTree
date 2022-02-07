@@ -96,7 +96,7 @@ namespace DSPTree.Helpers
 
         public static Item2 CasimirCrystal()
         {
-            return new Item2(6, "Casimir Crystal", "Icon_Casimir_Crystal.png.png")
+            return new Item2(6, "Casimir Crystal", "Icon_Casimir_Crystal.png")
             {
                 Recipes =
                 {

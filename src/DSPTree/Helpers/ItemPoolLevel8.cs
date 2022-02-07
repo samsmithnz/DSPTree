@@ -30,7 +30,7 @@ namespace DSPTree.Helpers
 
         public static Item2 QuantumChip()
         {
-            return new Item2(8, "Quantum Chip", "Icon_Quantum_Chip.png.png")
+            return new Item2(8, "Quantum Chip", "Icon_Quantum_Chip.png")
             {
                 Recipes =
                 {
