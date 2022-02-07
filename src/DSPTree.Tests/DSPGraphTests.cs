@@ -85,6 +85,7 @@ public class DSPGraphTests
         {
             foreach (Recipe2 recipe in item.Recipes)
             {
+                //Check each input (if it's not gathered)
                 foreach (KeyValuePair<string, int> input in recipe.Inputs)
                 {
                     if (recipe.ManufactoringMethod != ManufactoringMethodType.Gathered)
@@ -95,6 +96,7 @@ public class DSPGraphTests
                         }
                     }
                 }
+                //Check each output (if it's not gathered)
                 foreach (KeyValuePair<string, int> output in recipe.Outputs)
                 {
                     if (recipe.ManufactoringMethod != ManufactoringMethodType.Gathered)
