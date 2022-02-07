@@ -1,8 +1,9 @@
-﻿using BuildingType = DSPTree.Models.ManufactoringBuildingType;
+﻿using DSPTree.Models;
+using BuildingType = DSPTree.Models.ManufactoringBuildingType;
 using MethodType = DSPTree.Models.ManufactoringMethodType;
 
 
-namespace DSPTree.Models
+namespace DSPTree.Helpers
 {
     public static class ItemPool
     {
