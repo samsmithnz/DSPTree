@@ -30,7 +30,7 @@
         var color = d3.scaleOrdinal(d3.schemeCategory10);
 
         var simulation = d3.forceSimulation()
-            .force("link", d3.forceLink().id(function (d) { return d.id; }))
+            .force("link", d3.forceLink().id(function (d) { return d.name; }))
             .force("charge", d3.forceManyBody())
             .force("center", d3.forceCenter(width / 2, height / 2));
 
@@ -72,7 +72,7 @@
                 .on("end", dragended));
 
         node.append("title")
-            .text(function (d) { return d.id; });
+            .text(function (d) { return d.name; });
 
         simulation
             .nodes(graph.nodes)

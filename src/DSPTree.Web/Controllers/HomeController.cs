@@ -53,11 +53,12 @@ namespace DSPTree.Web.Controllers
                 //Create first item
                 Node newNode = new()
                 {
-                    id = item.Name.Replace(" ", "_"),
-                    group = item.Level
+                    name = item.Name.Replace(" ", "_"),
+                    group = item.Level,
+                    image = item.Image
                 };
                 //Add the node if it has an ID and the graph doesn't already contain an Id of that name
-                if (newNode.id != null && !newGraph.nodes.Any(n => n.id == newNode.id))
+                if (newNode.name != null && !newGraph.nodes.Any(n => n.name == newNode.name))
                 {
                     newGraph.nodes.Add(newNode);
                 }
@@ -94,11 +95,12 @@ namespace DSPTree.Web.Controllers
                 //Create first item
                 Node newNode = new()
                 {
-                    id = item.Name.Replace(" ", "_"),
-                    group = item.Level
+                    name = item.Name.Replace(" ", "_"),
+                    group = item.Level,
+                    image = item.Image
                 };
                 //Add the node if it has an ID and the graph doesn't already contain an Id of that name
-                if (newNode.id != null && !newGraph.nodes.Any(n => n.id == newNode.id))
+                if (newNode.name != null && !newGraph.nodes.Any(n => n.name == newNode.name))
                 {
                     newGraph.nodes.Add(newNode);
                 }

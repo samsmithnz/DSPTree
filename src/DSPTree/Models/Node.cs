@@ -2,7 +2,8 @@
 {
     public class Node
     {
-        public string id;
+        public string name;
         public int group;
+        public string image;
     }
 }

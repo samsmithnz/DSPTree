@@ -34,4 +34,8 @@
     <ProjectReference Include="..\DSPTree\DSPTree.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\d3v3\" />
+  </ItemGroup>
+
 </Project>

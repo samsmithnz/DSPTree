@@ -1,120 +1,100 @@
 ﻿@model string
 @{
-    ViewData["Title"] = "Home Page 2";
+    ViewData["Title"] = "Home Page";
 }
 
-<h2>Index 2</h2>
+<h2>Index</h2>
 
-@*From: https://bl.ocks.org/mbostock/4062045*@
-<script src="https://d3js.org/d3.v4.min.js"></script>
-@*<script src="~/lib/d3/d3.min.js"></script>*@
+@*From: https://bl.ocks.org/mbostock/950642 *@
+<!DOCTYPE html>
+<meta charset="utf-8">
 <style>
-    .links line {
-        stroke: #999;
-        stroke-opacity: 0.6;
+
+    .link {
+        stroke: #ccc;
     }
 
-    .nodes circle {
-        stroke: #fff;
-        stroke-width: 1.5px;
+    .node text {
+        pointer-events: none;
+        font: 10px sans-serif;
     }
+
 </style>
-<svg width="1200" height="800"></svg>
-<script>
+<body>
+    @*<script src="https://d3js.org/d3.v3.min.js"></script>*@
+    <script src="~/lib/d3v3/d3.min.js"></script>  
+    <script>
 
-    function UpdateGraph(graph) {
-        var svg = d3.select("svg"),
-            width = +svg.attr("width"),
-            height = +svg.attr("height");
+            //var json = JSON.parse(@Html.Raw(Model));
+            //var json2 = JSON.parse('{"nodes":[{"name":"id1","group":1},{"name":"id3","group":3},{"name":"id2","group":2},{"name":"id4","group":2},{"name":"id5","group":2},{"name":"id6","group":1},{"name":"id7","group":1}],"links":[{"source":1,"target":2,"value":1},{"source":1,"target":3,"value":1},{"source":3,"target":4,"value":1},{"source":4,"target":6,"value":1},{"source":4,"target":6,"value":1},{"source":4,"target":3,"value":1}]}');        
+            var json2 = @Html.Raw(Model);
 
-        var color = d3.scaleOrdinal(d3.schemeCategory10);
+            var width = 1200,
+                height = 800
 
-        var simulation = d3.forceSimulation()
-            .force("link", d3.forceLink().id(function (d) { return d.id; }))
-            .force("charge", d3.forceManyBody())
-            .force("center", d3.forceCenter(width / 2, height / 2));
+            var svg = d3.select("body").append("svg")
+                .attr("width", width)
+                .attr("height", height);
 
-        var link = svg.append("g")
-            .attr("class", "links")
-            .selectAll("line")
-            .data(graph.links)
-            .enter().append("line")
-            .attr("stroke-width", function (d) { return Math.sqrt(d.value); });
+            var force = d3.layout.force()
+                .gravity(0.05)
+                .distance(150)
+                .charge(-100)
+                .size([width, height]);
 
-        var node = svg.append("g")
-            .attr("class", "nodes")
-            .selectAll("circle")
-            .data(graph.nodes)
-            .enter().append("circle")
-            .attr("r", 5)
-            .attr("fill", function (d) {
-                //console.log(d.id + ":" + d.group);
-                //https://bl.ocks.org/pstuffa/3393ff2711a53975040077b7453781a9
-                if (d.group == 1) { return "rgb(31, 119, 180)"; } //blue
-                else if (d.group == 2) { return "rgb(255, 127, 14)"; } //orange
-                else if (d.group == 3) { return "rgb(44, 160, 44)"; } //green
-                else if (d.group == 4) { return "rgb(214, 39, 40)"; } //red
-                else if (d.group == 5) { return "rgb(204, 204, 0)"; } //dirty-yellow
-                else if (d.group == 6) { return "rgb(102, 0, 204)"; } //purple
-                else if (d.group == 7) { return "rgb(0, 204, 204)"; } //Aqua
-                else if (d.group == 8) { return "rgb(204, 0, 102)"; } //pink
-                else if (d.group == 9) { return "rgb(96, 96, 96)"; } //charcoal
-                else { return color(d.group); }
-            })
-            //.attr("xlink:href", function(d) {
-            //    var imagePath = "https://localhost:7015/images/" + "Icon_Iron_Ingot.png"; //d.image;
-            //    console.log(imagePath);
-            //    return imagePath;
-            //})
-            .call(d3.drag()
-                .on("start", dragstarted)
-                .on("drag", dragged)
-                .on("end", dragended));
+            d3.json("graph.json", function(error, json) {
+              if (error) throw error;
 
-        node.append("title")
-            .text(function (d) { return d.id; });
+              console.log(json.links[0]);
+              console.log(json2.links[0]);
+              console.log(json.nodes[0]);
+              console.log(json2.nodes[0]);
+              json = json2;
 
-        simulation
-            .nodes(graph.nodes)
-            .on("tick", ticked);
+              force
+                  .nodes(json.nodes)
+                  .links(json.links)
+                  .start();
 
-        simulation.force("link")
-            .links(graph.links);
+              var link = svg.selectAll(".link")
+                  .data(json.links)
+                .enter().append("line")
+                  .attr("class", "link");
 
-        function ticked() {
-            link
-                .attr("x1", function (d) { return d.source.x; })
-                .attr("y1", function (d) { return d.source.y; })
-                .attr("x2", function (d) { return d.target.x; })
-                .attr("y2", function (d) { return d.target.y; });
-            node
-                .attr("cx", function (d) { return d.x; })
-                .attr("cy", function (d) { return d.y; });
-        }
+              var node = svg.selectAll(".node")
+                  .data(json.nodes)
+                .enter().append("g")
+                  .attr("class", "node")
+                  .call(force.drag);
 
-        function dragstarted(d) {
-            if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-            d.fx = d.x;
-            d.fy = d.y;
-        }
+              node.append("image")
+                  .attr("xlink:href", "https://github.com/favicon.ico")
+                  .attr("x", -8)
+                  .attr("y", -8)
+                  .attr("width", 20)
+                  .attr("height", 20);
 
-        function dragged(d) {
-            d.fx = d3.event.x;
-            d.fy = d3.event.y;
-        }
+              node.append("text")
+                  .attr("dx", 12)
+                  .attr("dy", ".35em")
+                  .text(function(d) { return d.name });
 
-        function dragended(d) {
-            if (!d3.event.active) simulation.alphaTarget(0);
-            d.fx = null;
-            d.fy = null;
-        }
+              force.on("tick", function() {
+                link.attr("x1", function(d) { return d.source.x; })
+                    .attr("y1", function(d) { return d.source.y; })
+                    .attr("x2", function(d) { return d.target.x; })
+                    .attr("y2", function(d) { return d.target.y; });
 
-    }
+                node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+              });
+            });
 
-    //var myJson = '{"nodes":[{"id":"id1","group":1},{"id":"id3","group":3},{"id":"id2","group":2},{"id":"id4","group":2},{"id":"id5","group":2},{"id":"id6","group":1},{"id":"id7","group":1}],"links":[{"source":"id1","target":"id2","value":1},{"source":"id1","target":"id3","value":1},{"source":"id3","target":"id4","value":1},{"source":"id4","target":"id5","value":1},{"source":"id4","target":"id6","value":1},{"source":"id4","target":"id7","value":1}]}';
-    //var graph = JSON.parse(myJson);
-    var graph = @Html.Raw(Model);
-    console.log(graph);
-    UpdateGraph(graph)
+        //var myJson = '{"nodes":[{"id":"id1","group":1},{"id":"id3","group":3},{"id":"id2","group":2},{"id":"id4","group":2},{"id":"id5","group":2},{"id":"id6","group":1},{"id":"id7","group":1}],"links":[{"source":"id1","target":"id2","value":1},{"source":"id1","target":"id3","value":1},{"source":"id3","target":"id4","value":1},{"source":"id4","target":"id5","value":1},{"source":"id4","target":"id6","value":1},{"source":"id4","target":"id7","value":1}]}';
+        //var graph = JSON.parse(myJson);
+        //var graph = @Html.Raw(Model);
+        //console.log(graph);
+        //UpdateGraph(graph)
 
-</script>
+    </script>
+
+</body>
