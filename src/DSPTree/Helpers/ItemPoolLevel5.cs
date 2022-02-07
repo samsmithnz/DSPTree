@@ -9,7 +9,7 @@ namespace DSPTree.Helpers
         //Level 5
         public static Item2 PlasmaExciter()
         {
-            return new Item2(5, "Plasma Exciter", "Icon_Electromagnetic_Matrix.png")
+            return new Item2(5, "Plasma Exciter", "Icon_Plasma_Exciter.png")
             {
                 Recipes =
                 {
