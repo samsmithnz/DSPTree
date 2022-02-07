@@ -13,28 +13,35 @@ namespace DSPTree
             Items2 = BuildDSPTree2();
         }
 
-        private List<Item2> BuildDSPTree2()
+        private static List<Item2> BuildDSPTree2()
         {
             List<Item2> items = new()
             {
                 //Level 1 items (mostly mined ore)
                 ItemPool.IronOre(),
                 ItemPool.CopperOre(),
+                ItemPool.Water(),
+                ItemPool.CrudeOil(),
 
                 //Level 2 items
                 ItemPool.IronIngot(),
                 ItemPool.Magnet(),
                 ItemPool.CopperIngot(),
+                ItemPool.RefinedOil(),
+                ItemPool.Hydrogen(),
 
                 //Level 3 items
-                ItemPool.MagneticCoil()
+                ItemPool.MagneticCoil(),
+                ItemPool.CircuitBoard(),
+                ItemPool.Gear(),
+                ItemPool.Steel()
 
             };
 
             return items;
         }
 
-        private List<Item> BuildDSPTree()
+        private static List<Item> BuildDSPTree()
         {
             List<Item> items = new();
 
