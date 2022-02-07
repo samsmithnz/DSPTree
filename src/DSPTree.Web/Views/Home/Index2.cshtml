@@ -22,11 +22,11 @@
 </style>
 <body>
     @*<script src="https://d3js.org/d3.v3.min.js"></script>*@
-    <script src="~/lib/d3v3/d3.min.js"></script>  
+    <script src="~/lib/d3v3/d3.min.js"></script>
     <script>
 
             //var json = JSON.parse(@Html.Raw(Model));
-            //var json2 = JSON.parse('{"nodes":[{"name":"id1","group":1},{"name":"id3","group":3},{"name":"id2","group":2},{"name":"id4","group":2},{"name":"id5","group":2},{"name":"id6","group":1},{"name":"id7","group":1}],"links":[{"source":1,"target":2,"value":1},{"source":1,"target":3,"value":1},{"source":3,"target":4,"value":1},{"source":4,"target":6,"value":1},{"source":4,"target":6,"value":1},{"source":4,"target":3,"value":1}]}');        
+            //var json2 = JSON.parse('{"nodes":[{"name":"id1","group":1},{"name":"id3","group":3},{"name":"id2","group":2},{"name":"id4","group":2},{"name":"id5","group":2},{"name":"id6","group":1},{"name":"id7","group":1}],"links":[{"source":1,"target":2,"value":1},{"source":1,"target":3,"value":1},{"source":3,"target":4,"value":1},{"source":4,"target":6,"value":1},{"source":4,"target":6,"value":1},{"source":4,"target":3,"value":1}]}');
             var json2 = @Html.Raw(Model);
 
             var width = 1200,
@@ -38,7 +38,7 @@
 
             var force = d3.layout.force()
                 .gravity(0.05)
-                .distance(150)
+                .distance(100)
                 .charge(-100)
                 .size([width, height]);
 
@@ -68,7 +68,7 @@
                   .call(force.drag);
 
               node.append("image")
-                  .attr("xlink:href", "https://github.com/favicon.ico")
+                  .attr("xlink:href", function(d) {return "images/" + d.image})
                   .attr("x", -8)
                   .attr("y", -8)
                   .attr("width", 20)

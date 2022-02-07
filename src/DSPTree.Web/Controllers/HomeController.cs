@@ -29,7 +29,7 @@ namespace DSPTree.Web.Controllers
             DSPGraph dSPGraph = new();
 
             //Convert the DSP graph to a D3 graph object
-            Graph graph = CreateGraph2(dSPGraph.Items2);
+            Graph2 graph = CreateGraph2(dSPGraph.Items2);
 
             //Convert to Json and return the result
             string result = JsonConvert.SerializeObject(graph);
@@ -85,9 +85,9 @@ namespace DSPTree.Web.Controllers
             return newGraph;
         }
 
-        private Graph CreateGraph2(List<Item2> data)
+        private Graph2 CreateGraph2(List<Item2> data)
         {
-            Graph newGraph = new();
+            Graph2 newGraph = new();
 
             //Build the graph
             foreach (Item2 item in data)
@@ -110,18 +110,18 @@ namespace DSPTree.Web.Controllers
                 {
                     foreach (Recipe2 recipe2 in item.Recipes)
                     {
-                        if (recipe2.PrimaryMethodOfManufacture == true && 
+                        if (recipe2.PrimaryMethodOfManufacture == true &&
                             recipe2.ManufactoringMethod != ManufactoringMethodType.Gathered)
                         {
                             foreach (KeyValuePair<string, int> itemInput in recipe2.Inputs)
                             {
-                                Link newLink = new()
+                                Link2 newLink = new()
                                 {
-                                    source = item.Name.Replace(" ", "_"),
-                                    target = itemInput.Key.Replace(" ", "_"),
+                                    source = FindIndex(data, item.Name), //item.Name.Replace(" ", "_"),
+                                    target = FindIndex(data, itemInput.Key), // itemInput.Key.Replace(" ", "_"),
                                     value = itemInput.Value //The width of the connection
                                 };
-                                if (newLink.source != null && newLink.target != null && !newGraph.links.Any(n => n.source == newLink.source && n.target == newLink.target))
+                                if (newLink.source >= 0 && newLink.target >= 0 && !newGraph.links.Any(n => n.source == newLink.source && n.target == newLink.target))
                                 {
                                     newGraph.links.Add(newLink);
                                 }
@@ -133,5 +133,18 @@ namespace DSPTree.Web.Controllers
 
             return newGraph;
         }
+
+        private int FindIndex(List<Item2> data, string name)
+        {
+            for (int i = 0; i < data.Count; i++)
+            {
+                if (data[i].Name == name)
+                {
+                    return i;
+                }
+            }
+            return 0;
+        }
+
     }
 }

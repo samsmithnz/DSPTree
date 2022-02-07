@@ -36,6 +36,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\lib\d3v3\" />
+    <Folder Include="wwwroot\lib\d3v4\" />
   </ItemGroup>
 
 </Project>
