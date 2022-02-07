@@ -473,6 +473,109 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item2 Glass()
+        {
+            return new Item2(3, "Glass", "Icon_Glass.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(1,
+                        new()
+                        {
+                            { "Stone", 2 }
+                        },
+                        new()
+                        {
+                            { "Glass", 1 }
+                        },
+                        BuildingType.Smelter)
+                }
+            };
+        }
+
+        public static Item2 HighPuritySilicon()
+        {
+            return new Item2(3, "High-Purity Silicon", "Icon_High-Purity_Silicon.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(1,
+                        new()
+                        {
+                            { "Silicon Ore", 2 }
+                        },
+                        new()
+                        {
+                            { "High-Purity Silicon", 1 }
+                        },
+                        BuildingType.Smelter)
+                }
+            };
+        }
+
+
+        public static Item2 HydrogenFuelRod()
+        {
+            return new Item2(3, "Hydrogen Fuel Rod", "Icon_Hydrogen_Fuel_Rod.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(1,
+                        new()
+                        {
+                            { "Titanium Ingot", 1 },
+                            { "Hydrogen", 10 }
+                        },
+                        new()
+                        {
+                            { "Hydrogen Fuel Rod", 2 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
+        public static Item2 Diamond()
+        {
+            return new Item2(3, "Diamond", "Icon_Diamond.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(1,
+                        new()
+                        {
+                            { "Energetic Graphite", 1 }
+                        },
+                        new()
+                        {
+                            { "Diamond", 1 }
+                        },
+                        BuildingType.Smelter)
+                }
+            };
+        }
+
+        public static Item2 Plastic()
+        {
+            return new Item2(3, "Plastic", "Icon_Plastic.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(1,
+                        new()
+                        {
+                            { "Energetic Graphite", 1 },
+                            { "Refined Oil", 2 }
+                        },
+                        new()
+                        {
+                            { "Plastic", 1 }
+                        },
+                        BuildingType.ChemicalPlant)
+                }
+            };
+        }
+
         //Level 4
         public static Item2 ElectromagneticMatrix()
         {

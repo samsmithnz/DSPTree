@@ -44,6 +44,11 @@ namespace DSPTree
                 ItemPool.Steel(),
                 ItemPool.SulfuricAcid(),
                 ItemPool.EnergyMatrix(),
+                ItemPool.Glass(),
+                ItemPool.HighPuritySilicon(),
+                ItemPool.Diamond(),
+                ItemPool.HydrogenFuelRod(),
+                ItemPool.Plastic(),
 
                 //Level 4 items
                 ItemPool.ElectromagneticMatrix(),
