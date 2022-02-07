@@ -24,6 +24,8 @@ namespace DSPTree
                 ItemPool.CrudeOil(),
                 ItemPool.Stone(),
                 ItemPool.Coal(),
+                ItemPool.TitaniumOre(),
+                ItemPool.SiliconOre(),
 
                 //Level 2 items
                 ItemPool.IronIngot(),

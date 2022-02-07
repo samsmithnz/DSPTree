@@ -132,6 +132,50 @@ namespace DSPTree.Helpers
                     )
                 }
             };
+        }
+
+        public static Item2 TitaniumOre()
+        {
+            return new Item2(1, "Titanium Ore", "Icon_Titanium_Ore.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(2,
+                        new()
+                        {
+                            { "Titanium Ore Vein", 1 }
+                        },
+                        new()
+                        {
+                            { "Titanium Ore", 1 }
+                        },
+                        BuildingType.MiningMachine,
+                        MethodType.Gathered
+                    )
+                }
+            };
+        }
+        
+        public static Item2 SiliconOre()
+        {
+            return new Item2(1, "Silicon Ore", "Icon_Silicon_Ore.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(2,
+                        new()
+                        {
+                            { "Silicon Ore Vein", 1 }
+                        },
+                        new()
+                        {
+                            { "Silicon Ore", 1 }
+                        },
+                        BuildingType.MiningMachine,
+                        MethodType.Gathered
+                    )
+                }
+            };
         }       
 
         //Level 2
