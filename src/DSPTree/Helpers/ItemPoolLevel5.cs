@@ -7,111 +7,151 @@ namespace DSPTree.Helpers
     public static class ItemPoolLevel5
     {
         //Level 5
-        public static Item2 ElectromagneticMatrix()
+        public static Item2 PlasmaExciter()
         {
-            return new Item2(5, "Electromagnetic Matrix", "Icon_Electromagnetic_Matrix.png")
+            return new Item2(5, "Plasma Exciter", "Icon_Electromagnetic_Matrix.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe2(2,
                         new()
                         {
-                            { "Magnetic Coil", 10 },
-                            { "Circuit Board", 10 }
+                            { "Magnetic Coil", 4 },
+                            { "Prism", 2 },
                         },
                         new()
                         {
-                            { "Electromagnetic Matrix", 1 }
+                            { "Plasma Exciter", 1 }
                         },
-                        BuildingType.MatrixLab)
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
+        public static Item2 PhotonCombiner()
+        {
+            return new Item2(5, "Photon Combiner", "Icon_Photon_Combiner.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(3,
+                        new()
+                        {
+                            { "Circuit Board", 2 },
+                            { "Prism", 1 },
+                        },
+                        new()
+                        {
+                            { "Photon Combiner", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
+        public static Item2 ElectromagneticTurbine()
+        {
+            return new Item2(5, "Electromagnetic Turbine", "Icon_Electromagnetic_Turbine.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(2,
+                        new()
+                        {
+                            { "Magnetic Coil", 2 },
+                            { "Electric Motor", 2 }
+                        },
+                        new()
+                        {
+                            { "Electromagnetic Turbine", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
+        public static Item2 TitaniumAlloy()
+        {
+            return new Item2(5, "Titanium Alloy", "Icon_Titanium_Alloy.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(12,
+                        new()
+                        {
+                            { "Titanium Ingot", 4 },
+                            { "Steel", 4 },
+                            { "Sulfuric Acid", 8 }                        },
+                        new()
+                        {
+                            { "Titanium Alloy", 4 }
+                        },
+                        BuildingType.Smelter)
+                }
+            };
+        }
+
+        public static Item2 Processor()
+        {
+            return new Item2(5, "Processor", "Icon_Processor.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(3,
+                        new()
+                        {
+                            { "Circuit Board", 2 },
+                            { "Microcrystalline Component", 2 }
+                        },
+                        new()
+                        {
+                            { "Processor", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
+        public static Item2 CarbonNanotube()
+        {
+            return new Item2(5, "Carbon Nanotube", "Icon_Carbon_Nanotube.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(4,
+                        new()
+                        {
+                            { "Titanium Ingot", 1 },
+                            { "Graphene", 3 }
+                        },
+                        new()
+                        {
+                            { "Carbon Nanotube", 2 }
+                        },
+                        BuildingType.ChemicalPlant)
+                }
+            };
+        }
+
+        public static Item2 TitaniumCrystal()
+        {
+            return new Item2(5, "Titanium Crystal", "Icon_Titanium_Crystal.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(4,
+                        new()
+                        {
+                            { "Titanium Ingot", 3 },
+                            { "Organic Crystal", 1 }
+                        },
+                        new()
+                        {
+                            { "Titanium Crystal", 1 }
+                        },
+                        BuildingType.Smelter)
                 }
             };
         }
     }
-
-            //items.Add(new Item()
-            //{
-            //    Name = "Plasma Exciter",
-            //    Image = "Icon_Plasma_Exciter.png",
-            //    Recipe = new()
-            //    {
-            //        { "Magnetic Coil", 4 },
-            //        { "Prism", 2 },
-            //    },
-            //    ManufactoringMethod = "Assembling Machine",
-            //    Level = 5
-            //});
-            //items.Add(new Item()
-            //{
-            //    Name = "Photon Combiner",
-            //    Image = "Icon_Photon_Combiner.png",
-            //    Recipe = new()
-            //    {
-            //        { "Circuit Board", 1 }, //0.5m },
-            //        { "Prism", 1 },
-            //    },
-            //    ManufactoringMethod = "Assembling Machine",
-            //    Level = 5
-            //});
-            //items.Add(new Item()
-            //{
-            //    Name = "Electromagnetic Turbine",
-            //    Image = "Icon_Electromagnetic_Turbine.png",
-            //    Recipe = new()
-            //    {
-            //        { "Magnetic Coil", 2 },
-            //        { "Electric Motor", 2 },
-            //    },
-            //    ManufactoringMethod = "Assembling Machine",
-            //    Level = 5
-            //});
-            //items.Add(new Item()
-            //{
-            //    Name = "Titanium Alloy",
-            //    Image = "Icon_Titanium_Alloy.png",
-            //    Recipe = new()
-            //    {
-            //        { "Titanium Ingot", 1 },
-            //        { "Steel", 1 },
-            //        { "Sulfuric Acid", 2 }
-            //    },
-            //    ManufactoringMethod = "Arc Smelter",
-            //    Level = 5
-            //});
-            //items.Add(new Item()
-            //{
-            //    Name = "Processor",
-            //    Image = "Icon_Processor.png",
-            //    Recipe = new()
-            //    {
-            //        { "Circuit Board", 2 },
-            //        { "Microcrystalline Component", 2 }
-            //    },
-            //    ManufactoringMethod = "Assembling Machine",
-            //    Level = 5
-            //});
-            //items.Add(new Item()
-            //{
-            //    Name = "Carbon Nanotube",
-            //    Image = "Icon_Carbon_Nanotube.png",
-            //    Recipe = new()
-            //    {
-            //        { "Titanium Ingot", 1 },//0.5m },
-            //        { "Graphene", 2 } // 1.5m }
-            //    },
-            //    ManufactoringMethod = "Chemical Plant",
-            //    Level = 5
-            //});
-            //items.Add(new Item()
-            //{
-            //    Name = "Titanium Crystal",
-            //    Image = "Icon_Titanium_Crystal.png",
-            //    Recipe = new()
-            //    {
-            //        { "Titanium Ingot", 3 },
-            //        { "Organic Crystal", 1 }
-            //    },
-            //    ManufactoringMethod = "Assembling Machine",
-            //    Level = 5
-            //});
 }

@@ -62,10 +62,22 @@ namespace DSPTree
                 ItemPoolLevel4.OrganicCrystal(),
 
                 //Level 5 items
+                ItemPoolLevel5.PlasmaExciter(),
+                ItemPoolLevel5.PhotonCombiner(),
+                ItemPoolLevel5.ElectromagneticTurbine(),
+                ItemPoolLevel5.TitaniumAlloy(),
+                ItemPoolLevel5.Processor(),
+                ItemPoolLevel5.CarbonNanotube(),
+                ItemPoolLevel5.TitaniumCrystal(),
 
                 //Level 6 items
+                ItemPoolLevel6.SuperMagneticRing(),
+                ItemPoolLevel6.StructureMatrix(),
+                ItemPoolLevel6.ParticleBroadband(),
+                ItemPoolLevel6.ParticleContainer(),
 
                 //Level 7 items
+                ItemPoolLevel7.StrangeMatter(),
 
                 //Level 8 items
                 ItemPoolLevel8.GravitonLens(),
@@ -737,18 +749,6 @@ namespace DSPTree
             });
 
             ////Level 9
-            //items.Add(new Item()
-            //{
-            //    Name = "Gravity Matrix",
-            //    Image = "Icon_Gravity_Matrix.png",
-            //    Recipe = new()
-            //    {
-            //        { "Graviton Lens", 1 },
-            //        { "Quantum Chip", 1 }
-            //    },
-            //    ManufactoringMethod = "Matrix Lab",
-            //    Level = 9
-            //});
 
             //Sort the items by level
             items = items.OrderBy(b => b.Level).ToList();

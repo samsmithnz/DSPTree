@@ -36,10 +36,12 @@ public class DSPGraphTests
 
         //Assert
 
-        foreach (Item item in graph.Items)
+        foreach (Item2 item in graph.Items2)
         {
-            if (item.Name.Contains("matrix") == true &&
-                item.ManufactoringMethod != "Matrix Lab")
+            if ((item.Name.ToLower().Contains("matrix") == true &&
+                item.Recipes[0].ManufactoringBuilding != ManufactoringBuildingType.MatrixLab) ||
+                (item.Name.ToLower().Contains("matrix") == false &&
+                item.Recipes[0].ManufactoringBuilding == ManufactoringBuildingType.MatrixLab))
             {
                 Assert.AreEqual("", item.Name);
                 Assert.IsTrue(false);
