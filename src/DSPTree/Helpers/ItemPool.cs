@@ -156,18 +156,6 @@ namespace DSPTree.Helpers
             };
         }
 
-        //TODO: RECIPE 2!!!!!!!!!!!!!!!
-        //items.Add(new Item()
-        //{
-        //    Name = "Silicon Ore",
-        //        Image = "Icon_Silicon_Ore.png",
-        //        Recipe = new()
-        //        {
-        //            { "Stone", 10 }
-        //        },
-        //        ManufactoringMethod = "Arc Smelter",
-        //        Level = 2
-        //    });
         public static Item2 SiliconOre()
         {
             return new Item2(1, "Silicon Ore", "Icon_Silicon_Ore.png")
@@ -185,6 +173,19 @@ namespace DSPTree.Helpers
                         },
                         BuildingType.MiningMachine,
                         MethodType.Gathered
+                    ),
+                    new Recipe2(2,
+                        new()
+                        {
+                            { "Stone", 10 }
+                        },
+                        new()
+                        {
+                            { "Silicon Ore", 1 }
+                        },
+                        BuildingType.Smelter,
+                        MethodType.Manufactured,
+                        false
                     )
                 }
             };
