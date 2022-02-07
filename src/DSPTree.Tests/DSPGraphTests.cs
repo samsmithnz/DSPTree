@@ -5,6 +5,7 @@ using System.Linq;
 
 namespace DSPTree.Tests;
 
+[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [TestClass]
 public class DSPGraphTests
 {
