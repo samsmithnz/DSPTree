@@ -50,6 +50,27 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item2 PlaneFilter()
+        {
+            return new Item2(7, "Plane Filter", "Icon_Plane_Filter.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(12,
+                        new()
+                        {
+                            { "Casimir Crystal", 1 },
+                            { "Titanium Glass", 2 }
+                        },
+                        new()
+                        {
+                            { "Plane Filter", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 
 }

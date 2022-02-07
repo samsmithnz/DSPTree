@@ -60,6 +60,7 @@ namespace DSPTree
                 ItemPoolLevel4.MicrocrystallineComponent(),
                 ItemPoolLevel4.Graphene(),
                 ItemPoolLevel4.OrganicCrystal(),
+                ItemPoolLevel4.TitaniumGlass(),
 
                 //Level 5 items
                 ItemPoolLevel5.PlasmaExciter(),
@@ -75,12 +76,16 @@ namespace DSPTree
                 ItemPoolLevel6.StructureMatrix(),
                 ItemPoolLevel6.ParticleBroadband(),
                 ItemPoolLevel6.ParticleContainer(),
+                ItemPoolLevel6.CasimirCrystal(),
 
                 //Level 7 items
                 ItemPoolLevel7.StrangeMatter(),
+                ItemPoolLevel7.InformationMatrix(),
+                ItemPoolLevel7.PlaneFilter(),
 
                 //Level 8 items
                 ItemPoolLevel8.GravitonLens(),
+                ItemPoolLevel8.QuantumChip(),
 
                 //Level 9 items
                 ItemPoolLevel9.GravityMatrix()

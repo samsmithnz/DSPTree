@@ -28,6 +28,27 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item2 QuantumChip()
+        {
+            return new Item2(8, "Quantum Chip", "Icon_Quantum_Chip.png.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(6,
+                        new()
+                        {
+                            { "Processor", 2 },
+                            { "Plane Filter", 2 }
+                        },
+                        new()
+                        {
+                            { "Quantum Chip", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 
 }

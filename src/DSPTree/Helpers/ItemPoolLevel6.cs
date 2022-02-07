@@ -93,6 +93,28 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item2 CasimirCrystal()
+        {
+            return new Item2(6, "Casimir Crystal", "Icon_Casimir_Crystal.png.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(4,
+                        new()
+                        {
+                            { "Titanium Crystal", 1 },
+                            { "Graphene", 2 },
+                            { "Hydrogen", 12 }
+                        },
+                        new()
+                        {
+                            { "Casimir Crystal", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 
 }

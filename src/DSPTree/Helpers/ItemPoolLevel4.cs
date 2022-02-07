@@ -197,5 +197,27 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item2 TitaniumGlass()
+        {
+            return new Item2(4, "Titanium Glass", "Icon_Titanium_Glass.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(5,
+                        new()
+                        {
+                            { "Glass", 2 },
+                            { "Titanium Ingot", 2 },
+                            { "Water", 2 }
+                        },
+                        new()
+                        {
+                            { "Titanium Glass", 2 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }
