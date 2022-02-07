@@ -43,7 +43,7 @@ namespace DSPTree.Web.Controllers
         }
 
         //A generic function that creates a new graph object
-        private Graph CreateGraph(List<Item> data)
+        private static Graph CreateGraph(List<Item> data)
         {
             Graph newGraph = new();
 
@@ -85,7 +85,7 @@ namespace DSPTree.Web.Controllers
             return newGraph;
         }
 
-        private Graph2 CreateGraph2(List<Item2> data)
+        private static Graph2 CreateGraph2(List<Item2> data)
         {
             Graph2 newGraph = new();
 
@@ -134,7 +134,7 @@ namespace DSPTree.Web.Controllers
             return newGraph;
         }
 
-        private int FindIndex(List<Item2> data, string name)
+        private static int FindIndex(List<Item2> data, string name)
         {
             for (int i = 0; i < data.Count; i++)
             {

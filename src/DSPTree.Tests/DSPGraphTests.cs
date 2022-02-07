@@ -62,7 +62,7 @@ public class DSPGraphTests
         {
             foreach (KeyValuePair<string, decimal> itemChild in item.Recipe)
             {
-                if (graph.Items.Where(a => a.Name == itemChild.Key).Count() == 0)
+                if (!graph.Items.Where(a => a.Name == itemChild.Key).Any())
                 {
                     Assert.AreEqual("child not found", itemChild.Key);
                 }
@@ -111,7 +111,7 @@ public class DSPGraphTests
         }
         foreach (KeyValuePair<string, int> item in rawMaterials)
         {
-            if (graph.Items2.Where(a => a.Name == item.Key).Count() == 0)
+            if (!graph.Items2.Where(a => a.Name == item.Key).Any())
             {
                 Assert.AreEqual("child not found", item.Key);
             }
