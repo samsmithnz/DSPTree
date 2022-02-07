@@ -60,7 +60,7 @@ namespace DSPTree.Helpers
                         new()
                         {
                             { "Carbon Nanotube", 2 },
-                            { "Titanium Crystal", 2 },
+                            { "Crystal Silicon", 2 },
                             { "Plastic", 1 }
                         },
                         new()
