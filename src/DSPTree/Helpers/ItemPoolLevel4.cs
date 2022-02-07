@@ -73,7 +73,8 @@ namespace DSPTree.Helpers
         }
         public static Item2 SolarPanels()
         {
-            return new Item2(4, "Solar Panels", "Icon_Solar_Panel.png")
+            return new Item2(4, "Solar Panels", "Icon_Solar_Panel.png", 
+                ItemType.Building)
             {
                 Recipes =
                 {
