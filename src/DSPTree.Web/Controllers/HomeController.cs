@@ -110,8 +110,9 @@ namespace DSPTree.Web.Controllers
                 {
                     foreach (Recipe2 recipe2 in item.Recipes)
                     {
-                        if (recipe2.PrimaryMethodOfManufacture == true &&
-                            recipe2.ManufactoringMethod != ManufactoringMethodType.Gathered)
+                        //recipe2.PrimaryMethodOfManufacture == true &&
+
+                        if (recipe2.ManufactoringMethod != ManufactoringMethodType.Gathered)
                         {
                             foreach (KeyValuePair<string, int> itemInput in recipe2.Inputs)
                             {

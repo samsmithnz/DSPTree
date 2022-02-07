@@ -35,6 +35,7 @@ namespace DSPTree
                 ItemPool.Hydrogen(),
                 ItemPool.EnergeticGraphite(),
                 ItemPool.StoneBrick(),
+                ItemPool.TitaniumIngot(),
 
                 //Level 3 items
                 ItemPool.MagneticCoil(),
@@ -45,7 +46,8 @@ namespace DSPTree
                 ItemPool.EnergyMatrix(),
 
                 //Level 4 items
-                ItemPool.ElectromagneticMatrix()
+                ItemPool.ElectromagneticMatrix(),
+                ItemPool.ElectricMotor()
             };
 
             return items;
