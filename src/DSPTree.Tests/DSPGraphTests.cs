@@ -120,4 +120,25 @@ public class DSPGraphTests
         }
         Assert.IsTrue(true);
     }
+
+    [TestMethod]
+    public void Tree2ImageIsUsedOnlyOnce()
+    {
+        //Arrange
+        DSPGraph graph = new();
+
+        //Act
+
+        //Assert
+        HashSet<string> images = new();
+        foreach (Item2 item in graph.Items2)
+        {
+            if (images.Contains(item.Image) == true)
+            {
+                Assert.AreEqual("", item.Image);
+            }
+            images.Add(item.Image);
+        }
+
+    }
 }

@@ -126,7 +126,7 @@ namespace DSPTree.Helpers
 
         public static Item2 TitaniumIngot()
         {
-            return new Item2(2, "Titanium Ingot", "Icon_Energetic_Graphite.png")
+            return new Item2(2, "Titanium Ingot", "Icon_Titanium_Ingot.png")
             {
                 Recipes =
                 {
