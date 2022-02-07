@@ -18,41 +18,48 @@ namespace DSPTree
             List<Item2> items = new()
             {
                 //Level 1 items (mostly mined ore)
-                ItemPool.IronOre(),
-                ItemPool.CopperOre(),
-                ItemPool.Water(),
-                ItemPool.CrudeOil(),
-                ItemPool.Stone(),
-                ItemPool.Coal(),
-                ItemPool.TitaniumOre(),
-                ItemPool.SiliconOre(),
+                ItemPoolLevel1.IronOre(),
+                ItemPoolLevel1.CopperOre(),
+                ItemPoolLevel1.Water(),
+                ItemPoolLevel1.CrudeOil(),
+                ItemPoolLevel1.Stone(),
+                ItemPoolLevel1.Coal(),
+                ItemPoolLevel1.TitaniumOre(),
+                ItemPoolLevel1.SiliconOre(),
 
                 //Level 2 items
-                ItemPool.IronIngot(),
-                ItemPool.Magnet(),
-                ItemPool.CopperIngot(),
-                ItemPool.RefinedOil(),
-                ItemPool.Hydrogen(),
-                ItemPool.EnergeticGraphite(),
-                ItemPool.StoneBrick(),
-                ItemPool.TitaniumIngot(),
+                ItemPoolLevel2.IronIngot(),
+                ItemPoolLevel2.Magnet(),
+                ItemPoolLevel2.CopperIngot(),
+                ItemPoolLevel2.RefinedOil(),
+                ItemPoolLevel2.Hydrogen(),
+                ItemPoolLevel2.EnergeticGraphite(),
+                ItemPoolLevel2.StoneBrick(),
+                ItemPoolLevel2.TitaniumIngot(),
 
                 //Level 3 items
-                ItemPool.MagneticCoil(),
-                ItemPool.CircuitBoard(),
-                ItemPool.Gear(),
-                ItemPool.Steel(),
-                ItemPool.SulfuricAcid(),
-                ItemPool.EnergyMatrix(),
-                ItemPool.Glass(),
-                ItemPool.HighPuritySilicon(),
-                ItemPool.Diamond(),
-                ItemPool.HydrogenFuelRod(),
-                ItemPool.Plastic(),
+                ItemPoolLevel3.MagneticCoil(),
+                ItemPoolLevel3.CircuitBoard(),
+                ItemPoolLevel3.Gear(),
+                ItemPoolLevel3.Steel(),
+                ItemPoolLevel3.SulfuricAcid(),
+                ItemPoolLevel3.EnergyMatrix(),
+                ItemPoolLevel3.Glass(),
+                ItemPoolLevel3.HighPuritySilicon(),
+                ItemPoolLevel3.Diamond(),
+                ItemPoolLevel3.HydrogenFuelRod(),
+                ItemPoolLevel3.Plastic(),
 
                 //Level 4 items
-                ItemPool.ElectromagneticMatrix(),
-                ItemPool.ElectricMotor()
+                ItemPoolLevel4.ElectromagneticMatrix(),
+                ItemPoolLevel4.ElectricMotor(),
+                ItemPoolLevel4.Foundation(),
+                ItemPoolLevel4.SolarPanels(),
+                ItemPoolLevel4.Prism(),
+                ItemPoolLevel4.CrystalSilicon(),
+                ItemPoolLevel4.MicrocrystallineComponent(),
+                ItemPoolLevel4.Graphene(),
+                ItemPoolLevel4.OrganicCrystal()
             };
 
             return items;

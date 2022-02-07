@@ -14,7 +14,7 @@ public class RawMaterialsTests
     {
         //Arrange
         DSPGraph graph = new();
-        Item2 startingItem = ItemPool.CopperIngot();
+        Item2 startingItem = ItemPoolLevel1.CopperIngot();
 
         //Act
         Dictionary<string, int> rawMaterials = RawMaterials.CalculateRawMaterials(graph.Items2, startingItem);
@@ -31,7 +31,7 @@ public class RawMaterialsTests
     {
         //Arrange
         DSPGraph graph = new();
-        Item2 startingItem = ItemPool.MagneticCoil();
+        Item2 startingItem = ItemPoolLevel1.MagneticCoil();
 
         //Act
         Dictionary<string, int> rawMaterials = RawMaterials.CalculateRawMaterials(graph.Items2, startingItem);
