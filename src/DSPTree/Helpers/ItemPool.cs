@@ -111,7 +111,7 @@ namespace DSPTree.Helpers
                     )
                 }
             };
-        } 
+        }
         public static Item2 Coal()
         {
             return new Item2(1, "Coal", "Icon_Coal.png")
@@ -155,7 +155,19 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        
+
+        //TODO: RECIPE 2!!!!!!!!!!!!!!!
+        //items.Add(new Item()
+        //{
+        //    Name = "Silicon Ore",
+        //        Image = "Icon_Silicon_Ore.png",
+        //        Recipe = new()
+        //        {
+        //            { "Stone", 10 }
+        //        },
+        //        ManufactoringMethod = "Arc Smelter",
+        //        Level = 2
+        //    });
         public static Item2 SiliconOre()
         {
             return new Item2(1, "Silicon Ore", "Icon_Silicon_Ore.png")
@@ -176,7 +188,7 @@ namespace DSPTree.Helpers
                     )
                 }
             };
-        }       
+        }
 
         //Level 2
         public static Item2 IronIngot()
@@ -290,6 +302,46 @@ namespace DSPTree.Helpers
                         new()
                         {
                             {"Energetic Graphite",1 }
+                        },
+                        BuildingType.Smelter)
+                }
+            };
+        }
+
+        public static Item2 TitaniumIngot()
+        {
+            return new Item2(2, "Titanium Ingot", "Icon_Energetic_Graphite.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(1,
+                        new()
+                        {
+                            { "Titanium Ore", 2 }
+                        },
+                        new()
+                        {
+                            { "Titanium Ingot",1 }
+                        },
+                        BuildingType.Smelter)
+                }
+            };
+        }
+
+        public static Item2 StoneBrick()
+        {
+            return new Item2(2, "Stone Brick", "Icon_Stone_Brick.png")
+            {
+                Recipes =
+                {
+                    new Recipe2(1,
+                        new()
+                        {
+                            { "Stone", 1 }
+                        },
+                        new()
+                        {
+                            { "Stone Brick",1 }
                         },
                         BuildingType.Smelter)
                 }

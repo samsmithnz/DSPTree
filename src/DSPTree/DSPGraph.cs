@@ -34,6 +34,7 @@ namespace DSPTree
                 ItemPool.RefinedOil(),
                 ItemPool.Hydrogen(),
                 ItemPool.EnergeticGraphite(),
+                ItemPool.StoneBrick(),
 
                 //Level 3 items
                 ItemPool.MagneticCoil(),
