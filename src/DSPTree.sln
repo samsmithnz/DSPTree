@@ -1,19 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSPTree.Tests", "DSPTree.Tests\DSPTree.Tests.csproj", "{6EBB1B74-A9AF-4E49-BF65-21C79C16CAD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSPTree.Tests", "DSPTree.Tests\DSPTree.Tests.csproj", "{6EBB1B74-A9AF-4E49-BF65-21C79C16CAD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSPTree", "DSPTree\DSPTree.csproj", "{7F7A9BBD-2D68-4170-9057-9661A5BD9B87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSPTree", "DSPTree\DSPTree.csproj", "{7F7A9BBD-2D68-4170-9057-9661A5BD9B87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSPTree.Web", "DSPTree.Web\DSPTree.Web.csproj", "{CEF02DA2-9056-4B26-AD31-CCE8BC0356A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2476877E-F188-4D2B-9B1B-F8BDF762F076}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+		..\.github\workflows\workflow.yml = ..\.github\workflows\workflow.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6EBB1B74-A9AF-4E49-BF65-21C79C16CAD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +29,15 @@ Global
 		{7F7A9BBD-2D68-4170-9057-9661A5BD9B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F7A9BBD-2D68-4170-9057-9661A5BD9B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F7A9BBD-2D68-4170-9057-9661A5BD9B87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF02DA2-9056-4B26-AD31-CCE8BC0356A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF02DA2-9056-4B26-AD31-CCE8BC0356A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF02DA2-9056-4B26-AD31-CCE8BC0356A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF02DA2-9056-4B26-AD31-CCE8BC0356A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DC23688-986D-48C1-BED6-D8975778ABA4}
 	EndGlobalSection
 EndGlobal
