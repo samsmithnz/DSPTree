@@ -134,6 +134,7 @@ namespace DSPTree
                     if (inputItem != null && inputs.Contains(inputItem) == false)
                     {
                         inputs.Add(inputItem);
+                        inputs.AddRange(GetInputs(items, inputItem.Recipes));
                     }
                 }
             }
