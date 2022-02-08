@@ -50,7 +50,7 @@ public class DSPGraphTests
     }
 
     [TestMethod]
-    public void Tree2HasValidParentsAndChildrenTest()
+    public void TreeHasValidParentsAndChildrenTest()
     {
         //Arrange
         DSPGraph graph = new();
@@ -98,7 +98,7 @@ public class DSPGraphTests
     }
 
     [TestMethod]
-    public void Tree2ImageIsUsedOnlyOnce()
+    public void TreeImageIsUsedOnlyOnceTest()
     {
         //Arrange
         DSPGraph graph = new();
@@ -115,6 +115,19 @@ public class DSPGraphTests
             }
             images.Add(item.Image);
         }
+    }
 
+    [TestMethod]
+    public void FilterEnergyMatrixTest()
+    {
+        //Arrange
+        string filter = "Energy Matrix";
+        DSPGraph graph = new(filter);
+
+        //Act
+
+        //Assert
+        Assert.IsTrue(graph.Items.Count > 1);
+        Assert.AreEqual(filter, graph.Items[graph.Items.Count - 1].Name);
     }
 }

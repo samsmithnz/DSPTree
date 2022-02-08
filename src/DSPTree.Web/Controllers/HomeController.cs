@@ -13,7 +13,8 @@ namespace DSPTree.Web.Controllers
         public IActionResult Index()
         {
             //Build the DSP graph
-            DSPGraph dSPGraph = new();
+            string filter = "Energy Matrix";
+            DSPGraph dSPGraph = new(filter);
 
             //Convert the DSP graph to a D3 graph object
             Graph graph = CreateGraph(dSPGraph.Items);

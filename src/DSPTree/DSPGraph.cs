@@ -6,12 +6,12 @@ namespace DSPTree
     public class DSPGraph
     {
         public List<Item> Items { get; set; }
-        public DSPGraph()
+        public DSPGraph(string filter = "")
         {
-            Items = BuildDSPTree();
+            Items = BuildDSPTree(filter);
         }
 
-        private static List<Item> BuildDSPTree()
+        private static List<Item> BuildDSPTree(string filter)
         {
             List<Item> items = new()
             {
@@ -97,7 +97,52 @@ namespace DSPTree
                 ItemPoolLevel9.GravityMatrix()
             };
 
+            //Filter by
+            if (string.IsNullOrEmpty(filter) == false)
+            {
+                Item? filteredItem = FindItem(items, filter);
+                if (filteredItem == null)
+                {
+                    throw new Exception(filter + " item not found");
+                }
+                else
+                {
+                    List<Item> filteredItems = new();
+                    //Add the root - this is the final item
+                    filteredItems.Add(filteredItem);
+
+                    //Get all of the inputs leading up to it
+                    filteredItems.AddRange(GetInputs(items, filteredItem.Recipes));
+
+                    //Sort the items by level
+                    filteredItems = filteredItems.OrderBy(b => b.Level).ToList();
+                    items = filteredItems;
+                }
+            }
+
             return items;
+        }
+
+        private static List<Item> GetInputs(List<Item> items, List<Recipe> recipes)
+        {
+            List<Item> inputs = new();
+            foreach (Recipe recipe in recipes)
+            {
+                foreach (KeyValuePair<string, int> item in recipe.Inputs)
+                {
+                    Item? inputItem = FindItem(items, item.Key);
+                    if (inputItem != null && inputs.Contains(inputItem) == false)
+                    {
+                        inputs.Add(inputItem);
+                    }
+                }
+            }
+            return inputs;
+        }
+
+        private static Item? FindItem(List<Item> items, string name)
+        {
+            return items.Where(i => i.Name == name).FirstOrDefault();
         }
 
     }
