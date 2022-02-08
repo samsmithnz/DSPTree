@@ -7,13 +7,13 @@ namespace DSPTree.Helpers
     public static class ItemPoolLevel7
     {
         //Level 7
-        public static Item2 StrangeMatter()
+        public static Item StrangeMatter()
         {
-            return new Item2(7, "Strange Matter", "Icon_Strange_Matter.png")
+            return new Item(7, "Strange Matter", "Icon_Strange_Matter.png")
             {
                 Recipes =
                 {
-                    new Recipe2(8,
+                    new Recipe(8,
                         new()
                         {
                             { "Particle Container", 2 },
@@ -29,13 +29,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 InformationMatrix()
+        public static Item InformationMatrix()
         {
-            return new Item2(7, "Information Matrix", "Icon_Information_Matrix.png")
+            return new Item(7, "Information Matrix", "Icon_Information_Matrix.png")
             {
                 Recipes =
                 {
-                    new Recipe2(10,
+                    new Recipe(10,
                         new()
                         {
                             { "Processor", 2 },
@@ -50,13 +50,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 PlaneFilter()
+        public static Item PlaneFilter()
         {
-            return new Item2(7, "Plane Filter", "Icon_Plane_Filter.png")
+            return new Item(7, "Plane Filter", "Icon_Plane_Filter.png")
             {
                 Recipes =
                 {
-                    new Recipe2(12,
+                    new Recipe(12,
                         new()
                         {
                             { "Casimir Crystal", 1 },

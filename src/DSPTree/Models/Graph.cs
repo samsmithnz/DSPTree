@@ -1,11 +1,11 @@
 ﻿namespace DSPTree.Models
 {
-    public class Graph2
+    public class Graph
     {
         public List<Node> nodes;
-        public List<Link2> links;
+        public List<Link> links;
 
-        public Graph2()
+        public Graph()
         {
             nodes = new();
             links = new();

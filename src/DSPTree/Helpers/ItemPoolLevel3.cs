@@ -7,13 +7,13 @@ namespace DSPTree.Helpers
     public static class ItemPoolLevel3
     {
               //Level 3
-        public static Item2 MagneticCoil()
+        public static Item MagneticCoil()
         {
-            return new Item2(3, "Magnetic Coil", "Icon_Magnetic_Coil.png")
+            return new Item(3, "Magnetic Coil", "Icon_Magnetic_Coil.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Magnet", 2 },
@@ -27,13 +27,13 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        public static Item2 CircuitBoard()
+        public static Item CircuitBoard()
         {
-            return new Item2(3, "Circuit Board", "Icon_Circuit_Board.png")
+            return new Item(3, "Circuit Board", "Icon_Circuit_Board.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Iron Ingot", 1 },
@@ -47,13 +47,13 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        public static Item2 Steel()
+        public static Item Steel()
         {
-            return new Item2(3, "Steel", "Icon_Steel.png")
+            return new Item(3, "Steel", "Icon_Steel.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Iron Ingot", 1 }
@@ -67,13 +67,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 Gear()
+        public static Item Gear()
         {
-            return new Item2(3, "Gear", "Icon_Gear.png")
+            return new Item(3, "Gear", "Icon_Gear.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Iron Ingot", 1 }
@@ -87,13 +87,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 SulfuricAcid()
+        public static Item SulfuricAcid()
         {
-            return new Item2(3, "Sulfuric Acid", "Icon_Sulfuric_Acid.png")
+            return new Item(3, "Sulfuric Acid", "Icon_Sulfuric_Acid.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Water", 1 },
@@ -109,13 +109,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 EnergyMatrix()
+        public static Item EnergyMatrix()
         {
-            return new Item2(3, "Energy Matrix", "Icon_Energy_Matrix.png")
+            return new Item(3, "Energy Matrix", "Icon_Energy_Matrix.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Energetic Graphite", 2 },
@@ -130,13 +130,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 Glass()
+        public static Item Glass()
         {
-            return new Item2(3, "Glass", "Icon_Glass.png")
+            return new Item(3, "Glass", "Icon_Glass.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Stone", 2 }
@@ -150,13 +150,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 HighPuritySilicon()
+        public static Item HighPuritySilicon()
         {
-            return new Item2(3, "High-Purity Silicon", "Icon_High-Purity_Silicon.png")
+            return new Item(3, "High-Purity Silicon", "Icon_High-Purity_Silicon.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Silicon Ore", 2 }
@@ -171,13 +171,13 @@ namespace DSPTree.Helpers
         }
 
 
-        public static Item2 HydrogenFuelRod()
+        public static Item HydrogenFuelRod()
         {
-            return new Item2(3, "Hydrogen Fuel Rod", "Icon_Hydrogen_Fuel_Rod.png")
+            return new Item(3, "Hydrogen Fuel Rod", "Icon_Hydrogen_Fuel_Rod.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Titanium Ingot", 1 },
@@ -192,13 +192,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 Diamond()
+        public static Item Diamond()
         {
-            return new Item2(3, "Diamond", "Icon_Diamond.png")
+            return new Item(3, "Diamond", "Icon_Diamond.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Energetic Graphite", 1 }
@@ -212,13 +212,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 Plastic()
+        public static Item Plastic()
         {
-            return new Item2(3, "Plastic", "Icon_Plastic.png")
+            return new Item(3, "Plastic", "Icon_Plastic.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Energetic Graphite", 1 },

@@ -19,10 +19,10 @@ public class DSPGraphTests
 
         //Assert
         Assert.IsNotNull(graph);
-        Assert.IsTrue(graph.Items2.Count > 0);
-        Assert.AreEqual("Iron Ore Vein", graph.Items2[0].Name);
-        Assert.AreEqual("80px-Icon_Iron_Ore_Vein.png", graph.Items2[0].Image);
-        Assert.AreEqual(0, graph.Items2[0].Level);
+        Assert.IsTrue(graph.Items.Count > 0);
+        Assert.AreEqual("Iron Ore Vein", graph.Items[0].Name);
+        Assert.AreEqual("80px-Icon_Iron_Ore_Vein.png", graph.Items[0].Image);
+        Assert.AreEqual(0, graph.Items[0].Level);
     }
 
     [TestMethod]
@@ -35,7 +35,7 @@ public class DSPGraphTests
 
         //Assert
 
-        foreach (Item2 item in graph.Items2)
+        foreach (Item item in graph.Items)
         {
             if ((item.Name.ToLower().Contains("matrix") == true &&
                 item.Recipes[0].ManufactoringBuilding != ManufactoringBuildingType.MatrixLab) ||
@@ -59,9 +59,9 @@ public class DSPGraphTests
 
         //Assert
         Dictionary<string, int> rawMaterials = new();
-        foreach (Item2 item in graph.Items2)
+        foreach (Item item in graph.Items)
         {
-            foreach (Recipe2 recipe in item.Recipes)
+            foreach (Recipe recipe in item.Recipes)
             {
                 //Check each input (if it's not gathered)
                 foreach (KeyValuePair<string, int> input in recipe.Inputs)
@@ -89,7 +89,7 @@ public class DSPGraphTests
         }
         foreach (KeyValuePair<string, int> item in rawMaterials)
         {
-            if (!graph.Items2.Where(a => a.Name == item.Key).Any())
+            if (!graph.Items.Where(a => a.Name == item.Key).Any())
             {
                 Assert.AreEqual("child not found", item.Key);
             }
@@ -107,7 +107,7 @@ public class DSPGraphTests
 
         //Assert
         HashSet<string> images = new();
-        foreach (Item2 item in graph.Items2)
+        foreach (Item item in graph.Items)
         {
             if (images.Contains(item.Image) == true)
             {

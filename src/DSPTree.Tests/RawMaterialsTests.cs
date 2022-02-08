@@ -14,10 +14,10 @@ public class RawMaterialsTests
     {
         //Arrange
         DSPGraph graph = new();
-        Item2 startingItem = ItemPoolLevel2.CopperIngot();
+        Item startingItem = ItemPoolLevel2.CopperIngot();
 
         //Act
-        Dictionary<string, int> rawMaterials = RawMaterials.CalculateRawMaterials(graph.Items2, startingItem);
+        Dictionary<string, int> rawMaterials = RawMaterials.CalculateRawMaterials(graph.Items, startingItem);
 
         //Assert
         //1 Copper Ore -> Copper Ingot
@@ -31,10 +31,10 @@ public class RawMaterialsTests
     {
         //Arrange
         DSPGraph graph = new();
-        Item2 startingItem = ItemPoolLevel3.MagneticCoil();
+        Item startingItem = ItemPoolLevel3.MagneticCoil();
 
         //Act
-        Dictionary<string, int> rawMaterials = RawMaterials.CalculateRawMaterials(graph.Items2, startingItem);
+        Dictionary<string, int> rawMaterials = RawMaterials.CalculateRawMaterials(graph.Items, startingItem);
 
         //Assert
         //2 Iron Ore-> 2 Magnets

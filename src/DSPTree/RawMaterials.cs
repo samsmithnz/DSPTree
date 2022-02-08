@@ -4,7 +4,7 @@ namespace DSPTree
 {
     public static class RawMaterials
     {
-        public static Dictionary<string, int> CalculateRawMaterials(List<Item2> items, Item2 item)
+        public static Dictionary<string, int> CalculateRawMaterials(List<Item> items, Item item)
         {
             if (items == null)
             {
@@ -21,21 +21,21 @@ namespace DSPTree
             return rawMaterials;
         }
 
-        private static Dictionary<string, int> GetRawMaterials(List<Item2> items, Item2 item, int count)
+        private static Dictionary<string, int> GetRawMaterials(List<Item> items, Item item, int count)
         {
             Dictionary<string, int> rawMaterials = new();
 
-            foreach (Recipe2 recipe in item.Recipes)
+            foreach (Recipe recipe in item.Recipes)
             {
                 //get each items materials recursively, summing up all of the items
                 if (recipe.PrimaryMethodOfManufacture == true)
                 {
                     foreach (KeyValuePair<string, int> input in recipe.Inputs)
                     {
-                        Item2? inputItem = FindItem(items, input.Key);
+                        Item? inputItem = FindItem(items, input.Key);
                         if (inputItem != null)
                         {
-                            foreach (Recipe2 inputItemRecipe in inputItem.Recipes)
+                            foreach (Recipe inputItemRecipe in inputItem.Recipes)
                             {
                                 if (inputItemRecipe.PrimaryMethodOfManufacture == true)
                                 {
@@ -54,11 +54,11 @@ namespace DSPTree
                                     else
                                     {
                                         //We need to dig deeper
-                                        Item2? detailedItem = FindItem(items, input.Key);
+                                        Item? detailedItem = FindItem(items, input.Key);
                                         if (detailedItem != null)
                                         {
                                             int detailedCount = 0;
-                                            foreach (Recipe2 detailedRecipe in detailedItem.Recipes)
+                                            foreach (Recipe detailedRecipe in detailedItem.Recipes)
                                             {
                                                 //get each items materials recursively, summing up all of the items
                                                 if (detailedRecipe.PrimaryMethodOfManufacture == true)
@@ -94,9 +94,9 @@ namespace DSPTree
             return rawMaterials;
         }
 
-        private static Item2? FindItem(List<Item2> items, string name)
+        private static Item? FindItem(List<Item> items, string name)
         {
-            Item2? item = null;
+            Item? item = null;
             if (items != null)
             {
                 item = items.Where(x => x.Name == name).FirstOrDefault();

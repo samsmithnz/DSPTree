@@ -7,13 +7,13 @@ namespace DSPTree.Helpers
     public static class ItemPoolLevel8
     {
         //Level 8
-        public static Item2 GravitonLens()
+        public static Item GravitonLens()
         {
-            return new Item2(8, "Graviton Lens", "Icon_Graviton_Lens.png")
+            return new Item(8, "Graviton Lens", "Icon_Graviton_Lens.png")
             {
                 Recipes =
                 {
-                    new Recipe2(6,
+                    new Recipe(6,
                         new()
                         {
                             { "Diamond", 4 },
@@ -28,13 +28,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 QuantumChip()
+        public static Item QuantumChip()
         {
-            return new Item2(8, "Quantum Chip", "Icon_Quantum_Chip.png")
+            return new Item(8, "Quantum Chip", "Icon_Quantum_Chip.png")
             {
                 Recipes =
                 {
-                    new Recipe2(6,
+                    new Recipe(6,
                         new()
                         {
                             { "Processor", 2 },

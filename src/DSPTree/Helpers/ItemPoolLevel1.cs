@@ -6,13 +6,13 @@ namespace DSPTree.Helpers
 {
     public static class ItemPoolLevel1
     {
-        public static Item2 IronOre()
+        public static Item IronOre()
         {
-            return new Item2(1, "Iron Ore", "Icon_Iron_Ore.png")
+            return new Item(1, "Iron Ore", "Icon_Iron_Ore.png")
             {
                 Recipes =
                 {
-                    new Recipe2(2,
+                    new Recipe(2,
                         new()
                         {
                             { "Iron Ore Vein", 1 }
@@ -26,13 +26,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 CopperOre()
+        public static Item CopperOre()
         {
-            return new Item2(1, "Copper Ore", "Icon_Copper_Ore.png")
+            return new Item(1, "Copper Ore", "Icon_Copper_Ore.png")
             {
                 Recipes =
                 {
-                    new Recipe2(2,
+                    new Recipe(2,
                         new()
                         {
                             { "Copper Ore Vein", 1 }
@@ -46,13 +46,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 Water()
+        public static Item Water()
         {
-            return new Item2(1, "Water", "Icon_Water.png")
+            return new Item(1, "Water", "Icon_Water.png")
             {
                 Recipes =
                 {
-                    new Recipe2(2,
+                    new Recipe(2,
                         new()
                         {
                             { "Water Source", 1 }
@@ -68,13 +68,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 CrudeOil()
+        public static Item CrudeOil()
         {
-            return new Item2(1, "Crude Oil", "Icon_Crude_Oil.png")
+            return new Item(1, "Crude Oil", "Icon_Crude_Oil.png")
             {
                 Recipes =
                 {
-                    new Recipe2(2,
+                    new Recipe(2,
                         new()
                         {
                             { "Crude Oil Vein", 1 }
@@ -87,13 +87,13 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        public static Item2 Stone()
+        public static Item Stone()
         {
-            return new Item2(1, "Stone", "Icon_Stone.png")
+            return new Item(1, "Stone", "Icon_Stone.png")
             {
                 Recipes =
                 {
-                    new Recipe2(2,
+                    new Recipe(2,
                         new()
                         {
                             { "Stone Vein", 1 }
@@ -106,13 +106,13 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        public static Item2 Coal()
+        public static Item Coal()
         {
-            return new Item2(1, "Coal", "Icon_Coal.png")
+            return new Item(1, "Coal", "Icon_Coal.png")
             {
                 Recipes =
                 {
-                    new Recipe2(2,
+                    new Recipe(2,
                         new()
                         {
                             { "Coal Vein", 1 }
@@ -126,13 +126,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 TitaniumOre()
+        public static Item TitaniumOre()
         {
-            return new Item2(1, "Titanium Ore", "Icon_Titanium_Ore.png")
+            return new Item(1, "Titanium Ore", "Icon_Titanium_Ore.png")
             {
                 Recipes =
                 {
-                    new Recipe2(2,
+                    new Recipe(2,
                         new()
                         {
                             { "Titanium Ore Vein", 1 }
@@ -146,13 +146,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 SiliconOre()
+        public static Item SiliconOre()
         {
-            return new Item2(1, "Silicon Ore", "Icon_Silicon_Ore.png")
+            return new Item(1, "Silicon Ore", "Icon_Silicon_Ore.png")
             {
                 Recipes =
                 {
-                    new Recipe2(2,
+                    new Recipe(2,
                         new()
                         {
                             { "Silicon Ore Vein", 1 }
@@ -163,7 +163,7 @@ namespace DSPTree.Helpers
                         },
                         BuildingType.MiningMachine
                     ),
-                    new Recipe2(2,
+                    new Recipe(2,
                         new()
                         {
                             { "Stone", 10 }

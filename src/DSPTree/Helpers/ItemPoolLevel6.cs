@@ -7,13 +7,13 @@ namespace DSPTree.Helpers
     public static class ItemPoolLevel6
     {
         //Level 6
-        public static Item2 SuperMagneticRing()
+        public static Item SuperMagneticRing()
         {
-            return new Item2(6, "Super-Magnetic Ring", "Icon_Super-Magnetic_Ring.png")
+            return new Item(6, "Super-Magnetic Ring", "Icon_Super-Magnetic_Ring.png")
             {
                 Recipes =
                 {
-                    new Recipe2(3,
+                    new Recipe(3,
                         new()
                         {
                             { "Electromagnetic Turbine", 2 },
@@ -29,13 +29,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 StructureMatrix()
+        public static Item StructureMatrix()
         {
-            return new Item2(6, "Structure Matrix", "Icon_Structure_Matrix.png")
+            return new Item(6, "Structure Matrix", "Icon_Structure_Matrix.png")
             {
                 Recipes =
                 {
-                    new Recipe2(8,
+                    new Recipe(8,
                         new()
                         {
                             { "Diamond", 1 },
@@ -50,13 +50,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 ParticleBroadband()
+        public static Item ParticleBroadband()
         {
-            return new Item2(6, "Particle Broadband", "Icon_Particle_Broadband.png")
+            return new Item(6, "Particle Broadband", "Icon_Particle_Broadband.png")
             {
                 Recipes =
                 {
-                    new Recipe2(8,
+                    new Recipe(8,
                         new()
                         {
                             { "Carbon Nanotube", 2 },
@@ -72,13 +72,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 ParticleContainer()
+        public static Item ParticleContainer()
         {
-            return new Item2(6, "Particle Container", "Icon_Particle_Container.png")
+            return new Item(6, "Particle Container", "Icon_Particle_Container.png")
             {
                 Recipes =
                 {
-                    new Recipe2(4,
+                    new Recipe(4,
                         new()
                         {
                             { "Electromagnetic Turbine", 2 },
@@ -94,13 +94,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 CasimirCrystal()
+        public static Item CasimirCrystal()
         {
-            return new Item2(6, "Casimir Crystal", "Icon_Casimir_Crystal.png")
+            return new Item(6, "Casimir Crystal", "Icon_Casimir_Crystal.png")
             {
                 Recipes =
                 {
-                    new Recipe2(4,
+                    new Recipe(4,
                         new()
                         {
                             { "Titanium Crystal", 1 },

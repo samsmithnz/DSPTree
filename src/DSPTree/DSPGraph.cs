@@ -5,15 +5,15 @@ namespace DSPTree
 {
     public class DSPGraph
     {
-        public List<Item2> Items2 { get; set; }
+        public List<Item> Items { get; set; }
         public DSPGraph()
         {
-            Items2 = BuildDSPTree2();
+            Items = BuildDSPTree();
         }
 
-        private static List<Item2> BuildDSPTree2()
+        private static List<Item> BuildDSPTree()
         {
-            List<Item2> items = new()
+            List<Item> items = new()
             {
                 ItemPoolLevel0.IronOreVein(),
                 ItemPoolLevel0.CopperOreVein(),

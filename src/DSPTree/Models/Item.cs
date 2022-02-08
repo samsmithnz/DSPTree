@@ -1,8 +1,8 @@
 ﻿namespace DSPTree.Models
 {
-    public class Item2
+    public class Item
     {
-        public Item2(int level, string name, string image, ItemType itemType = ItemType.Item)
+        public Item(int level, string name, string image, ItemType itemType = ItemType.Item)
         {
             Level = level;
             Name = name;
@@ -14,7 +14,7 @@
         public string Name { get; set; }
         public string Image { get; set; }
         public ItemType ItemType { get; set; }
-        public List<Recipe2> Recipes { get; set; }
+        public List<Recipe> Recipes { get; set; }
     }
 
     public enum ItemType

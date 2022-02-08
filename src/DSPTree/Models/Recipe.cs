@@ -1,8 +1,8 @@
 ﻿namespace DSPTree.Models
 {
-    public class Recipe2
+    public class Recipe
     {
-        public Recipe2(
+        public Recipe(
             decimal processingTimeInSeconds,
             Dictionary<string, int> inputs,
             Dictionary<string, int> outputs,

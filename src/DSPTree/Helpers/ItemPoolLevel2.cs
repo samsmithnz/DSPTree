@@ -7,13 +7,13 @@ namespace DSPTree.Helpers
     public static class ItemPoolLevel2
     {
              //Level 2
-        public static Item2 IronIngot()
+        public static Item IronIngot()
         {
-            return new Item2(2, "Iron Ingot", "Icon_Iron_Ingot.png")
+            return new Item(2, "Iron Ingot", "Icon_Iron_Ingot.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Iron Ore", 1 }
@@ -27,13 +27,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 Magnet()
+        public static Item Magnet()
         {
-            return new Item2(2, "Magnet", "Icon_Magnet.png")
+            return new Item(2, "Magnet", "Icon_Magnet.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1.5m,
+                    new Recipe(1.5m,
                         new()
                         {
                             { "Iron Ore", 1 }
@@ -46,13 +46,13 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        public static Item2 CopperIngot()
+        public static Item CopperIngot()
         {
-            return new Item2(2, "Copper Ingot", "Icon_Copper_Ingot.png")
+            return new Item(2, "Copper Ingot", "Icon_Copper_Ingot.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Copper Ore", 1 }
@@ -65,13 +65,13 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        public static Item2 RefinedOil()
+        public static Item RefinedOil()
         {
-            return new Item2(2, "Refined Oil", "Icon_Refined_Oil.png")
+            return new Item(2, "Refined Oil", "Icon_Refined_Oil.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Crude Oil", 1 }
@@ -84,13 +84,13 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        public static Item2 Hydrogen()
+        public static Item Hydrogen()
         {
-            return new Item2(2, "Hydrogen", "Icon_Hydrogen.png")
+            return new Item(2, "Hydrogen", "Icon_Hydrogen.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Crude Oil", 2 }
@@ -104,13 +104,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 EnergeticGraphite()
+        public static Item EnergeticGraphite()
         {
-            return new Item2(2, "Energetic Graphite", "Icon_Energetic_Graphite.png")
+            return new Item(2, "Energetic Graphite", "Icon_Energetic_Graphite.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Coal", 1 }
@@ -124,13 +124,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 TitaniumIngot()
+        public static Item TitaniumIngot()
         {
-            return new Item2(2, "Titanium Ingot", "Icon_Titanium_Ingot.png")
+            return new Item(2, "Titanium Ingot", "Icon_Titanium_Ingot.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Titanium Ore", 2 }
@@ -144,13 +144,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 StoneBrick()
+        public static Item StoneBrick()
         {
-            return new Item2(2, "Stone Brick", "Icon_Stone_Brick.png")
+            return new Item(2, "Stone Brick", "Icon_Stone_Brick.png")
             {
                 Recipes =
                 {
-                    new Recipe2(1,
+                    new Recipe(1,
                         new()
                         {
                             { "Stone", 1 }

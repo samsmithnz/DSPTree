@@ -7,13 +7,13 @@ namespace DSPTree.Helpers
     public static class ItemPoolLevel5
     {
         //Level 5
-        public static Item2 PlasmaExciter()
+        public static Item PlasmaExciter()
         {
-            return new Item2(5, "Plasma Exciter", "Icon_Plasma_Exciter.png")
+            return new Item(5, "Plasma Exciter", "Icon_Plasma_Exciter.png")
             {
                 Recipes =
                 {
-                    new Recipe2(2,
+                    new Recipe(2,
                         new()
                         {
                             { "Magnetic Coil", 4 },
@@ -28,13 +28,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 PhotonCombiner()
+        public static Item PhotonCombiner()
         {
-            return new Item2(5, "Photon Combiner", "Icon_Photon_Combiner.png")
+            return new Item(5, "Photon Combiner", "Icon_Photon_Combiner.png")
             {
                 Recipes =
                 {
-                    new Recipe2(3,
+                    new Recipe(3,
                         new()
                         {
                             { "Circuit Board", 2 },
@@ -49,13 +49,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 ElectromagneticTurbine()
+        public static Item ElectromagneticTurbine()
         {
-            return new Item2(5, "Electromagnetic Turbine", "Icon_Electromagnetic_Turbine.png")
+            return new Item(5, "Electromagnetic Turbine", "Icon_Electromagnetic_Turbine.png")
             {
                 Recipes =
                 {
-                    new Recipe2(2,
+                    new Recipe(2,
                         new()
                         {
                             { "Magnetic Coil", 2 },
@@ -70,13 +70,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 TitaniumAlloy()
+        public static Item TitaniumAlloy()
         {
-            return new Item2(5, "Titanium Alloy", "Icon_Titanium_Alloy.png")
+            return new Item(5, "Titanium Alloy", "Icon_Titanium_Alloy.png")
             {
                 Recipes =
                 {
-                    new Recipe2(12,
+                    new Recipe(12,
                         new()
                         {
                             { "Titanium Ingot", 4 },
@@ -91,13 +91,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 Processor()
+        public static Item Processor()
         {
-            return new Item2(5, "Processor", "Icon_Processor.png")
+            return new Item(5, "Processor", "Icon_Processor.png")
             {
                 Recipes =
                 {
-                    new Recipe2(3,
+                    new Recipe(3,
                         new()
                         {
                             { "Circuit Board", 2 },
@@ -112,13 +112,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 CarbonNanotube()
+        public static Item CarbonNanotube()
         {
-            return new Item2(5, "Carbon Nanotube", "Icon_Carbon_Nanotube.png")
+            return new Item(5, "Carbon Nanotube", "Icon_Carbon_Nanotube.png")
             {
                 Recipes =
                 {
-                    new Recipe2(4,
+                    new Recipe(4,
                         new()
                         {
                             { "Titanium Ingot", 1 },
@@ -133,13 +133,13 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item2 TitaniumCrystal()
+        public static Item TitaniumCrystal()
         {
-            return new Item2(5, "Titanium Crystal", "Icon_Titanium_Crystal.png")
+            return new Item(5, "Titanium Crystal", "Icon_Titanium_Crystal.png")
             {
                 Recipes =
                 {
-                    new Recipe2(4,
+                    new Recipe(4,
                         new()
                         {
                             { "Titanium Ingot", 3 },

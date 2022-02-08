@@ -1,6 +1,6 @@
 ﻿namespace DSPTree.Models
 {
-    public class Link2
+    public class Link
     {
         public int source;
         public int target;
