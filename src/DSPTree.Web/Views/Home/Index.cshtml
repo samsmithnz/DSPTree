@@ -36,7 +36,7 @@
 
             var force = d3.layout.force()
                 .gravity(0.05)
-                .distance(100)
+                .distance(50)
                 .charge(-100)
                 .size([width, height]);
 
@@ -61,8 +61,8 @@
 
               node.append("image")
                   .attr("xlink:href", function(d) {return "images/" + d.image})
-                  .attr("x", -8)
-                  .attr("y", -8)
+                  .attr("x", -15) //Should be -ve half of the width
+                  .attr("y", -15)
                   .attr("width", 30)
                   .attr("height", 30);
 

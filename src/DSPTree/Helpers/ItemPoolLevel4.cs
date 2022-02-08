@@ -71,9 +71,9 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        public static Item SolarPanels()
+        public static Item SolarPanel()
         {
-            return new Item(4, "Solar Panels", "Icon_Solar_Panel.png", 
+            return new Item(4, "Solar Panel", "Icon_Solar_Panel.png", 
                 ItemType.Building)
             {
                 Recipes =
@@ -87,7 +87,7 @@ namespace DSPTree.Helpers
                         },
                         new()
                         {
-                            { "Solar Panels", 1 }
+                            { "Solar Panel", 1 }
                         },
                         BuildingType.AssemblingMachine)
                 }

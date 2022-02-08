@@ -60,7 +60,7 @@ namespace DSPTree
                 ItemPoolLevel4.ElectromagneticMatrix(),
                 ItemPoolLevel4.ElectricMotor(),
                 ItemPoolLevel4.Foundation(),
-                ItemPoolLevel4.SolarPanels(),
+                ItemPoolLevel4.SolarPanel(),
                 ItemPoolLevel4.Prism(),
                 ItemPoolLevel4.CrystalSilicon(),
                 ItemPoolLevel4.MicrocrystallineComponent(),

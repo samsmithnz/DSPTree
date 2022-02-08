@@ -13,7 +13,7 @@ namespace DSPTree.Web.Controllers
         public IActionResult Index()
         {
             //Build the DSP graph
-            string filter = "";// "Electromagnetic Matrix";
+            string filter = "";// Solar Panel";// "Electromagnetic Matrix";
             DSPGraph dSPGraph = new(filter);
 
             //Convert the DSP graph to a D3 graph object
