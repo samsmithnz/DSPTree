@@ -2,7 +2,6 @@
 using BuildingType = DSPTree.Models.ManufactoringBuildingType;
 using MethodType = DSPTree.Models.ManufactoringMethodType;
 
-
 namespace DSPTree.Helpers
 {
     public static class ItemPoolLevel0

@@ -2,7 +2,6 @@
 using BuildingType = DSPTree.Models.ManufactoringBuildingType;
 using MethodType = DSPTree.Models.ManufactoringMethodType;
 
-//TODO: Add in the veins (level 0?)
 namespace DSPTree.Helpers
 {
     public static class ItemPoolLevel1
