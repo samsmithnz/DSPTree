@@ -20,8 +20,8 @@ namespace DSPTree.Web.Controllers
             Graph graph = CreateGraph(dSPGraph.Items);
 
             //Convert to Json and return the result
-            string result = JsonConvert.SerializeObject(graph);
-            return View(model: result);
+            string json = JsonConvert.SerializeObject(graph);
+            return View(model: json);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
