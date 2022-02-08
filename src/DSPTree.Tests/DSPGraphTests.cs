@@ -118,7 +118,7 @@ public class DSPGraphTests
     }
 
     [TestMethod]
-    public void FilterEnergyMatrixTest()
+    public void FilterRedScienceTest()
     {
         //Arrange
         string filter = "Energy Matrix";
