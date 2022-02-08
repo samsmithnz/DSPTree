@@ -101,7 +101,8 @@ public class DSPGraphTests
     public void TreeImageIsUsedOnlyOnceTest()
     {
         //Arrange
-        DSPGraph graph = new();
+        string filter = "Electromagnetic Matrix";
+        DSPGraph graph = new(filter);
 
         //Act
 
@@ -115,6 +116,20 @@ public class DSPGraphTests
             }
             images.Add(item.Image);
         }
+    }
+
+    [TestMethod]
+    public void FilterBlueScienceTest()
+    {
+        //Arrange
+        string filter = "Electromagnetic Matrix";
+        DSPGraph graph = new(filter);
+
+        //Act
+
+        //Assert
+        Assert.IsTrue(graph.Items.Count > 1);
+        Assert.AreEqual(filter, graph.Items[graph.Items.Count - 1].Name);
     }
 
     [TestMethod]
