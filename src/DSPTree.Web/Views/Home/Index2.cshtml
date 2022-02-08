@@ -42,13 +42,13 @@
                 .charge(-100)
                 .size([width, height]);
 
-            d3.json("graph.json", function(error, json) {
-              if (error) throw error;
+            //d3.json("graph.json", function(error, json) {
+            //  if (error) throw error;
 
-              console.log(json.links[0]);
-              console.log(json2.links[0]);
-              console.log(json.nodes[0]);
-              console.log(json2.nodes[0]);
+              //console.log(json.links[0]);
+              //console.log(json2.links[0]);
+              //console.log(json.nodes[0]);
+              //console.log(json2.nodes[0]);
               json = json2;
 
               force
@@ -90,7 +90,7 @@
 
                 node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
               });
-            });
+            //});
 
         //var myJson = '{"nodes":[{"id":"id1","group":1},{"id":"id3","group":3},{"id":"id2","group":2},{"id":"id4","group":2},{"id":"id5","group":2},{"id":"id6","group":1},{"id":"id7","group":1}],"links":[{"source":"id1","target":"id2","value":1},{"source":"id1","target":"id3","value":1},{"source":"id3","target":"id4","value":1},{"source":"id4","target":"id5","value":1},{"source":"id4","target":"id6","value":1},{"source":"id4","target":"id7","value":1}]}';
         //var graph = JSON.parse(myJson);
