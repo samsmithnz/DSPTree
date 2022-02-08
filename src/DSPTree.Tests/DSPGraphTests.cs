@@ -19,11 +19,10 @@ public class DSPGraphTests
 
         //Assert
         Assert.IsNotNull(graph);
-        Assert.IsTrue(graph.Items.Count > 0);
-        Assert.AreEqual("Iron Ore", graph.Items[0].Name);
-        Assert.AreEqual("Icon_Iron_Ore.png", graph.Items[0].Image);
-        Assert.AreEqual("Mining Machine", graph.Items[0].ManufactoringMethod);
-        Assert.AreEqual(1, graph.Items[0].Level);
+        Assert.IsTrue(graph.Items2.Count > 0);
+        Assert.AreEqual("Iron Ore Vein", graph.Items2[0].Name);
+        Assert.AreEqual("80px-Icon_Iron_Ore_Vein.png", graph.Items2[0].Image);
+        Assert.AreEqual(0, graph.Items2[0].Level);
     }
 
     [TestMethod]
@@ -45,29 +44,6 @@ public class DSPGraphTests
             {
                 Assert.AreEqual("", item.Name);
                 Assert.IsTrue(false);
-            }
-        }
-        Assert.IsTrue(true);
-    }
-
-    [TestMethod]
-    public void TreeHasValidParentsAndChildrenTest()
-    {
-        //Arrange
-        DSPGraph graph = new();
-
-        //Act
-
-        //Assert
-
-        foreach (Item item in graph.Items)
-        {
-            foreach (KeyValuePair<string, decimal> itemChild in item.Recipe)
-            {
-                if (!graph.Items.Where(a => a.Name == itemChild.Key).Any())
-                {
-                    Assert.AreEqual("child not found", itemChild.Key);
-                }
             }
         }
         Assert.IsTrue(true);

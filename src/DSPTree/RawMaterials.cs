@@ -39,7 +39,8 @@ namespace DSPTree
                             {
                                 if (inputItemRecipe.PrimaryMethodOfManufacture == true)
                                 {
-                                    if (inputItemRecipe.ManufactoringMethod == ManufactoringMethodType.Gathered)
+                                    //We don't want to include veins
+                                    if (inputItem.Level == 1)
                                     {
                                         if (rawMaterials.ContainsKey(input.Key))
                                         {

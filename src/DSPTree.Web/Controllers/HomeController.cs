@@ -10,19 +10,6 @@ namespace DSPTree.Web.Controllers
     {
         public HomeController() { }
 
-        public IActionResult Index()
-        {
-            //Build the DSP graph
-            DSPGraph dSPGraph = new();
-
-            //Convert the DSP graph to a D3 graph object
-            Graph graph = CreateGraph(dSPGraph.Items);
-
-            //Convert to Json and return the result
-            string result = JsonConvert.SerializeObject(graph);
-            return View(model: result);
-        }
-
         public IActionResult Index2()
         {
             //Build the DSP graph
@@ -43,48 +30,6 @@ namespace DSPTree.Web.Controllers
         }
 
         //A generic function that creates a new graph object
-        private static Graph CreateGraph(List<Item> data)
-        {
-            Graph newGraph = new();
-
-            //Build the graph
-            foreach (Item item in data)
-            {
-                //Create first item
-                Node newNode = new()
-                {
-                    name = item.Name.Replace(" ", "_"),
-                    group = item.Level,
-                    image = item.Image
-                };
-                //Add the node if it has an ID and the graph doesn't already contain an Id of that name
-                if (newNode.name != null && !newGraph.nodes.Any(n => n.name == newNode.name))
-                {
-                    newGraph.nodes.Add(newNode);
-                }
-
-                //Create a link between this item and any pre-reqs
-                if (item.Recipe.Count > 0)
-                {
-                    foreach (KeyValuePair<string, decimal> prereqItem in item.Recipe)
-                    {
-                        Link newLink = new()
-                        {
-                            source = item.Name.Replace(" ", "_"),
-                            target = prereqItem.Key.Replace(" ", "_"),
-                            value = (int)(prereqItem.Value) //The width of the connection
-                        };
-                        if (newLink.source != null && newLink.target != null && !newGraph.links.Any(n => n.source == newLink.source && n.target == newLink.target))
-                        {
-                            newGraph.links.Add(newLink);
-                        }
-                    }
-                }
-            }
-
-            return newGraph;
-        }
-
         private static Graph2 CreateGraph2(List<Item2> data)
         {
             Graph2 newGraph = new();
