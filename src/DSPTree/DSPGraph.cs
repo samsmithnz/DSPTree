@@ -17,6 +17,14 @@ namespace DSPTree
         {
             List<Item2> items = new()
             {
+                ItemPoolLevel0.IronOreVein(),
+                ItemPoolLevel0.CopperOreVein(),
+                ItemPoolLevel0.CrudeOilVein(),
+                ItemPoolLevel0.StoneVein(),
+                ItemPoolLevel0.CoalVein(),
+                ItemPoolLevel0.TitaniumOreVein(),
+                ItemPoolLevel0.SiliconOreVein(),
+
                 //Level 1 items (mostly mined ore)
                 ItemPoolLevel1.IronOre(),
                 ItemPoolLevel1.CopperOre(),

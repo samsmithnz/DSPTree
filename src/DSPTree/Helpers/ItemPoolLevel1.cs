@@ -22,8 +22,7 @@ namespace DSPTree.Helpers
                         {
                             { "Iron Ore", 1 }
                         },
-                        BuildingType.MiningMachine,
-                        MethodType.Gathered)
+                        BuildingType.MiningMachine)
                 }
             };
         }
@@ -43,12 +42,11 @@ namespace DSPTree.Helpers
                         {
                             { "Copper Ore", 1 }
                         },
-                        BuildingType.MiningMachine,
-                        MethodType.Gathered
-                    )
+                        BuildingType.MiningMachine)
                 }
             };
         }
+
         public static Item2 Water()
         {
             return new Item2(1, "Water", "Icon_Water.png")
@@ -70,6 +68,7 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
         public static Item2 CrudeOil()
         {
             return new Item2(1, "Crude Oil", "Icon_Crude_Oil.png")
@@ -79,15 +78,13 @@ namespace DSPTree.Helpers
                     new Recipe2(2,
                         new()
                         {
-                            { "Oil Source", 1 }
+                            { "Crude Oil Vein", 1 }
                         },
                         new()
                         {
                             { "Crude Oil", 1 }
                         },
-                        BuildingType.OilExtractor,
-                        MethodType.Gathered
-                    )
+                        BuildingType.OilExtractor)
                 }
             };
         }
@@ -106,9 +103,7 @@ namespace DSPTree.Helpers
                         {
                             { "Stone", 1 }
                         },
-                        BuildingType.MiningMachine,
-                        MethodType.Gathered
-                    )
+                        BuildingType.MiningMachine)
                 }
             };
         }
@@ -127,9 +122,7 @@ namespace DSPTree.Helpers
                         {
                             { "Coal", 1 }
                         },
-                        BuildingType.MiningMachine,
-                        MethodType.Gathered
-                    )
+                        BuildingType.MiningMachine)
                 }
             };
         }
@@ -149,9 +142,7 @@ namespace DSPTree.Helpers
                         {
                             { "Titanium Ore", 1 }
                         },
-                        BuildingType.MiningMachine,
-                        MethodType.Gathered
-                    )
+                        BuildingType.MiningMachine)
                 }
             };
         }
@@ -171,8 +162,7 @@ namespace DSPTree.Helpers
                         {
                             { "Silicon Ore", 1 }
                         },
-                        BuildingType.MiningMachine,
-                        MethodType.Gathered
+                        BuildingType.MiningMachine
                     ),
                     new Recipe2(2,
                         new()
