@@ -19,7 +19,8 @@
 
     public enum ItemType
     {
-        Item = 0,
-        Building = 1
+        All = 0,
+        Item = 1,
+        Building = 2
     }
 }

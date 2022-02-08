@@ -11,7 +11,7 @@ namespace DSPTree
             Items = BuildDSPTree(filter);
         }
 
-        private static List<Item> BuildDSPTree(string filter)
+        private static List<Item> BuildDSPTree(string nameFilter, bool includeBuildings = false)
         {
             List<Item> items = new()
             {
@@ -97,13 +97,25 @@ namespace DSPTree
                 ItemPoolLevel9.GravityMatrix()
             };
 
-            //Filter by
-            if (string.IsNullOrEmpty(filter) == false)
+            //Filter by item type
+            if (includeBuildings == false)
             {
-                Item? filteredItem = FindItem(items, filter);
+                for (int i = items.Count - 1; i >= 0; i--)
+                {
+                    if (items[i].ItemType == ItemType.Building)
+                    {
+                        items.RemoveAt(i);
+                    }
+                }
+            }
+
+            //Filter by name
+            if (string.IsNullOrEmpty(nameFilter) == false)
+            {
+                Item? filteredItem = FindItem(items, nameFilter);
                 if (filteredItem == null)
                 {
-                    throw new Exception(filter + " item not found");
+                    throw new Exception(nameFilter + " item not found");
                 }
                 else
                 {
