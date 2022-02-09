@@ -9,7 +9,10 @@ namespace DSPTree.Helpers
         //Level 4
         public static Item ElectromagneticMatrix()
         {
-            return new Item(4, "Electromagnetic Matrix", "Icon_Electromagnetic_Matrix.png")
+            return new Item(4, "Electromagnetic Matrix",
+                "Icon_Electromagnetic_Matrix.png",
+                ItemType.Item,
+                ResearchType.PreBlueScience)
             {
                 Recipes =
                 {
@@ -30,7 +33,10 @@ namespace DSPTree.Helpers
 
         public static Item ElectricMotor()
         {
-            return new Item(4, "Electric Motor", "Icon_Electric_Motor.png")
+            return new Item(4, "Electric Motor", 
+                "Icon_Electric_Motor.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -52,7 +58,10 @@ namespace DSPTree.Helpers
 
         public static Item Foundation()
         {
-            return new Item(4, "Foundation", "Icon_Foundation.png")
+            return new Item(4, "Foundation",
+                "Icon_Foundation.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -74,7 +83,10 @@ namespace DSPTree.Helpers
 
         public static Item Prism()
         {
-            return new Item(4, "Prism", "Icon_Prism.png")
+            return new Item(4, "Prism",
+                "Icon_Prism.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -94,7 +106,10 @@ namespace DSPTree.Helpers
 
         public static Item CrystalSilicon()
         {
-            return new Item(4, "Crystal Silicon", "Icon_Crystal_Silicon.png")
+            return new Item(4, "Crystal Silicon",
+                "Icon_Crystal_Silicon.png",
+                ItemType.Item,
+                ResearchType.RedScience)
             {
                 Recipes =
                 {
@@ -114,7 +129,10 @@ namespace DSPTree.Helpers
 
         public static Item MicrocrystallineComponent()
         {
-            return new Item(4, "Microcrystalline Component", "Icon_Microcrystalline_Component.png")
+            return new Item(4, "Microcrystalline Component",
+                "Icon_Microcrystalline_Component.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -135,7 +153,10 @@ namespace DSPTree.Helpers
 
         public static Item Graphene()
         {
-            return new Item(4, "Graphene", "Icon_Graphene.png")
+            return new Item(4, "Graphene",
+                "Icon_Graphene.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -156,7 +177,10 @@ namespace DSPTree.Helpers
 
         public static Item OrganicCrystal()
         {
-            return new Item(4, "Organic Crystal", "Icon_Organic_Crystal.png")
+            return new Item(4, "Organic Crystal",
+                "Icon_Organic_Crystal.png",
+                ItemType.Item,
+                ResearchType.RedScience)
             {
                 Recipes =
                 {
@@ -178,7 +202,10 @@ namespace DSPTree.Helpers
 
         public static Item TitaniumGlass()
         {
-            return new Item(4, "Titanium Glass", "Icon_Titanium_Glass.png")
+            return new Item(4, "Titanium Glass",
+                "Icon_Titanium_Glass.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
             {
                 Recipes =
                 {
