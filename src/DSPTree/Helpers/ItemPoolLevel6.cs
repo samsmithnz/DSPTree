@@ -9,7 +9,10 @@ namespace DSPTree.Helpers
         //Level 6
         public static Item SuperMagneticRing()
         {
-            return new Item(6, "Super-Magnetic Ring", "Icon_Super-Magnetic_Ring.png")
+            return new Item(6, "Super-Magnetic Ring",
+                "Icon_Super-Magnetic_Ring.png",
+                ItemType.Item,
+                ResearchType.RedScience)
             {
                 Recipes =
                 {
@@ -31,7 +34,10 @@ namespace DSPTree.Helpers
 
         public static Item StructureMatrix()
         {
-            return new Item(6, "Structure Matrix", "Icon_Structure_Matrix.png")
+            return new Item(6, "Structure Matrix",
+                "Icon_Structure_Matrix.png",
+                ItemType.Item,
+                ResearchType.RedScience)
             {
                 Recipes =
                 {
@@ -52,7 +58,10 @@ namespace DSPTree.Helpers
 
         public static Item ParticleBroadband()
         {
-            return new Item(6, "Particle Broadband", "Icon_Particle_Broadband.png")
+            return new Item(6, "Particle Broadband", 
+                "Icon_Particle_Broadband.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
             {
                 Recipes =
                 {
@@ -74,7 +83,10 @@ namespace DSPTree.Helpers
 
         public static Item ParticleContainer()
         {
-            return new Item(6, "Particle Container", "Icon_Particle_Container.png")
+            return new Item(6, "Particle Container",
+                "Icon_Particle_Container.png",
+                ItemType.Item,
+                ResearchType.RedScience)
             {
                 Recipes =
                 {
@@ -96,7 +108,10 @@ namespace DSPTree.Helpers
 
         public static Item CasimirCrystal()
         {
-            return new Item(6, "Casimir Crystal", "Icon_Casimir_Crystal.png")
+            return new Item(6, "Casimir Crystal",
+                "Icon_Casimir_Crystal.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
             {
                 Recipes =
                 {

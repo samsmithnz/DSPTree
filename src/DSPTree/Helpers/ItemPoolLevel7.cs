@@ -9,7 +9,10 @@ namespace DSPTree.Helpers
         //Level 7
         public static Item StrangeMatter()
         {
-            return new Item(7, "Strange Matter", "Icon_Strange_Matter.png")
+            return new Item(7, "Strange Matter",
+                "Icon_Strange_Matter.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
             {
                 Recipes =
                 {
@@ -31,7 +34,10 @@ namespace DSPTree.Helpers
 
         public static Item InformationMatrix()
         {
-            return new Item(7, "Information Matrix", "Icon_Information_Matrix.png")
+            return new Item(7, "Information Matrix",
+                "Icon_Information_Matrix.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
             {
                 Recipes =
                 {
@@ -52,7 +58,10 @@ namespace DSPTree.Helpers
 
         public static Item PlaneFilter()
         {
-            return new Item(7, "Plane Filter", "Icon_Plane_Filter.png")
+            return new Item(7, "Plane Filter",
+                "Icon_Plane_Filter.png",
+                ItemType.Item,
+                ResearchType.PurpleScience)
             {
                 Recipes =
                 {
