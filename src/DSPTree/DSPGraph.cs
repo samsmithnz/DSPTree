@@ -7,20 +7,17 @@ namespace DSPTree
     {
         public List<Item> Items { get; set; }
         public DSPGraph(string filter = "",
-            bool includeEarlyGameBuildings = false,
-            bool includeMidGameBuildings = false,
-            bool includeLateGameBuildings = false)
+            ResearchType researchType = ResearchType.WhiteScience,
+            bool includeBuildings = false)
         {
             Items = BuildDSPTree(filter,
-                includeEarlyGameBuildings,
-                includeMidGameBuildings,
-                includeLateGameBuildings);
+                researchType,
+                includeBuildings);
         }
 
         private static List<Item> BuildDSPTree(string nameFilter,
-            bool includeEarlyGameBuildings,
-            bool includeMidGameBuildings,
-            bool includeLateGameBuildings)
+            ResearchType researchType,
+            bool includeBuildings)
         {
             List<Item> items = new()
             {
@@ -106,14 +103,23 @@ namespace DSPTree
 
             };
 
-            //Add buildings
-            if (includeEarlyGameBuildings == true)
+            //Include buildings
+            if (includeBuildings == true)
             {
                 List<Item> earlyBuildings = new()
                 {
                     BuildingsEarlyGame.SolarPanel()
                 };
                 items.AddRange(earlyBuildings);
+            }
+
+            //Filter by science level
+            for (int i = items.Count-1; i >= 0; i--)
+            {
+                if (items[i].ResearchType > researchType)
+                {
+                    items.RemoveAt(i);
+                }
             }
 
             //Filter by name

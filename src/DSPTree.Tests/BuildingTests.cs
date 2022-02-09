@@ -28,7 +28,7 @@ public class BuildingTests
     public void SolarPanelBuildingDoesExistTest()
     {
         //Arrange
-        DSPGraph graph = new("", true);
+        DSPGraph graph = new("", ResearchType.WhiteScience, true);
         string building = "Solar Panel";
 
         //Act

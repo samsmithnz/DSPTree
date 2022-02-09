@@ -14,7 +14,7 @@ namespace DSPTree.Web.Controllers
         {
             //Build the DSP graph
             string filter = "";// Solar Panel";// "Electromagnetic Matrix";
-            DSPGraph dSPGraph = new(filter);
+            DSPGraph dSPGraph = new(filter, ResearchType.BlueScience);
 
             //Convert the DSP graph to a D3 graph object
             Graph graph = CreateGraph(dSPGraph.Items);
