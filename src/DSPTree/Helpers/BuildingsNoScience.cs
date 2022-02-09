@@ -152,5 +152,31 @@ namespace DSPTree.Helpers
                 }
             };
         }
+        
+        public static Item MiniFusionPowerPlant()
+        {
+            return new Item(7, "Mini Fusion Power Plant",
+                "Icon_Mini_Fusion_Power_Plant.png",
+                ItemType.Building,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(10,
+                        new()
+                        {
+                            { "Titanium Alloy", 12 },
+                            { "Super-Magnetic Ring", 10 },
+                            { "Carbon Nanotube", 8 },
+                            { "Processor", 4 }
+                        },
+                        new()
+                        {
+                            { "Mini Fusion Power Plant", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }
