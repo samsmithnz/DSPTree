@@ -8,7 +8,10 @@ namespace DSPTree.Helpers
     {
         public static Item IronOre()
         {
-            return new Item(1, "Iron Ore", "Icon_Iron_Ore.png")
+            return new Item(1, "Iron Ore",
+                "Icon_Iron_Ore.png",
+                ItemType.Item,
+                ResearchType.NoScience)
             {
                 Recipes =
                 {
@@ -28,7 +31,10 @@ namespace DSPTree.Helpers
 
         public static Item CopperOre()
         {
-            return new Item(1, "Copper Ore", "Icon_Copper_Ore.png")
+            return new Item(1, "Copper Ore",
+                "Icon_Copper_Ore.png",
+                ItemType.Item,
+                ResearchType.NoScience)
             {
                 Recipes =
                 {
@@ -48,7 +54,10 @@ namespace DSPTree.Helpers
 
         public static Item Water()
         {
-            return new Item(1, "Water", "Icon_Water.png")
+            return new Item(1, "Water",
+                "Icon_Water.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -70,7 +79,10 @@ namespace DSPTree.Helpers
 
         public static Item CrudeOil()
         {
-            return new Item(1, "Crude Oil", "Icon_Crude_Oil.png")
+            return new Item(1, "Crude Oil",
+                "Icon_Crude_Oil.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -89,7 +101,10 @@ namespace DSPTree.Helpers
         }
         public static Item Stone()
         {
-            return new Item(1, "Stone", "Icon_Stone.png")
+            return new Item(1, "Stone",
+                "Icon_Stone.png",
+                ItemType.Item,
+                ResearchType.NoScience)
             {
                 Recipes =
                 {
@@ -108,7 +123,10 @@ namespace DSPTree.Helpers
         }
         public static Item Coal()
         {
-            return new Item(1, "Coal", "Icon_Coal.png")
+            return new Item(1, "Coal",
+                "Icon_Coal.png",
+                ItemType.Item,
+                ResearchType.NoScience)
             {
                 Recipes =
                 {
@@ -128,7 +146,10 @@ namespace DSPTree.Helpers
 
         public static Item TitaniumOre()
         {
-            return new Item(1, "Titanium Ore", "Icon_Titanium_Ore.png")
+            return new Item(1, "Titanium Ore",
+                "Icon_Titanium_Ore.png",
+                ItemType.Item,
+                ResearchType.NoScience)
             {
                 Recipes =
                 {
@@ -148,7 +169,10 @@ namespace DSPTree.Helpers
 
         public static Item SiliconOre()
         {
-            return new Item(1, "Silicon Ore", "Icon_Silicon_Ore.png")
+            return new Item(1, "Silicon Ore",
+                "Icon_Silicon_Ore.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
