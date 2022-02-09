@@ -110,15 +110,24 @@ namespace DSPTree
             {
                 List<Item> buildings = new()
                 {
-                    BuildingsNoScience.TeslaTower(),
-                    BuildingsNoScience.WirelessPowerTower(),
-                    BuildingsNoScience.SatelliteSubstation(),
-                    BuildingsNoScience.WindTurbine(),
-                    BuildingsNoScience.ThermalPowerPlant(),
-                    BuildingsNoScience.SolarPanel(),
-                    BuildingsNoScience.Accumulator(),
-                    BuildingsNoScience.MiniFusionPowerPlant(),
-                    BuildingsNoScience.EnergyExchanger(),
+                    BuildingsPreBlueScience.TeslaTower(),
+                    BuildingsPreBlueScience.WindTurbine(),
+
+                    BuildingsBlueScience.WirelessPowerTower(),
+                    BuildingsBlueScience.ThermalPowerPlant(),
+                    BuildingsBlueScience.SolarPanel(),
+
+                    BuildingsRedScience.Accumulator(),
+
+                    BuildingsYellowScience.SatelliteSubstation(),
+                    BuildingsYellowScience.MiniFusionPowerPlant(),
+                    BuildingsYellowScience.EnergyExchanger(),
+
+                    //BuildingsPurpleScience.ArtificialStar(),
+
+                    BuildingsGreenScience.ArtificialStar(),
+
+                    //BuildingsWhiteScience.ArtificialStar(),
                 };
                 items.AddRange(buildings);
             }
