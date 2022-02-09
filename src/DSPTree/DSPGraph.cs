@@ -94,6 +94,7 @@ namespace DSPTree
                 ItemPoolLevel7.InformationMatrix(),
                 ItemPoolLevel7.PlaneFilter(),
                 ItemPoolLevel7.FrameMaterial(),
+                ItemPoolLevel7.AnnihilationConstraintSphere(),
 
                 //Level 8 items
                 ItemPoolLevel8.GravitonLens(),
@@ -123,7 +124,7 @@ namespace DSPTree
             }
 
             //Filter by science level
-            for (int i = items.Count-1; i >= 0; i--)
+            for (int i = items.Count - 1; i >= 0; i--)
             {
                 if (items[i].ResearchType > researchType)
                 {

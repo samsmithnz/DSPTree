@@ -105,6 +105,30 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item AnnihilationConstraintSphere()
+        {
+            return new Item(7, "Annihilation Constraint Sphere",
+                "Icon_Annihilation_Constraint_Sphere.png",
+                ItemType.Item,
+                ResearchType.GreenScience)
+            {
+                Recipes =
+                {
+                    new Recipe(20,
+                        new()
+                        {
+                            { "Particle Container", 1 },
+                            { "Processor", 1 }
+                        },
+                        new()
+                        {
+                            { "Annihilation Constraint Sphere", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 
 }

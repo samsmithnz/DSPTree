@@ -53,7 +53,7 @@ public class DSPGraphTests
     public void TreeHasValidParentsAndChildrenTest()
     {
         //Arrange
-        DSPGraph graph = new();
+        DSPGraph graph = new("", ResearchType.WhiteScience, true);
 
         //Act
 
