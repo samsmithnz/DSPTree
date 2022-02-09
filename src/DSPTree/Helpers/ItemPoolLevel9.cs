@@ -9,7 +9,10 @@ namespace DSPTree.Helpers
         //Level 9
         public static Item GravityMatrix()
         {
-            return new Item(9, "Gravity Matrix", "Icon_Gravity_Matrix.png")
+            return new Item(9, "Gravity Matrix", 
+                "Icon_Gravity_Matrix.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
             {
                 Recipes =
                 {
