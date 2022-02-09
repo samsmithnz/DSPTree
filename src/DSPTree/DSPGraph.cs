@@ -117,6 +117,7 @@ namespace DSPTree
                     BuildingsNoScience.SolarPanel(),
                     BuildingsNoScience.Accumulator(),
                     BuildingsNoScience.MiniFusionPowerPlant(),
+                    BuildingsNoScience.EnergyExchanger(),
                 };
                 items.AddRange(buildings);
             }
