@@ -80,6 +80,31 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item FrameMaterial()
+        {
+            return new Item(7, "Frame Material",
+                "Icon_Frame_Material.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(6,
+                        new()
+                        {
+                            { "Carbon Nanotube", 4 },
+                            { "Titanium Alloy", 1 },
+                            { "High-Purity Silicon", 1 }
+                        },
+                        new()
+                        {
+                            { "Frame Material", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 
 }

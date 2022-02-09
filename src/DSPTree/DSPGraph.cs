@@ -93,6 +93,7 @@ namespace DSPTree
                 ItemPoolLevel7.StrangeMatter(),
                 ItemPoolLevel7.InformationMatrix(),
                 ItemPoolLevel7.PlaneFilter(),
+                ItemPoolLevel7.FrameMaterial(),
 
                 //Level 8 items
                 ItemPoolLevel8.GravitonLens(),
@@ -106,11 +107,16 @@ namespace DSPTree
             //Include buildings
             if (includeBuildings == true)
             {
-                List<Item> earlyBuildings = new()
+                List<Item> buildings = new()
                 {
-                    BuildingsEarlyGame.SolarPanel()
+                    BuildingsNoScience.TeslaTower(),
+                    BuildingsNoScience.WirelessPowerTower(),
+                    BuildingsNoScience.SatelliteSubstation(), 
+                    //BuildingsNoScience.WindTurbine(),
+                    //BuildingsNoScience.ThermalPowerPlant(),
+                    BuildingsNoScience.SolarPanel(),
                 };
-                items.AddRange(earlyBuildings);
+                items.AddRange(buildings);
             }
 
             //Filter by science level
