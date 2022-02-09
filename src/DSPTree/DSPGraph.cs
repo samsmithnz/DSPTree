@@ -6,12 +6,21 @@ namespace DSPTree
     public class DSPGraph
     {
         public List<Item> Items { get; set; }
-        public DSPGraph(string filter = "")
+        public DSPGraph(string filter = "",
+            bool includeEarlyGameBuildings = false,
+            bool includeMidGameBuildings = false,
+            bool includeLateGameBuildings = false)
         {
-            Items = BuildDSPTree(filter);
+            Items = BuildDSPTree(filter,
+                includeEarlyGameBuildings,
+                includeMidGameBuildings,
+                includeLateGameBuildings);
         }
 
-        private static List<Item> BuildDSPTree(string nameFilter, bool includeBuildings = false)
+        private static List<Item> BuildDSPTree(string nameFilter,
+            bool includeEarlyGameBuildings,
+            bool includeMidGameBuildings,
+            bool includeLateGameBuildings)
         {
             List<Item> items = new()
             {
@@ -60,7 +69,6 @@ namespace DSPTree
                 ItemPoolLevel4.ElectromagneticMatrix(),
                 ItemPoolLevel4.ElectricMotor(),
                 ItemPoolLevel4.Foundation(),
-                ItemPoolLevel4.SolarPanel(),
                 ItemPoolLevel4.Prism(),
                 ItemPoolLevel4.CrystalSilicon(),
                 ItemPoolLevel4.MicrocrystallineComponent(),
@@ -95,18 +103,17 @@ namespace DSPTree
 
                 //Level 9 items
                 ItemPoolLevel9.GravityMatrix()
+
             };
 
-            //Filter by item type
-            if (includeBuildings == false)
+            //Add buildings
+            if (includeEarlyGameBuildings == true)
             {
-                for (int i = items.Count - 1; i >= 0; i--)
+                List<Item> earlyBuildings = new()
                 {
-                    if (items[i].ItemType == ItemType.Building)
-                    {
-                        items.RemoveAt(i);
-                    }
-                }
+                    BuildingsEarlyGame.SolarPanel()
+                };
+                items.AddRange(earlyBuildings);
             }
 
             //Filter by name
