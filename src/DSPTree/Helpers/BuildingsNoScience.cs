@@ -29,6 +29,7 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
         public static Item WindTurbine()
         {
             return new Item(4, "Wind Turbine",
@@ -48,6 +49,32 @@ namespace DSPTree.Helpers
                         new()
                         {
                             { "Wind Turbine", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
+        public static Item ThermalPowerPlant()
+        {
+            return new Item(4, "Thermal Power Plant",
+                "Icon_Thermal_Power_Plant.png",
+                ItemType.Building,
+                ResearchType.BlueScience)
+            {
+                Recipes =
+                {
+                    new Recipe(5,
+                        new()
+                        {
+                            { "Iron Ingot", 10 },
+                            { "Stone Brick", 4 },
+                            { "Gear", 4 },
+                            { "Magnetic Coil", 4 }
+                        },
+                        new()
+                        {
+                            { "Thermal Power Plant", 1 }
                         },
                         BuildingType.AssemblingMachine)
                 }

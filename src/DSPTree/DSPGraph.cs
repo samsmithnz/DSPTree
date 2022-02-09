@@ -111,10 +111,12 @@ namespace DSPTree
                 {
                     BuildingsNoScience.TeslaTower(),
                     BuildingsNoScience.WirelessPowerTower(),
-                    BuildingsNoScience.SatelliteSubstation(), 
-                    //BuildingsNoScience.WindTurbine(),
-                    //BuildingsNoScience.ThermalPowerPlant(),
+                    BuildingsNoScience.SatelliteSubstation(),
+                    BuildingsNoScience.WindTurbine(),
+                    BuildingsNoScience.ThermalPowerPlant(),
                     BuildingsNoScience.SolarPanel(),
+                    BuildingsNoScience.Accumulator(),
+                    BuildingsNoScience.MiniFusionPowerPlant(),
                 };
                 items.AddRange(buildings);
             }
