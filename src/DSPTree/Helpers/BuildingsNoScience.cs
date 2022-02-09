@@ -205,5 +205,31 @@ namespace DSPTree.Helpers
                 }
             };
         }
+        
+        public static Item EnergyExchanger()
+        {
+            return new Item(7, "Energy Exchanger",
+                "Icon_Energy_Exchanger.png",
+                ItemType.Building,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(15,
+                        new()
+                        {
+                            { "Titanium Alloy", 40 },
+                            { "Steel", 40 },
+                            { "Processor", 40 },
+                            { "Particle Container", 8 },
+                        },
+                        new()
+                        {
+                            { "Energy Exchanger", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }
