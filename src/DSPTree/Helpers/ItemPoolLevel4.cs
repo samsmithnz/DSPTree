@@ -122,7 +122,19 @@ namespace DSPTree.Helpers
                         {
                             { "Crystal Silicon", 2 }
                         },
-                        BuildingType.Smelter)
+                        BuildingType.Smelter),
+                    new Recipe(1.5m,
+                        new()
+                        {
+                            { "Fractal Silicon", 1 }
+                        },
+                        new()
+                        {
+                            { "Crystal Silicon", 2 }
+                        },
+                        BuildingType.Smelter,
+                        ManufactoringMethodType.Manufactured,
+                        false)
                 }
             };
         }
