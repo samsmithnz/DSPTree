@@ -233,5 +233,31 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item TrafficMonitor()
+        {
+            return new Item(5, "Traffic Monitor",
+                "Icon_Traffic_Monitor.png",
+                ItemType.Building,
+                ResearchType.BlueScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                        new()
+                        {
+                            { "Iron Ingot", 3 },
+                            { "Gear", 2 },
+                            { "Glass", 1 },
+                            { "Circuit Board", 2 }
+                        },
+                        new()
+                        {
+                            { "Traffic Monitor", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 }
