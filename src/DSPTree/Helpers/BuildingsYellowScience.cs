@@ -158,5 +158,31 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item OrbitalCollector()
+        {
+            return new Item(9, "Orbital Collector",
+                "Icon_Orbital_Collector.png",
+                ItemType.Building,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(30,
+                        new()
+                        {
+                            { "Interstellar Logistics Station", 1 },
+                            { "Super-Magnetic Ring", 50 },
+                            { "Reinforced Thruster", 20 },
+                            { "Full Accumulator", 20 }
+                        },
+                        new()
+                        {
+                            { "Orbital Collector", 1 }
+                        },
+                        BuildingType.EnergyExchanger)
+                }
+            };
+        }
+
     }
 }
