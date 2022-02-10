@@ -43,7 +43,7 @@ public class ResearchTests
 
         //Assert
         Assert.IsNotNull(graph);
-        Assert.AreEqual(60, graph.Items.Count);
+        Assert.AreEqual(61, graph.Items.Count);
     }
 
 }

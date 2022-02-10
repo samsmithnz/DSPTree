@@ -259,5 +259,31 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item ChemicalPlant()
+        {
+            return new Item(5, "Chemical Plant",
+                "Icon_Chemical_Plant.png",
+                ItemType.Building,
+                ResearchType.BlueScience)
+            {
+                Recipes =
+                {
+                    new Recipe(5,
+                        new()
+                        {
+                            { "Steel", 8 },
+                            { "Stone Brick", 8 },
+                            { "Glass", 8 },
+                            { "Circuit Board", 2 }
+                        },
+                        new()
+                        {
+                            { "Chemical Plant", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 }
