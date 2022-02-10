@@ -125,7 +125,10 @@ namespace DSPTree
 
                 //Level 9 items
                 ItemPoolLevel9.GravityMatrix(),
-                ItemPoolLevel9.SmallCarrierRocket()
+                ItemPoolLevel9.SmallCarrierRocket(),
+
+                //Level 10 items
+                ItemPoolLevel10.UniverseMatrix()
 
             };
 
