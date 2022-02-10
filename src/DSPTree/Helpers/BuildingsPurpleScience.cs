@@ -56,5 +56,31 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item VerticalLaunchingSilo()
+        {
+            return new Item(8, "Vertical Launching Silo",
+                "Icon_Vertical_Launching_Silo.png",
+                ItemType.Building,
+                ResearchType.PurpleScience)
+            {
+                Recipes =
+                {
+                    new Recipe(30,
+                        new()
+                        {
+                            { "Titanium Alloy", 80 },
+                            { "Frame Material", 30 },
+                            { "Graviton Lens", 20 },
+                            { "Quantum Chip", 10 }
+                        },
+                        new()
+                        {
+                            { "Vertical Launching Silo", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }

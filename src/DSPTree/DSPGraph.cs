@@ -151,6 +151,7 @@ namespace DSPTree
 
                     BuildingsPurpleScience.AssemblingMachineMkIII(),
                     BuildingsPurpleScience.PlaneSmelter(),
+                    BuildingsPurpleScience.VerticalLaunchingSilo(),
 
                     BuildingsGreenScience.ArtificialStar(),
 
