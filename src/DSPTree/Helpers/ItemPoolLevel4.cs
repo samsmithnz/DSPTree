@@ -170,6 +170,17 @@ namespace DSPTree.Helpers
                         {
                             { "Graphene", 2 }
                         },
+                        BuildingType.ChemicalPlant),
+                    new Recipe(2,
+                        new()
+                        {
+                            { "Fire Ice", 2 }
+                        },
+                        new()
+                        {
+                            { "Graphene", 2 },
+                            { "Hydrogen", 1 }
+                        },
                         BuildingType.ChemicalPlant)
                 }
             };
