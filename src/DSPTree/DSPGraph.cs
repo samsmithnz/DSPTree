@@ -144,6 +144,7 @@ namespace DSPTree
                     BuildingsYellowScience.FullAccumulator(),
 
                     BuildingsPurpleScience.AssemblingMachineMkIII(),
+                    BuildingsPurpleScience.PlaneSmelter(),
 
                     BuildingsGreenScience.ArtificialStar(),
 

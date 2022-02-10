@@ -30,5 +30,31 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item PlaneSmelter()
+        {
+            return new Item(8, "Plane Smelter",
+                "Icon_Plane_Smelter.png",
+                ItemType.Building,
+                ResearchType.PurpleScience)
+            {
+                Recipes =
+                {
+                    new Recipe(5,
+                        new()
+                        {
+                            { "Arc Smelter", 1 },
+                            { "Frame Material", 5},
+                            { "Plane Filter", 4 },
+                            { "Plane Smelter", 15 }
+                        },
+                        new()
+                        {
+                            { "Plane Smelter", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }
