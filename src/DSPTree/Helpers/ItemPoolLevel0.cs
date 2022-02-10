@@ -182,5 +182,27 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item KimberliteOreVein()
+        {
+            return new Item(1, "Kimberlite Ore Vein",
+                "85px-Icon_Kimberlite_Ore_Vein.png",
+                ItemType.Item,
+                ResearchType.NoScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                        new(),
+                        new()
+                        {
+                            { "Kimberlite Ore Vein", 1 }
+                        },
+                        BuildingType.MiningMachine,
+                        MethodType.Gathered
+                    )
+                }
+            };
+        }
+
     }
 }
