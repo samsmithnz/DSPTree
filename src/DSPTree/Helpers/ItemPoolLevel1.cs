@@ -342,8 +342,7 @@ namespace DSPTree.Helpers
                         {
                             { "Fire Ice", 1 }
                         },
-                        BuildingType.MiningMachine,
-                        MethodType.Gathered
+                        BuildingType.MiningMachine
                     )
                 }
             };
