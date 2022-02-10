@@ -129,10 +129,12 @@ namespace DSPTree
                     BuildingsBlueScience.OilRefinery(),
                     BuildingsBlueScience.WaterPump(),
                     BuildingsBlueScience.StorageTank(),
+                    BuildingsBlueScience.SorterMkII(),
 
                     BuildingsRedScience.Accumulator(),
                     BuildingsRedScience.StorageMkII(),
                     BuildingsRedScience.ConveyorBeltMkII(),
+                    BuildingsRedScience.AssemblingMachineMkII(),
 
                     BuildingsYellowScience.SatelliteSubstation(),
                     BuildingsYellowScience.MiniFusionPowerPlant(),

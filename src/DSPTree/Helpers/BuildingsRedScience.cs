@@ -78,5 +78,30 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item AssemblingMachineMkII()
+        {
+            return new Item(8, "Assembling Machine Mk.II",
+                "Icon_Assembling_Machine_Mk.II.png",
+                ItemType.Building,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(3,
+                        new()
+                        {
+                            { "Assembling Machine Mk.I", 1 },
+                            { "Graphene", 8 },
+                            { "Processor", 4 }
+                        },
+                        new()
+                        {
+                            { "Assembling Machine Mk.II", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }

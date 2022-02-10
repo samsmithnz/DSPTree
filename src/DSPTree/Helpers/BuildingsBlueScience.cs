@@ -209,5 +209,29 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item SorterMkII()
+        {
+            return new Item(5, "Sorter Mk.II",
+                "Icon_Sorter_Mk.II.png",
+                ItemType.Building,
+                ResearchType.BlueScience)
+            {
+                Recipes =
+                {
+                    new Recipe(1,
+                        new()
+                        {
+                            { "Sorter Mk.I", 2 },
+                            { "Electric Motor", 1 }
+                        },
+                        new()
+                        {
+                            { "Sorter Mk.II", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 }
