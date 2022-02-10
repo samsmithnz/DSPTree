@@ -9,7 +9,10 @@ namespace DSPTree.Helpers
              //Level 2
         public static Item IronIngot()
         {
-            return new Item(2, "Iron Ingot", "Icon_Iron_Ingot.png")
+            return new Item(2, "Iron Ingot",
+                "Icon_Iron_Ingot.png",
+                ItemType.Item,
+                ResearchType.NoScience)
             {
                 Recipes =
                 {
@@ -29,7 +32,10 @@ namespace DSPTree.Helpers
 
         public static Item Magnet()
         {
-            return new Item(2, "Magnet", "Icon_Magnet.png")
+            return new Item(2, "Magnet",
+                "Icon_Magnet.png",
+                ItemType.Item,
+                ResearchType.NoScience)
             {
                 Recipes =
                 {
@@ -48,7 +54,10 @@ namespace DSPTree.Helpers
         }
         public static Item CopperIngot()
         {
-            return new Item(2, "Copper Ingot", "Icon_Copper_Ingot.png")
+            return new Item(2, "Copper Ingot",
+                "Icon_Copper_Ingot.png",
+                ItemType.Item,
+                ResearchType.NoScience)
             {
                 Recipes =
                 {
@@ -67,7 +76,10 @@ namespace DSPTree.Helpers
         }
         public static Item RefinedOil()
         {
-            return new Item(2, "Refined Oil", "Icon_Refined_Oil.png")
+            return new Item(2, "Refined Oil",
+                "Icon_Refined_Oil.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -86,7 +98,10 @@ namespace DSPTree.Helpers
         }
         public static Item Hydrogen()
         {
-            return new Item(2, "Hydrogen", "Icon_Hydrogen.png")
+            return new Item(2, "Hydrogen",
+                "Icon_Hydrogen.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -106,7 +121,10 @@ namespace DSPTree.Helpers
 
         public static Item EnergeticGraphite()
         {
-            return new Item(2, "Energetic Graphite", "Icon_Energetic_Graphite.png")
+            return new Item(2, "Energetic Graphite",
+                "Icon_Energetic_Graphite.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -126,7 +144,10 @@ namespace DSPTree.Helpers
 
         public static Item TitaniumIngot()
         {
-            return new Item(2, "Titanium Ingot", "Icon_Titanium_Ingot.png")
+            return new Item(2, "Titanium Ingot",
+                "Icon_Titanium_Ingot.png",
+                ItemType.Item,
+                ResearchType.RedScience)
             {
                 Recipes =
                 {
@@ -146,7 +167,10 @@ namespace DSPTree.Helpers
 
         public static Item StoneBrick()
         {
-            return new Item(2, "Stone Brick", "Icon_Stone_Brick.png")
+            return new Item(2, "Stone Brick",
+                "Icon_Stone_Brick.png",
+                ItemType.Item,
+                ResearchType.NoScience)
             {
                 Recipes =
                 {
@@ -160,6 +184,30 @@ namespace DSPTree.Helpers
                             { "Stone Brick",1 }
                         },
                         BuildingType.Smelter)
+                }
+            };
+        }
+
+        public static Item Antimatter()
+        {
+            return new Item(2, "Antimatter",
+                "Icon_Antimatter.png",
+                ItemType.Item,
+                ResearchType.GreenScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                        new()
+                        {
+                            { "Critical Photon", 2 }
+                        },
+                        new()
+                        {
+                            { "Antimatter", 2 },
+                            { "Hydrogen", 2 }
+                        },
+                        BuildingType.MiniatureParticleCollider)
                 }
             };
         }

@@ -13,14 +13,15 @@ namespace DSPTree.Web.Controllers
         public IActionResult Index()
         {
             //Build the DSP graph
-            DSPGraph dSPGraph = new();
+            string filter = "";// Solar Panel";// "Electromagnetic Matrix";
+            DSPGraph dSPGraph = new(filter, ResearchType.WhiteScience, true);
 
             //Convert the DSP graph to a D3 graph object
             Graph graph = CreateGraph(dSPGraph.Items);
 
             //Convert to Json and return the result
-            string result = JsonConvert.SerializeObject(graph);
-            return View(model: result);
+            string json = JsonConvert.SerializeObject(graph);
+            return View(model: json);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

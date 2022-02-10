@@ -9,7 +9,10 @@ namespace DSPTree.Helpers
         //Level 8
         public static Item GravitonLens()
         {
-            return new Item(8, "Graviton Lens", "Icon_Graviton_Lens.png")
+            return new Item(8, "Graviton Lens",
+                "Icon_Graviton_Lens.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
             {
                 Recipes =
                 {
@@ -30,7 +33,10 @@ namespace DSPTree.Helpers
 
         public static Item QuantumChip()
         {
-            return new Item(8, "Quantum Chip", "Icon_Quantum_Chip.png")
+            return new Item(8, "Quantum Chip", 
+                "Icon_Quantum_Chip.png",
+                ItemType.Item,
+                ResearchType.PurpleScience)
             {
                 Recipes =
                 {
@@ -43,6 +49,31 @@ namespace DSPTree.Helpers
                         new()
                         {
                             { "Quantum Chip", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
+        public static Item DysonSphereComponent()
+        {
+            return new Item(8, "Dyson Sphere Component",
+                "Icon_Dyson_Sphere_Component.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(8,
+                        new()
+                        {
+                            { "Frame Material", 3 },
+                            { "Solar Sail", 3 },
+                            { "Processor", 3 }
+                        },
+                        new()
+                        {
+                            { "Dyson Sphere Component", 1 }
                         },
                         BuildingType.AssemblingMachine)
                 }

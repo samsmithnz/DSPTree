@@ -21,6 +21,8 @@
 
 </style>
 <body>
+    <span>nd  items found</span>
+
     @*<script src="https://d3js.org/d3.v3.min.js"></script>*@
     <script src="~/lib/d3v3/d3.min.js"></script>
     <script>
@@ -36,7 +38,7 @@
 
             var force = d3.layout.force()
                 .gravity(0.05)
-                .distance(100)
+                .distance(60)
                 .charge(-100)
                 .size([width, height]);
 
@@ -61,8 +63,8 @@
 
               node.append("image")
                   .attr("xlink:href", function(d) {return "images/" + d.image})
-                  .attr("x", -8)
-                  .attr("y", -8)
+                  .attr("x", -15) //Should be -ve half of the width
+                  .attr("y", -15)
                   .attr("width", 30)
                   .attr("height", 30);
 

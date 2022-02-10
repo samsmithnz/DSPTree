@@ -9,7 +9,10 @@ namespace DSPTree.Helpers
         //Level 4
         public static Item ElectromagneticMatrix()
         {
-            return new Item(4, "Electromagnetic Matrix", "Icon_Electromagnetic_Matrix.png")
+            return new Item(4, "Electromagnetic Matrix",
+                "Icon_Electromagnetic_Matrix.png",
+                ItemType.Item,
+                ResearchType.PreBlueScience)
             {
                 Recipes =
                 {
@@ -30,7 +33,10 @@ namespace DSPTree.Helpers
 
         public static Item ElectricMotor()
         {
-            return new Item(4, "Electric Motor", "Icon_Electric_Motor.png")
+            return new Item(4, "Electric Motor", 
+                "Icon_Electric_Motor.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -52,7 +58,10 @@ namespace DSPTree.Helpers
 
         public static Item Foundation()
         {
-            return new Item(4, "Foundation", "Icon_Foundation.png")
+            return new Item(4, "Foundation",
+                "Icon_Foundation.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -71,32 +80,13 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        public static Item SolarPanels()
-        {
-            return new Item(4, "Solar Panels", "Icon_Solar_Panel.png", 
-                ItemType.Building)
-            {
-                Recipes =
-                {
-                    new Recipe(1,
-                        new()
-                        {
-                            { "Magnetic Coil", 1 },
-                            { "Gear", 1 },
-                            { "Iron Ingot", 2 }
-                        },
-                        new()
-                        {
-                            { "Solar Panels", 1 }
-                        },
-                        BuildingType.AssemblingMachine)
-                }
-            };
-        }
 
         public static Item Prism()
         {
-            return new Item(4, "Prism", "Icon_Prism.png")
+            return new Item(4, "Prism",
+                "Icon_Prism.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -116,7 +106,10 @@ namespace DSPTree.Helpers
 
         public static Item CrystalSilicon()
         {
-            return new Item(4, "Crystal Silicon", "Icon_Crystal_Silicon.png")
+            return new Item(4, "Crystal Silicon",
+                "Icon_Crystal_Silicon.png",
+                ItemType.Item,
+                ResearchType.RedScience)
             {
                 Recipes =
                 {
@@ -129,14 +122,29 @@ namespace DSPTree.Helpers
                         {
                             { "Crystal Silicon", 2 }
                         },
-                        BuildingType.Smelter)
+                        BuildingType.Smelter),
+                    new Recipe(1.5m,
+                        new()
+                        {
+                            { "Fractal Silicon", 1 }
+                        },
+                        new()
+                        {
+                            { "Crystal Silicon", 2 }
+                        },
+                        BuildingType.Smelter,
+                        ManufactoringMethodType.Manufactured,
+                        false)
                 }
             };
         }
 
         public static Item MicrocrystallineComponent()
         {
-            return new Item(4, "Microcrystalline Component", "Icon_Microcrystalline_Component.png")
+            return new Item(4, "Microcrystalline Component",
+                "Icon_Microcrystalline_Component.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -157,7 +165,10 @@ namespace DSPTree.Helpers
 
         public static Item Graphene()
         {
-            return new Item(4, "Graphene", "Icon_Graphene.png")
+            return new Item(4, "Graphene",
+                "Icon_Graphene.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -171,14 +182,30 @@ namespace DSPTree.Helpers
                         {
                             { "Graphene", 2 }
                         },
-                        BuildingType.ChemicalPlant)
+                        BuildingType.ChemicalPlant),
+                    new Recipe(2,
+                        new()
+                        {
+                            { "Fire Ice", 2 }
+                        },
+                        new()
+                        {
+                            { "Graphene", 2 },
+                            { "Hydrogen", 1 }
+                        },
+                        BuildingType.ChemicalPlant,
+                        ManufactoringMethodType.Manufactured,
+                        false)
                 }
             };
         }
 
         public static Item OrganicCrystal()
         {
-            return new Item(4, "Organic Crystal", "Icon_Organic_Crystal.png")
+            return new Item(4, "Organic Crystal",
+                "Icon_Organic_Crystal.png",
+                ItemType.Item,
+                ResearchType.RedScience)
             {
                 Recipes =
                 {
@@ -193,14 +220,55 @@ namespace DSPTree.Helpers
                         {
                             { "Organic Crystal", 2 }
                         },
-                        BuildingType.ChemicalPlant)
+                        BuildingType.ChemicalPlant),
+                    new Recipe(6,
+                        new()
+                        {
+                            { "Log", 20 },
+                            { "Plant Fuel", 30 },
+                            { "Water", 10 }
+                        },
+                        new()
+                        {
+                            { "Organic Crystal", 1 }
+                        },
+                        BuildingType.ChemicalPlant,
+                        ManufactoringMethodType.Manufactured,
+                        false)
+                }
+            };
+        }
+
+        public static Item Thruster()
+        {
+            return new Item(4, "Thruster",
+                "Icon_Thruster.png",
+                ItemType.Item,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(4,
+                        new()
+                        {
+                            { "Steel", 2 },
+                            { "Copper Ingot", 3 }
+                        },
+                        new()
+                        {
+                            { "Thruster", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
                 }
             };
         }
 
         public static Item TitaniumGlass()
         {
-            return new Item(4, "Titanium Glass", "Icon_Titanium_Glass.png")
+            return new Item(4, "Titanium Glass",
+                "Icon_Titanium_Glass.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
             {
                 Recipes =
                 {

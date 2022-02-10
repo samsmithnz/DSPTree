@@ -9,7 +9,10 @@ namespace DSPTree.Helpers
         //Level 5
         public static Item PlasmaExciter()
         {
-            return new Item(5, "Plasma Exciter", "Icon_Plasma_Exciter.png")
+            return new Item(5, "Plasma Exciter",
+                "Icon_Plasma_Exciter.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -30,7 +33,10 @@ namespace DSPTree.Helpers
 
         public static Item PhotonCombiner()
         {
-            return new Item(5, "Photon Combiner", "Icon_Photon_Combiner.png")
+            return new Item(5, "Photon Combiner",
+                "Icon_Photon_Combiner.png",
+                ItemType.Item,
+                ResearchType.RedScience)
             {
                 Recipes =
                 {
@@ -44,14 +50,30 @@ namespace DSPTree.Helpers
                         {
                             { "Photon Combiner", 1 }
                         },
-                        BuildingType.AssemblingMachine)
+                        BuildingType.AssemblingMachine),
+                    new Recipe(3,
+                        new()
+                        {
+                            { "Circuit Board", 2 },
+                            { "Optical Grating Crystal", 1 },
+                        },
+                        new()
+                        {
+                            { "Photon Combiner", 1 }
+                        },
+                        BuildingType.AssemblingMachine,
+                        ManufactoringMethodType.Manufactured,
+                        false)
                 }
             };
         }
 
         public static Item ElectromagneticTurbine()
         {
-            return new Item(5, "Electromagnetic Turbine", "Icon_Electromagnetic_Turbine.png")
+            return new Item(5, "Electromagnetic Turbine",
+                "Icon_Electromagnetic_Turbine.png",
+                ItemType.Item,
+                ResearchType.RedScience)
             {
                 Recipes =
                 {
@@ -72,7 +94,10 @@ namespace DSPTree.Helpers
 
         public static Item TitaniumAlloy()
         {
-            return new Item(5, "Titanium Alloy", "Icon_Titanium_Alloy.png")
+            return new Item(5, "Titanium Alloy",
+                "Icon_Titanium_Alloy.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
             {
                 Recipes =
                 {
@@ -93,7 +118,10 @@ namespace DSPTree.Helpers
 
         public static Item Processor()
         {
-            return new Item(5, "Processor", "Icon_Processor.png")
+            return new Item(5, "Processor",
+                "Icon_Processor.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
             {
                 Recipes =
                 {
@@ -114,7 +142,10 @@ namespace DSPTree.Helpers
 
         public static Item CarbonNanotube()
         {
-            return new Item(5, "Carbon Nanotube", "Icon_Carbon_Nanotube.png")
+            return new Item(5, "Carbon Nanotube",
+                "Icon_Carbon_Nanotube.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
             {
                 Recipes =
                 {
@@ -128,14 +159,29 @@ namespace DSPTree.Helpers
                         {
                             { "Carbon Nanotube", 2 }
                         },
-                        BuildingType.ChemicalPlant)
+                        BuildingType.ChemicalPlant),
+                    new Recipe(4,
+                        new()
+                        {
+                            { "Spiniform Stalagmite Crystal", 2 }
+                        },
+                        new()
+                        {
+                            { "Carbon Nanotube", 2 }
+                        },
+                        BuildingType.ChemicalPlant,
+                        ManufactoringMethodType.Manufactured,
+                        false)
                 }
             };
         }
 
         public static Item TitaniumCrystal()
         {
-            return new Item(5, "Titanium Crystal", "Icon_Titanium_Crystal.png")
+            return new Item(5, "Titanium Crystal",
+                "Icon_Titanium_Crystal.png",
+                ItemType.Item,
+                ResearchType.RedScience)
             {
                 Recipes =
                 {
