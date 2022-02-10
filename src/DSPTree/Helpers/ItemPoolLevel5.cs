@@ -159,7 +159,19 @@ namespace DSPTree.Helpers
                         {
                             { "Carbon Nanotube", 2 }
                         },
-                        BuildingType.ChemicalPlant)
+                        BuildingType.ChemicalPlant),
+                    new Recipe(4,
+                        new()
+                        {
+                            { "Spiniform Stalagmite Crystal", 2 }
+                        },
+                        new()
+                        {
+                            { "Carbon Nanotube", 2 }
+                        },
+                        BuildingType.ChemicalPlant,
+                        ManufactoringMethodType.Manufactured,
+                        false)
                 }
             };
         }
