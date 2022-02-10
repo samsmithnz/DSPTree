@@ -152,5 +152,31 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item Fractionator()
+        {
+            return new Item(8, "Fractionator",
+                "Icon_Fractionator.png",
+                ItemType.Building,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(1,
+                        new()
+                        {
+                            { "Steel", 8 },
+                            { "Stone Brick", 4 },
+                            { "Glass", 4 },
+                            { "Processor", 1 }
+                        },
+                        new()
+                        {
+                            { "Fractionator", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }

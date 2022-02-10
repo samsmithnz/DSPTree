@@ -133,6 +133,7 @@ namespace DSPTree
                     BuildingsBlueScience.WaterPump(),
                     BuildingsBlueScience.StorageTank(),
                     BuildingsBlueScience.SorterMkII(),
+                    BuildingsBlueScience.TrafficMonitor(), 
 
                     BuildingsRedScience.Accumulator(),
                     BuildingsRedScience.StorageMkII(),
@@ -140,6 +141,7 @@ namespace DSPTree
                     BuildingsRedScience.AssemblingMachineMkII(),
                     BuildingsRedScience.ConveyorBeltMkIII(),
                     BuildingsRedScience.SorterMkIII(),
+                    BuildingsRedScience.Fractionator(),
 
                     BuildingsYellowScience.SatelliteSubstation(),
                     BuildingsYellowScience.MiniFusionPowerPlant(),
