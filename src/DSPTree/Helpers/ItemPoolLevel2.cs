@@ -35,7 +35,7 @@ namespace DSPTree.Helpers
             return new Item(2, "Magnet",
                 "Icon_Magnet.png",
                 ItemType.Item,
-                ResearchType.PreBlueScience)
+                ResearchType.NoScience)
             {
                 Recipes =
                 {
@@ -57,7 +57,7 @@ namespace DSPTree.Helpers
             return new Item(2, "Copper Ingot",
                 "Icon_Copper_Ingot.png",
                 ItemType.Item,
-                ResearchType.PreBlueScience)
+                ResearchType.NoScience)
             {
                 Recipes =
                 {
