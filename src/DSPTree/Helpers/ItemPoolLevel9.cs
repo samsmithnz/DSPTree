@@ -56,6 +56,29 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item SpaceWarper()
+        {
+            return new Item(9, "Space Warper",
+                "Icon_Space_Warper.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(10,
+                        new()
+                        {
+                            { "Graviton Lens", 1 }
+                        },
+                        new()
+                        {
+                            { "Space Warper", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 
 }
