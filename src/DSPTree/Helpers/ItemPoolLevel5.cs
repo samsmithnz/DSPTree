@@ -9,7 +9,7 @@ namespace DSPTree.Helpers
         //Level 5
         public static Item PlasmaExciter()
         {
-            return new Item(5, "Plasma Exciter", 
+            return new Item(5, "Plasma Exciter",
                 "Icon_Plasma_Exciter.png",
                 ItemType.Item,
                 ResearchType.BlueScience)
@@ -50,7 +50,20 @@ namespace DSPTree.Helpers
                         {
                             { "Photon Combiner", 1 }
                         },
-                        BuildingType.AssemblingMachine)
+                        BuildingType.AssemblingMachine),
+                    new Recipe(3,
+                        new()
+                        {
+                            { "Circuit Board", 2 },
+                            { "Optical Grating Crystal", 1 },
+                        },
+                        new()
+                        {
+                            { "Photon Combiner", 1 }
+                        },
+                        BuildingType.AssemblingMachine,
+                        ManufactoringMethodType.Manufactured,
+                        false)
                 }
             };
         }
@@ -81,7 +94,7 @@ namespace DSPTree.Helpers
 
         public static Item TitaniumAlloy()
         {
-            return new Item(5, "Titanium Alloy", 
+            return new Item(5, "Titanium Alloy",
                 "Icon_Titanium_Alloy.png",
                 ItemType.Item,
                 ResearchType.YellowScience)
@@ -105,7 +118,7 @@ namespace DSPTree.Helpers
 
         public static Item Processor()
         {
-            return new Item(5, "Processor", 
+            return new Item(5, "Processor",
                 "Icon_Processor.png",
                 ItemType.Item,
                 ResearchType.BlueScience)
@@ -129,7 +142,7 @@ namespace DSPTree.Helpers
 
         public static Item CarbonNanotube()
         {
-            return new Item(5, "Carbon Nanotube", 
+            return new Item(5, "Carbon Nanotube",
                 "Icon_Carbon_Nanotube.png",
                 ItemType.Item,
                 ResearchType.YellowScience)

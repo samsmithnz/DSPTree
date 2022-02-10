@@ -58,7 +58,7 @@ namespace DSPTree.Helpers
 
         public static Item ParticleBroadband()
         {
-            return new Item(6, "Particle Broadband", 
+            return new Item(6, "Particle Broadband",
                 "Icon_Particle_Broadband.png",
                 ItemType.Item,
                 ResearchType.YellowScience)
@@ -126,7 +126,21 @@ namespace DSPTree.Helpers
                         {
                             { "Casimir Crystal", 1 }
                         },
-                        BuildingType.AssemblingMachine)
+                        BuildingType.AssemblingMachine),
+                    new Recipe(4,
+                        new()
+                        {
+                            { "Optical Grating Crystal", 4 },
+                            { "Graphene", 2 },
+                            { "Hydrogen", 12 }
+                        },
+                        new()
+                        {
+                            { "Casimir Crystal", 1 }
+                        },
+                        BuildingType.AssemblingMachine,
+                        ManufactoringMethodType.Manufactured,
+                        false)
                 }
             };
         }
