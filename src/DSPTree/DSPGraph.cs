@@ -34,6 +34,7 @@ namespace DSPTree
                 ItemPoolLevel0.FractalSiliconVein(),
                 ItemPoolLevel0.OpticalGratingRock(),
                 ItemPoolLevel0.SpiniformStalagmiteCrystalVein(),
+                ItemPoolLevel0.FireIceVein(),
                 ItemPoolLevel0.Log(),
                 ItemPoolLevel0.PlantFuel(),
 
@@ -51,6 +52,7 @@ namespace DSPTree
                 ItemPoolLevel1.FractalSilicon(),
                 ItemPoolLevel1.OpticalGratingCrystal(),
                 ItemPoolLevel1.SpiniformStalagmiteCrystal(),
+                ItemPoolLevel1.FireIce(),
 
                 //Level 2 items
                 ItemPoolLevel2.IronIngot(),

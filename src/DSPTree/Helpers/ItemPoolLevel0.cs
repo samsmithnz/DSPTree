@@ -270,6 +270,28 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item FireIceVein()
+        {
+            return new Item(1, "Fire Ice Vein",
+                "85px-Icon_Fire_Ice_Vein.png",
+                ItemType.Item,
+                ResearchType.NoScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                        new(),
+                        new()
+                        {
+                            { "Fire Ice Vein", 1 }
+                        },
+                        BuildingType.MiningMachine,
+                        MethodType.Gathered
+                    )
+                }
+            };
+        }
+
         public static Item Log()
         {
             return new Item(1, "Log",

@@ -324,5 +324,30 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item FireIce()
+        {
+            return new Item(1, "Fire Ice",
+                "Icon_Fire_Ice.png",
+                ItemType.Item,
+                ResearchType.NoScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                      new()
+                        {
+                            { "Fire Ice Vein", 1 }
+                        },
+                        new()
+                        {
+                            { "Fire Ice", 1 }
+                        },
+                        BuildingType.MiningMachine,
+                        MethodType.Gathered
+                    )
+                }
+            };
+        }
+
     }
 }
