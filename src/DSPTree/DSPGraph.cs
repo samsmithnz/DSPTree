@@ -150,6 +150,7 @@ namespace DSPTree
                     BuildingsYellowScience.MiniFusionPowerPlant(),
                     BuildingsYellowScience.EnergyExchanger(),
                     BuildingsYellowScience.FullAccumulator(),
+                    BuildingsYellowScience.MiniatureParticleCollider(),
 
                     BuildingsPurpleScience.AssemblingMachineMkIII(),
                     BuildingsPurpleScience.PlaneSmelter(),

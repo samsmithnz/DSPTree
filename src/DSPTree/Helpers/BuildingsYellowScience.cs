@@ -106,5 +106,32 @@ namespace DSPTree.Helpers
             };
         }
         
+        public static Item MiniatureParticleCollider()
+        {
+            return new Item(7, "Miniature Particle Collider",
+                "Icon_Miniature_Particle_Collider.png",
+                ItemType.Building,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(15,
+                        new()
+                        {
+                            { "Titanium Alloy", 20 },
+                            { "Frame Material", 20 },
+                            { "Super-Magnetic Ring", 50 },
+                            { "Graphene", 10 },
+                            { "Processor", 8 }
+                        },
+                        new()
+                        {
+                            { "Miniature Particle Collider", 1 }
+                        },
+                        BuildingType.EnergyExchanger)
+                }
+            };
+        }
+        
     }
 }
