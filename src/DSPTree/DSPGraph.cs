@@ -143,7 +143,7 @@ namespace DSPTree
                     BuildingsYellowScience.EnergyExchanger(),
                     BuildingsYellowScience.FullAccumulator(),
 
-                    //BuildingsPurpleScience.(),
+                    BuildingsPurpleScience.AssemblingMachineMkIII(),
 
                     BuildingsGreenScience.ArtificialStar(),
 

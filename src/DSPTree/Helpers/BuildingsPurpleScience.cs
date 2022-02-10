@@ -6,30 +6,29 @@ namespace DSPTree.Helpers
     public static class BuildingsPurpleScience
     {
 
-        //public static Item ArtificialStar()
-        //{
-        //    return new Item(8, "Artificial Star",
-        //        "Icon_Artificial_Star.png",
-        //        ItemType.Building,
-        //        ResearchType.GreenScience)
-        //    {
-        //        Recipes =
-        //        {
-        //            new Recipe(30,
-        //                new()
-        //                {
-        //                    { "Titanium Alloy", 20 },
-        //                    { "Frame Material", 20 },
-        //                    { "Annihilation Constraint Sphere", 40 },
-        //                    { "Quantum Chip", 10 },
-        //                },
-        //                new()
-        //                {
-        //                    { "Artificial Star", 1 }
-        //                },
-        //                BuildingType.AssemblingMachine)
-        //        }
-        //    };
-        //}
+        public static Item AssemblingMachineMkIII()
+        {
+            return new Item(8, "Assembling Machine Mk.III",
+                "Icon_Assembling_Machine_Mk.III.png",
+                ItemType.Building,
+                ResearchType.PurpleScience)
+            {
+                Recipes =
+                {
+                    new Recipe(4,
+                        new()
+                        {
+                            { "Assembling Machine Mk.II", 2 },
+                            { "Particle Broadband", 8},
+                            { "Quantum Chip", 2 },
+                        },
+                        new()
+                        {
+                            { "Assembling Machine Mk.III", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }
