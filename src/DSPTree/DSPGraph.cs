@@ -75,6 +75,7 @@ namespace DSPTree
                 ItemPoolLevel4.Graphene(),
                 ItemPoolLevel4.OrganicCrystal(),
                 ItemPoolLevel4.TitaniumGlass(),
+                ItemPoolLevel4.Thruster(),
 
                 //Level 5 items
                 ItemPoolLevel5.PlasmaExciter(),

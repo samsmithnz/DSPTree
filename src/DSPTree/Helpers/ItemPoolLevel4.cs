@@ -200,6 +200,30 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item Thruster()
+        {
+            return new Item(4, "Thruster",
+                "Icon_Thruster.png",
+                ItemType.Item,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(4,
+                        new()
+                        {
+                            { "Steel", 2 },
+                            { "Copper Ingot", 3 }
+                        },
+                        new()
+                        {
+                            { "Thruster", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
         public static Item TitaniumGlass()
         {
             return new Item(4, "Titanium Glass",
