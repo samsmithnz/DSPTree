@@ -93,6 +93,7 @@ namespace DSPTree
                 ItemPoolLevel6.ParticleContainer(),
                 ItemPoolLevel6.CasimirCrystal(),
                 ItemPoolLevel6.ReinforcedThruster(),
+                ItemPoolLevel6.LogisticsDrone(),
 
                 //Level 7 items
                 ItemPoolLevel7.StrangeMatter(),

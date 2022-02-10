@@ -154,6 +154,31 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item LogisticsDrone()
+        {
+            return new Item(6, "Logistics Drone",
+                "Icon_Logistics_Drone.png",
+                ItemType.Item,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(4,
+                        new()
+                        {
+                            { "Iron Ingot", 5 },
+                            { "Processor", 2 },
+                            { "Thruster", 2 }
+                        },
+                        new()
+                        {
+                            { "Logistics Drone", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 
 }
