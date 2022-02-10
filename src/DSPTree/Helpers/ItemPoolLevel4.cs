@@ -220,7 +220,21 @@ namespace DSPTree.Helpers
                         {
                             { "Organic Crystal", 2 }
                         },
-                        BuildingType.ChemicalPlant)
+                        BuildingType.ChemicalPlant),
+                    new Recipe(6,
+                        new()
+                        {
+                            { "Log", 20 },
+                            { "Plant Fuel", 30 },
+                            { "Water", 10 }
+                        },
+                        new()
+                        {
+                            { "Organic Crystal", 1 }
+                        },
+                        BuildingType.ChemicalPlant,
+                        ManufactoringMethodType.Manufactured,
+                        false)
                 }
             };
         }
