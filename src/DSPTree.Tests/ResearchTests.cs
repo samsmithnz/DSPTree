@@ -11,39 +11,39 @@ public class ResearchTests
     public void NoScienceTest()
     {
         //Arrange
-        DSPGraph graph = new("", ResearchType.NoScience);
+        DSPGraph graph = new("", ResearchType.NoScience, true);
 
         //Act
 
         //Assert
         Assert.IsNotNull(graph);
-        Assert.AreEqual(17, graph.Items.Count);
+        Assert.AreEqual(20, graph.Items.Count);
     }
 
     [TestMethod]
     public void PreBlueScienceTest()
     {
         //Arrange
-        DSPGraph graph = new("", ResearchType.PreBlueScience);
+        DSPGraph graph = new("", ResearchType.PreBlueScience, true);
 
         //Act
 
         //Assert
         Assert.IsNotNull(graph);
-        Assert.AreEqual(21, graph.Items.Count);
+        Assert.AreEqual(29, graph.Items.Count);
     }
 
     [TestMethod]
     public void BlueScienceTest()
     {
         //Arrange
-        DSPGraph graph = new("", ResearchType.BlueScience);
+        DSPGraph graph = new("", ResearchType.BlueScience, true);
 
         //Act
 
         //Assert
         Assert.IsNotNull(graph);
-        Assert.AreEqual(39, graph.Items.Count);
+        Assert.AreEqual(54, graph.Items.Count);
     }
 
 }

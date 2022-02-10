@@ -124,6 +124,9 @@ namespace DSPTree
                     BuildingsBlueScience.ThermalPowerPlant(),
                     BuildingsBlueScience.SolarPanel(),
                     BuildingsBlueScience.Splitter(),
+                    BuildingsBlueScience.OilExtractor(),
+                    BuildingsBlueScience.OilRefinery(),
+                    BuildingsBlueScience.WaterPump(),
 
                     BuildingsRedScience.Accumulator(),
 
