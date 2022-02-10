@@ -179,5 +179,31 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item MatrixLab()
+        {
+            return new Item(4, "Matrix Lab",
+                "Icon_Matrix_Lab.png",
+                ItemType.Building,
+                ResearchType.PreBlueScience)
+            {
+                Recipes =
+                {
+                    new Recipe(3,
+                        new()
+                        {
+                            { "Iron Ingot", 8 },
+                            { "Glass", 4 },
+                            { "Circuit Board", 4 },
+                            { "Magnetic Coil", 4 }
+                        },
+                        new()
+                        {
+                            { "Matrix Lab", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 }

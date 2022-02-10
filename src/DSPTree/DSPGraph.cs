@@ -119,6 +119,7 @@ namespace DSPTree
                     BuildingsPreBlueScience.MiningMachine(),
                     BuildingsPreBlueScience.ArcSmelter(),
                     BuildingsPreBlueScience.StorageMkI(),
+                    BuildingsPreBlueScience.MatrixLab(),
 
                     BuildingsBlueScience.WirelessPowerTower(),
                     BuildingsBlueScience.ThermalPowerPlant(),
@@ -178,6 +179,7 @@ namespace DSPTree
             return items;
         }
 
+        //Get recipe inputs
         private static List<Item> GetInputs(List<Item> items, List<Recipe> recipes)
         {
             List<Item> inputs = new();
