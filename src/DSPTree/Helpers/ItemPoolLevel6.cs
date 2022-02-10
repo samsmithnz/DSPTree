@@ -130,6 +130,30 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item ReinforcedThruster()
+        {
+            return new Item(6, "Reinforced Thruster",
+                "Icon_Reinforced_Thruster.png",
+                ItemType.Item,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(6,
+                        new()
+                        {
+                            { "Titanium Alloy", 5 },
+                            { "Electromagnetic Turbine", 5 }
+                        },
+                        new()
+                        {
+                            { "Reinforced Thruster", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 
 }

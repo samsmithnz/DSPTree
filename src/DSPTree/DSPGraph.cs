@@ -91,6 +91,7 @@ namespace DSPTree
                 ItemPoolLevel6.ParticleBroadband(),
                 ItemPoolLevel6.ParticleContainer(),
                 ItemPoolLevel6.CasimirCrystal(),
+                ItemPoolLevel6.ReinforcedThruster(),
 
                 //Level 7 items
                 ItemPoolLevel7.StrangeMatter(),
