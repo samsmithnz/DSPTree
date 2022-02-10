@@ -30,7 +30,7 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        
+
         public static Item MiniFusionPowerPlant()
         {
             return new Item(7, "Mini Fusion Power Plant",
@@ -56,7 +56,7 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        
+
         public static Item EnergyExchanger()
         {
             return new Item(7, "Energy Exchanger",
@@ -82,7 +82,7 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        
+
         public static Item FullAccumulator()
         {
             return new Item(7, "Full Accumulator",
@@ -105,7 +105,7 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        
+
         public static Item MiniatureParticleCollider()
         {
             return new Item(7, "Miniature Particle Collider",
@@ -132,6 +132,6 @@ namespace DSPTree.Helpers
                 }
             };
         }
-        
+
     }
 }
