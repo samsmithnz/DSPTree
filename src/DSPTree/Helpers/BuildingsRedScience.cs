@@ -204,5 +204,32 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item RayReceiver()
+        {
+            return new Item(8, "Ray Receiver",
+                "Icon_Ray_Receiver.png",
+                ItemType.Building,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(8,
+                        new()
+                        {
+                            { "Steel", 20 },
+                            { "High-Purity Silicon", 20 },
+                            { "Photon Combiner", 10 },
+                            { "Processor", 5 },
+                            { "Super-Magnetic Ring", 20 }
+                        },
+                        new()
+                        {
+                            { "Ray Receiver", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }

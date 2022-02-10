@@ -143,6 +143,8 @@ namespace DSPTree
                     BuildingsRedScience.ConveyorBeltMkIII(),
                     BuildingsRedScience.SorterMkIII(),
                     BuildingsRedScience.Fractionator(),
+                    BuildingsRedScience.EMRailEjector(),
+                    BuildingsRedScience.RayReceiver(),
 
                     BuildingsYellowScience.SatelliteSubstation(),
                     BuildingsYellowScience.MiniFusionPowerPlant(),
