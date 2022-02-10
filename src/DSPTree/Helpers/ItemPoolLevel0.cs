@@ -204,5 +204,27 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item FractalSiliconVein()
+        {
+            return new Item(1, "Fractal Silicon Vein",
+                "85px-Icon_Fractal_Silicon_Vein.png",
+                ItemType.Item,
+                ResearchType.NoScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                        new(),
+                        new()
+                        {
+                            { "Fractal Silicon Vein", 1 }
+                        },
+                        BuildingType.MiningMachine,
+                        MethodType.Gathered
+                    )
+                }
+            };
+        }
+
     }
 }

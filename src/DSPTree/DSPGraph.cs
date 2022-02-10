@@ -31,6 +31,7 @@ namespace DSPTree
                 ItemPoolLevel0.SiliconOreVein(),
                 ItemPoolLevel0.UnipolarMagnetVein(),
                 ItemPoolLevel0.KimberliteOreVein(),
+                ItemPoolLevel0.FractalSiliconVein(),
 
                 //Level 1 items (mostly mined ore)
                 ItemPoolLevel1.IronOre(),
@@ -43,6 +44,7 @@ namespace DSPTree
                 ItemPoolLevel1.SiliconOre(),
                 ItemPoolLevel1.UnipolarMagnet(),
                 ItemPoolLevel1.KimberliteOre(),
+                ItemPoolLevel1.FractalSilicon(),
 
                 //Level 2 items
                 ItemPoolLevel2.IronIngot(),
