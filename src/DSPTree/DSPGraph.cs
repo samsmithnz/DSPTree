@@ -34,6 +34,8 @@ namespace DSPTree
                 ItemPoolLevel0.FractalSiliconVein(),
                 ItemPoolLevel0.OpticalGratingRock(),
                 ItemPoolLevel0.SpiniformStalagmiteCrystalVein(),
+                ItemPoolLevel0.Log(),
+                ItemPoolLevel0.PlantFuel(),
 
                 //Level 1 items (mostly mined ore)
                 ItemPoolLevel1.IronOre(),

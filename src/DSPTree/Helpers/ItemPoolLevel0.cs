@@ -270,5 +270,49 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item Log()
+        {
+            return new Item(1, "Log",
+                "Icon_Log.png",
+                ItemType.Item,
+                ResearchType.NoScience)
+            {
+                Recipes =
+                {
+                    new Recipe(1,
+                        new(),
+                        new()
+                        {
+                            { "Log", 1 }
+                        },
+                        BuildingType.None,
+                        MethodType.Gathered
+                    )
+                }
+            };
+        }
+
+        public static Item PlantFuel()
+        {
+            return new Item(1, "Plant Fuel",
+                "Icon_Plant_Fuel.png",
+                ItemType.Item,
+                ResearchType.NoScience)
+            {
+                Recipes =
+                {
+                    new Recipe(1,
+                        new(),
+                        new()
+                        {
+                            { "PlantFuel", 1 }
+                        },
+                        BuildingType.None,
+                        MethodType.Gathered
+                    )
+                }
+            };
+        }
+
     }
 }
