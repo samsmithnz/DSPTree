@@ -102,7 +102,7 @@ public class DSPGraphTests
     {
         //Arrange
         string filter = "Electromagnetic Matrix";
-        DSPGraph graph = new(filter);
+        DSPGraph graph = new(filter, ResearchType.WhiteScience, true);
 
         //Act
 

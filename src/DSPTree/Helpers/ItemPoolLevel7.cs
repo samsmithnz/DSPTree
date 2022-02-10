@@ -154,6 +154,31 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item DeuteronFuelRod()
+        {
+            return new Item(7, "Deuteron Fuel Rod",
+                "Icon_Deuteron_Fuel_Rod.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(12,
+                        new()
+                        {
+                            { "Titanium Alloy", 1 },
+                            { "Deuterium", 20 },
+                            { "Super-Magnetic Ring", 1 }
+                        },
+                        new()
+                        {
+                            { "Deuteron Fuel Rod", 2 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 
 }

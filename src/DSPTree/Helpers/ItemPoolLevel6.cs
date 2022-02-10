@@ -179,6 +179,30 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item SolarSail()
+        {
+            return new Item(6, "Solar Sail",
+                "Icon_Solar_Sail.png",
+                ItemType.Item,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(4,
+                        new()
+                        {
+                            { "Graphene", 1 },
+                            { "Photon Combiner", 1 }
+                        },
+                        new()
+                        {
+                            { "Solar Sail", 2 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 
 }

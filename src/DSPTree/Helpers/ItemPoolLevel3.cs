@@ -266,5 +266,41 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item Deuterium()
+        {
+            return new Item(3, "Deuterium",
+                "Icon_Deuterium.png",
+                ItemType.Item,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(1,
+                        new()
+                        {
+                            { "Hydrogen", 100 }
+                        },
+                        new()
+                        {
+                            { "Deuterium", 1 },
+                            { "Hydrogen", 99 }
+                        },
+                        BuildingType.Fractionator),
+                    new Recipe(2.5m,
+                        new()
+                        {
+                            { "Hydrogen", 10 }
+                        },
+                        new()
+                        {
+                            { "Deuterium", 5 }
+                        },
+                        BuildingType.MiniatureParticleCollider,
+                        ManufactoringMethodType.Manufactured,
+                        false)
+                }
+            };
+        }
+
     }
 }

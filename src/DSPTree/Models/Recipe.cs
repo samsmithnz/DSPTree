@@ -42,6 +42,7 @@
         ChemicalPlant = 6,
         MatrixLab = 7,
         MiniatureParticleCollider = 8,
-        EnergyExchanger = 9
+        EnergyExchanger = 9,
+        Fractionator = 10
     }
 }

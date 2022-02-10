@@ -64,6 +64,7 @@ namespace DSPTree
                 ItemPoolLevel3.Diamond(),
                 ItemPoolLevel3.HydrogenFuelRod(),
                 ItemPoolLevel3.Plastic(),
+                ItemPoolLevel3.Deuterium(),
 
                 //Level 4 items
                 ItemPoolLevel4.ElectromagneticMatrix(),
@@ -94,6 +95,7 @@ namespace DSPTree
                 ItemPoolLevel6.CasimirCrystal(),
                 ItemPoolLevel6.ReinforcedThruster(),
                 ItemPoolLevel6.LogisticsDrone(),
+                ItemPoolLevel6.SolarSail(),
 
                 //Level 7 items
                 ItemPoolLevel7.StrangeMatter(),
@@ -102,6 +104,7 @@ namespace DSPTree
                 ItemPoolLevel7.FrameMaterial(),
                 ItemPoolLevel7.AnnihilationConstraintSphere(),
                 ItemPoolLevel7.LogisticsVessel(),
+                ItemPoolLevel7.DeuteronFuelRod(),
 
                 //Level 8 items
                 ItemPoolLevel8.GravitonLens(),
