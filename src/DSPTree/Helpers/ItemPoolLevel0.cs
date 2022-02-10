@@ -226,5 +226,27 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item OpticalGratingRock()
+        {
+            return new Item(1, "Optical Grating Rock",
+                "90px-Icon_Optical_Grating_Rock.png",
+                ItemType.Item,
+                ResearchType.NoScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                        new(),
+                        new()
+                        {
+                            { "Optical Grating Rock", 1 }
+                        },
+                        BuildingType.MiningMachine,
+                        MethodType.Gathered
+                    )
+                }
+            };
+        }
+
     }
 }
