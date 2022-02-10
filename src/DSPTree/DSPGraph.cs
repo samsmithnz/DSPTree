@@ -101,6 +101,7 @@ namespace DSPTree
                 ItemPoolLevel7.PlaneFilter(),
                 ItemPoolLevel7.FrameMaterial(),
                 ItemPoolLevel7.AnnihilationConstraintSphere(),
+                ItemPoolLevel7.LogisticsVessel(),
 
                 //Level 8 items
                 ItemPoolLevel8.GravitonLens(),
