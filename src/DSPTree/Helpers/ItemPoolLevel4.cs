@@ -181,7 +181,9 @@ namespace DSPTree.Helpers
                             { "Graphene", 2 },
                             { "Hydrogen", 1 }
                         },
-                        BuildingType.ChemicalPlant)
+                        BuildingType.ChemicalPlant,
+                        ManufactoringMethodType.Manufactured,
+                        false)
                 }
             };
         }

@@ -237,7 +237,19 @@ namespace DSPTree.Helpers
                         {
                             { "Diamond", 1 }
                         },
-                        BuildingType.Smelter)
+                        BuildingType.Smelter),
+                    new Recipe(1.5m,
+                        new()
+                        {
+                            { "Kimberlite Ore", 1 }
+                        },
+                        new()
+                        {
+                            { "Diamond", 2 }
+                        },
+                        BuildingType.Smelter,
+                        ManufactoringMethodType.Manufactured,
+                        false)
                 }
             };
         }
