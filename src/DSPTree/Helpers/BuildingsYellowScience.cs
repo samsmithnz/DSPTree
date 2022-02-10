@@ -133,5 +133,30 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item InterstellarLogisticsStation()
+        {
+            return new Item(9, "Interstellar Logistics Station",
+                "Icon_Interstellar_Logistics_Station.png",
+                ItemType.Building,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(30,
+                        new()
+                        {
+                            { "Planetary Logistics Station", 1 },
+                            { "Titanium Alloy", 50 },
+                            { "Particle Container", 20 }
+                        },
+                        new()
+                        {
+                            { "Interstellar Logistics Station", 1 }
+                        },
+                        BuildingType.EnergyExchanger)
+                }
+            };
+        }
+
     }
 }
