@@ -106,6 +106,7 @@ namespace DSPTree
                 //Level 8 items
                 ItemPoolLevel8.GravitonLens(),
                 ItemPoolLevel8.QuantumChip(),
+                ItemPoolLevel8.DysonSphereComponent(),
 
                 //Level 9 items
                 ItemPoolLevel9.GravityMatrix(),

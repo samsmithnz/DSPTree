@@ -55,6 +55,31 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item DysonSphereComponent()
+        {
+            return new Item(8, "Dyson Sphere Component",
+                "Icon_Dyson_Sphere_Component.png",
+                ItemType.Item,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(8,
+                        new()
+                        {
+                            { "Frame Material", 3 },
+                            { "Solar Sail", 3 },
+                            { "Processor", 3 }
+                        },
+                        new()
+                        {
+                            { "Dyson Sphere Component", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 
 }
