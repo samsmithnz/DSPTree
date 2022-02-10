@@ -178,5 +178,31 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item EMRailEjector()
+        {
+            return new Item(8, "EM-Rail Ejector",
+                "Icon_EM-Rail_Ejector.png",
+                ItemType.Building,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(6,
+                        new()
+                        {
+                            { "Steel", 20 },
+                            { "Gear", 20 },
+                            { "Processor", 5 },
+                            { "Super-Magnetic Ring", 10 }
+                        },
+                        new()
+                        {
+                            { "EM-Rail Ejector", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }
