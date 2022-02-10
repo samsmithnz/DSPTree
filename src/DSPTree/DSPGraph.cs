@@ -116,10 +116,13 @@ namespace DSPTree
                     BuildingsPreBlueScience.WindTurbine(),
                     BuildingsPreBlueScience.SorterMkI(),
                     BuildingsPreBlueScience.AssemblingMachineMkI(),
+                    BuildingsPreBlueScience.MiningMachine(),
+                    BuildingsPreBlueScience.ArcSmelter(),
 
                     BuildingsBlueScience.WirelessPowerTower(),
                     BuildingsBlueScience.ThermalPowerPlant(),
                     BuildingsBlueScience.SolarPanel(),
+                    BuildingsBlueScience.Splitter(),
 
                     BuildingsRedScience.Accumulator(),
 

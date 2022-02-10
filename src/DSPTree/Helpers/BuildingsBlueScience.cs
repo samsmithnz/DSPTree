@@ -81,5 +81,30 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item Splitter()
+        {
+            return new Item(4, "Splitter",
+                "Icon_Splitter.png",
+                ItemType.Building,
+                ResearchType.BlueScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                        new()
+                        {
+                            { "Iron Ingot", 3 },
+                            { "Gear", 2 },
+                            { "Circuit Board", 1 }
+                        },
+                        new()
+                        {
+                            { "Splitter", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 }

@@ -7,7 +7,7 @@ namespace DSPTree.Helpers
     {
         public static Item SorterMkI()
         {
-            return new Item(1, "Sorter Mk.I",
+            return new Item(4, "Sorter Mk.I",
                 "Icon_Sorter_Mk.I.png",
                 ItemType.Building,
                 ResearchType.PreBlueScience)
@@ -31,7 +31,7 @@ namespace DSPTree.Helpers
 
         public static Item AssemblingMachineMkI()
         {
-            return new Item(1, "Assembling Machine Mk.I",
+            return new Item(4, "Assembling Machine Mk.I",
                 "Icon_Conveyor_Belt_Mk.I.png",
                 ItemType.Building,
                 ResearchType.PreBlueScience)
@@ -97,6 +97,82 @@ namespace DSPTree.Helpers
                         new()
                         {
                             { "Wind Turbine", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
+        public static Item MiningMachine()
+        {
+            return new Item(4, "Mining Machine",
+                "Icon_Mining_Machine.png",
+                ItemType.Building,
+                ResearchType.PreBlueScience)
+            {
+                Recipes =
+                {
+                    new Recipe(3,
+                        new()
+                        {
+                            { "Iron Ingot", 4 },
+                            { "Circuit Board", 1 },
+                            { "Magnetic Coil", 2 },
+                            { "Gear", 2 }
+                        },
+                        new()
+                        {
+                            { "Mining Machine", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
+        public static Item ArcSmelter()
+        {
+            return new Item(4, "Arc Smelter",
+                "Icon_Arc_Smelter.png",
+                ItemType.Building,
+                ResearchType.PreBlueScience)
+            {
+                Recipes =
+                {
+                    new Recipe(3,
+                        new()
+                        {
+                            { "Iron Ingot", 4 },
+                            { "Stone Brick", 2 },
+                            { "Circuit Board", 4 },
+                            { "Magnetic Coil", 2 }
+                        },
+                        new()
+                        {
+                            { "Arc Smelter", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
+        public static Item StorageMkI()
+        {
+            return new Item(3, "Storage Mk.I",
+                "Icon_Arc_Smelter.png",
+                ItemType.Building,
+                ResearchType.PreBlueScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                        new()
+                        {
+                            { "Iron Ingot", 4 },
+                            { "Stone Brick", 4 }
+                        },
+                        new()
+                        {
+                            { "Storage Mk.I", 1 }
                         },
                         BuildingType.AssemblingMachine)
                 }
