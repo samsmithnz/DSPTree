@@ -135,6 +135,8 @@ namespace DSPTree
                     BuildingsRedScience.StorageMkII(),
                     BuildingsRedScience.ConveyorBeltMkII(),
                     BuildingsRedScience.AssemblingMachineMkII(),
+                    BuildingsRedScience.ConveyorBeltMkIII(),
+                    BuildingsRedScience.SorterMkIII(),
 
                     BuildingsYellowScience.SatelliteSubstation(),
                     BuildingsYellowScience.MiniFusionPowerPlant(),

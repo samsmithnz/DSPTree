@@ -103,5 +103,54 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item ConveyorBeltMkIII()
+        {
+            return new Item(8, "Conveyor Belt Mk.III",
+                "Icon_Conveyor_Belt_Mk.III.png",
+                ItemType.Building,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(1,
+                        new()
+                        {
+                            { "Conveyor Belt Mk.II", 3 },
+                            { "Super-Magnetic Ring", 1 },
+                            { "Graphene", 1 }
+                        },
+                        new()
+                        {
+                            { "Conveyor Belt Mk.III", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
+        public static Item SorterMkIII()
+        {
+            return new Item(8, "Sorter Mk.III",
+                "Icon_Sorter_Mk.III.png",
+                ItemType.Building,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(1,
+                        new()
+                        {
+                            { "Sorter Mk.II", 2 },
+                            { "Electromagnetic Turbine", 1 }
+                        },
+                        new()
+                        {
+                            { "Sorter Mk.III", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }
