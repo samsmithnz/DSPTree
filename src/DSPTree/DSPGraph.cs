@@ -133,7 +133,7 @@ namespace DSPTree
                     BuildingsBlueScience.WaterPump(),
                     BuildingsBlueScience.StorageTank(),
                     BuildingsBlueScience.SorterMkII(),
-                    BuildingsBlueScience.TrafficMonitor(), 
+                    BuildingsBlueScience.TrafficMonitor(),
 
                     BuildingsRedScience.Accumulator(),
                     BuildingsRedScience.StorageMkII(),
