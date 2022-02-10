@@ -114,6 +114,8 @@ namespace DSPTree
 
                     BuildingsPreBlueScience.TeslaTower(),
                     BuildingsPreBlueScience.WindTurbine(),
+                    BuildingsPreBlueScience.SorterMkI(),
+                    BuildingsPreBlueScience.AssemblingMachineMkI(),
 
                     BuildingsBlueScience.WirelessPowerTower(),
                     BuildingsBlueScience.ThermalPowerPlant(),
