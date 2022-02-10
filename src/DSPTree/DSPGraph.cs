@@ -139,6 +139,7 @@ namespace DSPTree
                     BuildingsYellowScience.SatelliteSubstation(),
                     BuildingsYellowScience.MiniFusionPowerPlant(),
                     BuildingsYellowScience.EnergyExchanger(),
+                    BuildingsYellowScience.FullAccumulator(),
 
                     //BuildingsPurpleScience.(),
 

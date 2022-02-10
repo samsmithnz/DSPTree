@@ -41,6 +41,7 @@
         OilRefinery = 5,
         ChemicalPlant = 6,
         MatrixLab = 7,
-        MiniatureParticleCollider = 8
+        MiniatureParticleCollider = 8,
+        EnergyExchanger = 9
     }
 }

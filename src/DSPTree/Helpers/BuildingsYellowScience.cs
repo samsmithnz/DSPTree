@@ -83,5 +83,28 @@ namespace DSPTree.Helpers
             };
         }
         
+        public static Item FullAccumulator()
+        {
+            return new Item(7, "Full Accumulator",
+                "Icon_Full_Accumulator.png",
+                ItemType.Building,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                        new()
+                        {
+                            { "Accumulator", 1 },
+                        },
+                        new()
+                        {
+                            { "Full Accumulator", 1 }
+                        },
+                        BuildingType.EnergyExchanger)
+                }
+            };
+        }
+        
     }
 }
