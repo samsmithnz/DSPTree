@@ -128,6 +128,7 @@ namespace DSPTree
                     BuildingsBlueScience.OilExtractor(),
                     BuildingsBlueScience.OilRefinery(),
                     BuildingsBlueScience.WaterPump(),
+                    BuildingsBlueScience.StorageTank(),
 
                     BuildingsRedScience.Accumulator(),
 

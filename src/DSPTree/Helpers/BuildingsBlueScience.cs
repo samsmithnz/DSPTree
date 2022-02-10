@@ -184,5 +184,30 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item StorageTank()
+        {
+            return new Item(5, "Storage Tank",
+                "Icon_Storage_Tank.png",
+                ItemType.Building,
+                ResearchType.BlueScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                        new()
+                        {
+                            { "Iron Ingot", 8 },
+                            { "Stone Brick", 4 },
+                            { "Glass", 4 }
+                        },
+                        new()
+                        {
+                            { "Storage Tank", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 }
