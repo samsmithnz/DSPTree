@@ -108,7 +108,8 @@ namespace DSPTree
                 ItemPoolLevel8.QuantumChip(),
 
                 //Level 9 items
-                ItemPoolLevel9.GravityMatrix()
+                ItemPoolLevel9.GravityMatrix(),
+                ItemPoolLevel9.SmallCarrierRocket()
 
             };
 
