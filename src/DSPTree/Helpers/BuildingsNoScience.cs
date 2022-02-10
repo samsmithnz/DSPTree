@@ -6,29 +6,29 @@ namespace DSPTree.Helpers
     public static class BuildingsNoScience
     {
 
-        //public static Item TeslaTower()
-        //{
-        //    return new Item(4, "Tesla Tower",
-        //        "Icon_Tesla_Tower.png",
-        //        ItemType.Building,
-        //        ResearchType.PreBlueScience)
-        //    {
-        //        Recipes =
-        //        {
-        //            new Recipe(1,
-        //                new()
-        //                {
-        //                    { "Magnetic Coil", 1 },
-        //                    { "Iron Ingot", 2 }
-        //                },
-        //                new()
-        //                {
-        //                    { "Tesla Tower", 1 }
-        //                },
-        //                BuildingType.AssemblingMachine)
-        //        }
-        //    };
-        //}
+        public static Item ConveyorBeltMkI()
+        {
+            return new Item(1, "Conveyor Belt Mk.I",
+                "Icon_Conveyor_Belt_Mk.I.png",
+                ItemType.Building,
+                ResearchType.NoScience)
+            {
+                Recipes =
+                {
+                    new Recipe(1,
+                        new()
+                        {
+                            { "Iron Ingot", 2 },
+                            { "Gear", 1 }
+                        },
+                        new()
+                        {
+                            { "Conveyor Belt Mk.I", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
 
     }
 }
