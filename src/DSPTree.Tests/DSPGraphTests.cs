@@ -101,8 +101,7 @@ public class DSPGraphTests
     public void TreeImageIsUsedOnlyOnceTest()
     {
         //Arrange
-        string filter = "Electromagnetic Matrix";
-        DSPGraph graph = new(filter, ResearchType.WhiteScience, true);
+        DSPGraph graph = new("", ResearchType.WhiteScience, true);
 
         //Act
 

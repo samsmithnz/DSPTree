@@ -33,6 +33,7 @@ namespace DSPTree
                 ItemPoolLevel0.KimberliteOreVein(),
                 ItemPoolLevel0.FractalSiliconVein(),
                 ItemPoolLevel0.OpticalGratingRock(),
+                ItemPoolLevel0.SpiniformStalagmiteCrystalVein(),
 
                 //Level 1 items (mostly mined ore)
                 ItemPoolLevel1.IronOre(),
@@ -47,6 +48,7 @@ namespace DSPTree
                 ItemPoolLevel1.KimberliteOre(),
                 ItemPoolLevel1.FractalSilicon(),
                 ItemPoolLevel1.OpticalGratingCrystal(),
+                ItemPoolLevel1.SpiniformStalagmiteCrystal(),
 
                 //Level 2 items
                 ItemPoolLevel2.IronIngot(),

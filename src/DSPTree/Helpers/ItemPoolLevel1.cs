@@ -300,5 +300,29 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item SpiniformStalagmiteCrystal()
+        {
+            return new Item(1, "Spiniform Stalagmite Crystal",
+                "Icon_Spiniform_Stalagmite_Crystal.png",
+                ItemType.Item,
+                ResearchType.NoScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                        new()
+                        {
+                            { "Spiniform Stalagmite Crystal Vein", 1 }
+                        },
+                        new()
+                        {
+                            { "Spiniform Stalagmite Crystal", 1 }
+                        },
+                        BuildingType.MiningMachine
+                    )
+                }
+            };
+        }
+
     }
 }
