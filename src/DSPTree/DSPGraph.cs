@@ -53,6 +53,7 @@ namespace DSPTree
                 ItemPoolLevel1.OpticalGratingCrystal(),
                 ItemPoolLevel1.SpiniformStalagmiteCrystal(),
                 ItemPoolLevel1.FireIce(),
+                ItemPoolLevel1.CriticalPhoton(),
 
                 //Level 2 items
                 ItemPoolLevel2.IronIngot(),
@@ -63,6 +64,7 @@ namespace DSPTree
                 ItemPoolLevel2.EnergeticGraphite(),
                 ItemPoolLevel2.StoneBrick(),
                 ItemPoolLevel2.TitaniumIngot(),
+                ItemPoolLevel2.Antimatter(),
 
                 //Level 3 items
                 ItemPoolLevel3.MagneticCoil(),

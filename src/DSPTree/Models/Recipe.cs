@@ -44,6 +44,7 @@
         MiniatureParticleCollider = 8,
         EnergyExchanger = 9,
         Fractionator = 10,
-        None = 11
+        RayReceiver = 11,
+        None = 12
     }
 }

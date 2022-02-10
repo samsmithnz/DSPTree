@@ -187,5 +187,29 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item Antimatter()
+        {
+            return new Item(2, "Antimatter",
+                "Icon_Antimatter.png",
+                ItemType.Item,
+                ResearchType.GreenScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                        new()
+                        {
+                            { "Critical Photon", 2 }
+                        },
+                        new()
+                        {
+                            { "Antimatter", 2 },
+                            { "Hydrogen", 2 }
+                        },
+                        BuildingType.MiniatureParticleCollider)
+                }
+            };
+        }
     }
 }

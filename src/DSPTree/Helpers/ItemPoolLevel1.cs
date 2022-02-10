@@ -349,5 +349,27 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item CriticalPhoton()
+        {
+            return new Item(1, "Critical Photon",
+                "Icon_Critical_Photon.png",
+                ItemType.Item,
+                ResearchType.GreenScience)
+            {
+                Recipes =
+                {
+                    new Recipe(10,
+                        new(),
+                        new()
+                        {
+                            { "Critical Photon", 1 }
+                        },
+                        BuildingType.RayReceiver,
+                        MethodType.Manufactured
+                    )
+                }
+            };
+        }
+
     }
 }
