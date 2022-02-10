@@ -231,5 +231,31 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item PlanetaryLogisticsStation()
+        {
+            return new Item(8, "Planetary Logistics Station",
+                "Icon_Planetary_Logistics_Station.png",
+                ItemType.Building,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(20,
+                        new()
+                        {
+                            { "Steel", 40 },
+                            { "Titanium Ingot", 40 },
+                            { "Processor", 40 },
+                            { "Particle Container", 20 }
+                        },
+                        new()
+                        {
+                            { "Planetary Logistics Station", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }

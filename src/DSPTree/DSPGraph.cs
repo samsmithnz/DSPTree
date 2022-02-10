@@ -145,6 +145,7 @@ namespace DSPTree
                     BuildingsRedScience.Fractionator(),
                     BuildingsRedScience.EMRailEjector(),
                     BuildingsRedScience.RayReceiver(),
+                    BuildingsRedScience.PlanetaryLogisticsStation(),
 
                     BuildingsYellowScience.SatelliteSubstation(),
                     BuildingsYellowScience.MiniFusionPowerPlant(),
