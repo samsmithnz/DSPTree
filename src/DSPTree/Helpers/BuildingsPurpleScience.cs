@@ -46,7 +46,7 @@ namespace DSPTree.Helpers
                             { "Arc Smelter", 1 },
                             { "Frame Material", 5},
                             { "Plane Filter", 4 },
-                            { "Plane Smelter", 15 }
+                            { "Unipolar Magnet", 15 }
                         },
                         new()
                         {

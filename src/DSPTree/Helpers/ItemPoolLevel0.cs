@@ -160,5 +160,27 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item UnipolarMagnetVein()
+        {
+            return new Item(1, "Unipolar Magnet Vein",
+                "90px-Icon_Unipolar_Magnet_Vein.png",
+                ItemType.Item,
+                ResearchType.NoScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                        new(),
+                        new()
+                        {
+                            { "Unipolar Magnet Vein", 1 }
+                        },
+                        BuildingType.MiningMachine,
+                        MethodType.Gathered
+                    )
+                }
+            };
+        }
+
     }
 }
