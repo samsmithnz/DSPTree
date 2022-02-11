@@ -172,7 +172,7 @@ namespace DSPTree.Helpers
             return new Item(1, "Silicon Ore",
                 "Icon_Silicon_Ore.png",
                 ItemType.Item,
-                ResearchType.BlueScience)
+                ResearchType.NoScience)
             {
                 Recipes =
                 {
