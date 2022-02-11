@@ -13,8 +13,10 @@ namespace DSPTree.Web.Controllers
         public IActionResult Index()
         {
             //Build the DSP graph
-            string filter = "";// Solar Panel";// "Electromagnetic Matrix";
-            DSPGraph dSPGraph = new(filter, ResearchType.NoScience, true);
+            string filter = "";// "Gravity Matrix";
+            DSPGraph dSPGraph = new(filter, 
+                ResearchType.WhiteScience, 
+                true);
 
             //Convert the DSP graph to a D3 graph object
             Graph graph = CreateGraph(dSPGraph.Items);
