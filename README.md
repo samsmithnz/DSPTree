@@ -10,5 +10,5 @@ This is very rough. At the beginning of the game - it looks like this:
 At the end of the game, it's a bit busy and I need another visualization:
 ![image](https://user-images.githubusercontent.com/8389039/153523397-1b80b54a-add7-4986-b2db-5b105c0f1eb5.png)
 
-I have various filtering, to search for specific items, various "ages" of science, and to exclude buildings. For example: This shows all items to build the Gravity Matrix (the green science cube)
+I have various filtering, to search for specific items, various "ages" of science, and to exclude buildings. For example: This shows all items to build the Gravity Matrix (the green science cube), including alternative/rare material recipes.
 ![image](https://user-images.githubusercontent.com/8389039/153523841-6f092c4b-80a1-4c39-b30e-fcbe872f816e.png)
