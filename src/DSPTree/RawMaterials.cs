@@ -6,11 +6,6 @@ namespace DSPTree
     {
         public static Dictionary<string, int> CalculateRawMaterials(List<Item> items, Item item)
         {
-            if (items == null)
-            {
-                throw new InvalidOperationException("Items list is not initialized - something bad happened given this is initialized in the class constructor");
-            }
-
             //For the primary recipe, look at the inputs.
             //If the input is not a gathered input, look at those items inputs,
             //adding together all of the resource totals until we find the gatherer.

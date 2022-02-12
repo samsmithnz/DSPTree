@@ -1,5 +1,6 @@
 using DSPTree.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -143,5 +144,24 @@ public class DSPGraphTests
         //Assert
         Assert.IsTrue(graph.Items.Count > 1);
         Assert.AreEqual(filter, graph.Items[graph.Items.Count - 1].Name);
+    }
+
+    [TestMethod]
+    public void FilterItemThatDoesNotExistTest()
+    {
+        //Arrange
+        string filter = "Widget";
+
+        //Act
+        try
+        {
+            DSPGraph graph = new(filter);
+        }
+        catch (Exception ex)
+        {
+            //Assert
+            Assert.AreEqual("Widget item not found", ex.Message);
+        }
+
     }
 }
