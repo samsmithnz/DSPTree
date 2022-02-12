@@ -285,5 +285,31 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item SprayCoater()
+        {
+            return new Item(5, "Spray Coater",
+                "Spray_Coater.png",
+                ItemType.Building,
+                ResearchType.BlueScience)
+            {
+                Recipes =
+                {
+                    new Recipe(3,
+                        new()
+                        {
+                            { "Steel", 4 },
+                            { "Plasma Exciter", 2 },
+                            { "Circuit Board", 2 },
+                            { "Microcrystalline Component", 2 },
+                        },
+                        new()
+                        {
+                            { "Spray Coater", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 }

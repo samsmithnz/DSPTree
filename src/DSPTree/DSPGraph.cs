@@ -65,6 +65,7 @@ namespace DSPTree
                 ItemPoolLevel2.StoneBrick(),
                 ItemPoolLevel2.TitaniumIngot(),
                 ItemPoolLevel2.Antimatter(),
+                ItemPoolLevel2.ProliferatorMkI(),
 
                 //Level 3 items
                 ItemPoolLevel3.MagneticCoil(),
@@ -91,6 +92,7 @@ namespace DSPTree
                 ItemPoolLevel4.OrganicCrystal(),
                 ItemPoolLevel4.TitaniumGlass(),
                 ItemPoolLevel4.Thruster(),
+                ItemPoolLevel4.ProliferatorMkII(),
 
                 //Level 5 items
                 ItemPoolLevel5.PlasmaExciter(),
@@ -110,6 +112,7 @@ namespace DSPTree
                 ItemPoolLevel6.ReinforcedThruster(),
                 ItemPoolLevel6.LogisticsDrone(),
                 ItemPoolLevel6.SolarSail(),
+                ItemPoolLevel6.ProliferatorMkIII(),
 
                 //Level 7 items
                 ItemPoolLevel7.StrangeMatter(),
@@ -162,6 +165,7 @@ namespace DSPTree
                     BuildingsBlueScience.SorterMkII(),
                     BuildingsBlueScience.TrafficMonitor(),
                     BuildingsBlueScience.ChemicalPlant(),
+                    BuildingsBlueScience.SprayCoater(),
 
                     BuildingsRedScience.Accumulator(),
                     BuildingsRedScience.StorageMkII(),

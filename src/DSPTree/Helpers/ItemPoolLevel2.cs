@@ -211,5 +211,28 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item ProliferatorMkI()
+        {
+            return new Item(2, "Proliferator Mk.I",
+                "Proliferator_Mk.I.png",
+                ItemType.Item,
+                ResearchType.BlueScience)
+            {
+                Recipes =
+                {
+                    new Recipe(0.5m,
+                        new()
+                        {
+                            { "Coal", 1 }
+                        },
+                        new()
+                        {
+                            { "Proliferator Mk.I", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }
