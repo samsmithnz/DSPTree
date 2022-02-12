@@ -192,6 +192,7 @@ namespace DSPTree
                     BuildingsPurpleScience.VerticalLaunchingSilo(),
 
                     BuildingsGreenScience.ArtificialStar(),
+                    BuildingsGreenScience.AdvancedMiningMachine(),
 
                     //BuildingsWhiteScience.(),
                 };
