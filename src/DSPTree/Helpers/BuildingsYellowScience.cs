@@ -184,5 +184,31 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item AutomaticPiler()
+        {
+            return new Item(9, "Automatic Piler",
+                "Icon_Orbital_Collector.png",
+                ItemType.Building,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(4,
+                        new()
+                        {
+                            { "Steel", 3 },
+                            { "Gear", 4 },
+                            { "Super-Magnetic Ring", 1 },
+                            { "Processor", 2 }
+                        },
+                        new()
+                        {
+                            { "Automatic Piler", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 }

@@ -185,6 +185,7 @@ namespace DSPTree
                     BuildingsYellowScience.MiniatureParticleCollider(),
                     BuildingsYellowScience.InterstellarLogisticsStation(),
                     BuildingsYellowScience.OrbitalCollector(),
+                    BuildingsYellowScience.AutomaticPiler(),
 
                     BuildingsPurpleScience.AssemblingMachineMkIII(),
                     BuildingsPurpleScience.PlaneSmelter(),
