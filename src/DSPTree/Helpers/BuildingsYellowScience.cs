@@ -187,7 +187,7 @@ namespace DSPTree.Helpers
         public static Item AutomaticPiler()
         {
             return new Item(9, "Automatic Piler",
-                "Icon_Orbital_Collector.png",
+                "Automatic_Piler.png",
                 ItemType.Building,
                 ResearchType.YellowScience)
             {
