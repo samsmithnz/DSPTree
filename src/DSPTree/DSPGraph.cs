@@ -8,16 +8,19 @@ namespace DSPTree
         public List<Item> Items { get; set; }
         public DSPGraph(string filter = "",
             ResearchType researchType = ResearchType.WhiteScience,
-            bool includeBuildings = false)
+            bool includeBuildings = false,
+            bool showOnlyDirectDependencies = false)
         {
             Items = BuildDSPTree(filter,
                 researchType,
-                includeBuildings);
+                includeBuildings,
+                showOnlyDirectDependencies);
         }
 
         private static List<Item> BuildDSPTree(string nameFilter,
             ResearchType researchType,
-            bool includeBuildings)
+            bool includeBuildings,
+            bool showOnlyDirectDependencies)
         {
             List<Item> items = new()
             {
@@ -229,6 +232,75 @@ namespace DSPTree
                     filteredItems = filteredItems.OrderBy(b => b.Level).ToList();
                     items = filteredItems;
                 }
+            }
+
+            //If enabled, only show the direct inputs to product an item
+            if (showOnlyDirectDependencies == true)
+            {
+                //get a list of each item and the number of items that need it
+                Dictionary<string, int> inputs = new();
+                foreach (Item? item in items)
+                {
+                    foreach (Recipe? recipe in item.Recipes)
+                    {
+                        foreach (KeyValuePair<string, int> input in recipe.Inputs)
+                        {
+                            if (inputs.ContainsKey(input.Key))
+                            {
+                                inputs[input.Key]++;
+                            }
+                            else
+                            {
+                                inputs.Add(input.Key, 1);
+                            }
+                        }
+                    }
+                }
+
+                //Add in the missing values
+                foreach (Item? item in items)
+                {
+                    if (inputs.ContainsKey(item.Name) == false)
+                    {
+                        inputs.Add(item.Name, 0);
+                    }
+                }
+
+                List<Item> filteredItems = new();
+                List<string> inputList = new();
+                //Add the top level items
+                foreach (KeyValuePair<string, int> item in inputs)
+                {
+                    if (item.Value == 0)
+                    {
+                        Item? rootItem = FindItem(items, item.Key);
+                        if (rootItem != null && rootItem.ItemType == ItemType.Building)
+                        {
+                            filteredItems.Add(rootItem);
+                            foreach (Recipe? recipe in rootItem.Recipes)
+                            {
+                                foreach (KeyValuePair<string, int> input in recipe.Inputs)
+                                {
+                                    inputList.Add(input.Key);
+                                }
+                            }
+                        }
+                    }
+                }
+                //now add the direct inputs
+                foreach (string item in inputList)
+                {
+                    Item? inputItem = FindItem(items, item);
+                    if (inputItem != null)
+                    {
+                        inputItem.Recipes = new List<Recipe>();
+                        if (!filteredItems.Contains(inputItem))
+                        {
+                            filteredItems.Add(inputItem);
+                        }
+                    }
+                }
+                items = filteredItems;
             }
 
             return items;

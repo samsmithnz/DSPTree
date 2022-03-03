@@ -15,7 +15,8 @@ namespace DSPTree.Web.Controllers
             //Build the DSP graph
             string filter = "";// "Gravity Matrix";
             DSPGraph dSPGraph = new(filter, 
-                ResearchType.WhiteScience, 
+                ResearchType.GreenScience, 
+                true,
                 true);
 
             //Convert the DSP graph to a D3 graph object
