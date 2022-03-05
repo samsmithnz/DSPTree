@@ -184,5 +184,56 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item AutomaticPiler()
+        {
+            return new Item(9, "Automatic Piler",
+                "Automatic_Piler.png",
+                ItemType.Building,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(4,
+                        new()
+                        {
+                            { "Steel", 3 },
+                            { "Gear", 4 },
+                            { "Super-Magnetic Ring", 1 },
+                            { "Processor", 2 }
+                        },
+                        new()
+                        {
+                            { "Automatic Piler", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
+        public static Item LogisticsVessel()
+        {
+            return new Item(7, "Logistics Vessel",
+                "Icon_Logistics_Vessel.png",
+                ItemType.Building,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(6,
+                        new()
+                        {
+                            { "Titanium Alloy", 10 },
+                            { "Processor", 10 },
+                            { "Reinforced Thruster", 2 }
+                        },
+                        new()
+                        {
+                            { "Logistics Vessel", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 }

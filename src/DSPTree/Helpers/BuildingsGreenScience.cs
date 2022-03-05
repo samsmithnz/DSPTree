@@ -31,5 +31,32 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item AdvancedMiningMachine()
+        {
+            return new Item(8, "Advanced Mining Machine",
+                "Advanced_Mining_Machine.png",
+                ItemType.Building,
+                ResearchType.GreenScience)
+            {
+                Recipes =
+                {
+                    new Recipe(20,
+                        new()
+                        {
+                            { "Titanium Alloy", 20 },
+                            { "Frame Material", 10 },
+                            { "Super-Magnetic Ring", 10 },
+                            { "Quantum Chip", 4 },
+                            { "Optical Grating Crystal", 40 }
+                        },
+                        new()
+                        {
+                            { "Advanced Mining Machine", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }

@@ -8,16 +8,19 @@ namespace DSPTree
         public List<Item> Items { get; set; }
         public DSPGraph(string filter = "",
             ResearchType researchType = ResearchType.WhiteScience,
-            bool includeBuildings = false)
+            bool includeBuildings = false,
+            bool showOnlyDirectDependencies = false)
         {
             Items = BuildDSPTree(filter,
                 researchType,
-                includeBuildings);
+                includeBuildings,
+                showOnlyDirectDependencies);
         }
 
         private static List<Item> BuildDSPTree(string nameFilter,
             ResearchType researchType,
-            bool includeBuildings)
+            bool includeBuildings,
+            bool showOnlyDirectDependencies)
         {
             List<Item> items = new()
             {
@@ -65,6 +68,7 @@ namespace DSPTree
                 ItemPoolLevel2.StoneBrick(),
                 ItemPoolLevel2.TitaniumIngot(),
                 ItemPoolLevel2.Antimatter(),
+                ItemPoolLevel2.ProliferatorMkI(),
 
                 //Level 3 items
                 ItemPoolLevel3.MagneticCoil(),
@@ -91,6 +95,7 @@ namespace DSPTree
                 ItemPoolLevel4.OrganicCrystal(),
                 ItemPoolLevel4.TitaniumGlass(),
                 ItemPoolLevel4.Thruster(),
+                ItemPoolLevel4.ProliferatorMkII(),
 
                 //Level 5 items
                 ItemPoolLevel5.PlasmaExciter(),
@@ -108,8 +113,8 @@ namespace DSPTree
                 ItemPoolLevel6.ParticleContainer(),
                 ItemPoolLevel6.CasimirCrystal(),
                 ItemPoolLevel6.ReinforcedThruster(),
-                ItemPoolLevel6.LogisticsDrone(),
                 ItemPoolLevel6.SolarSail(),
+                ItemPoolLevel6.ProliferatorMkIII(),
 
                 //Level 7 items
                 ItemPoolLevel7.StrangeMatter(),
@@ -117,7 +122,6 @@ namespace DSPTree
                 ItemPoolLevel7.PlaneFilter(),
                 ItemPoolLevel7.FrameMaterial(),
                 ItemPoolLevel7.AnnihilationConstraintSphere(),
-                ItemPoolLevel7.LogisticsVessel(),
                 ItemPoolLevel7.DeuteronFuelRod(),
 
                 //Level 8 items
@@ -127,7 +131,6 @@ namespace DSPTree
 
                 //Level 9 items
                 ItemPoolLevel9.GravityMatrix(),
-                ItemPoolLevel9.SmallCarrierRocket(),
                 ItemPoolLevel9.SpaceWarper(),
 
                 //Level 10 items
@@ -162,6 +165,7 @@ namespace DSPTree
                     BuildingsBlueScience.SorterMkII(),
                     BuildingsBlueScience.TrafficMonitor(),
                     BuildingsBlueScience.ChemicalPlant(),
+                    BuildingsBlueScience.SprayCoater(),
 
                     BuildingsRedScience.Accumulator(),
                     BuildingsRedScience.StorageMkII(),
@@ -173,6 +177,7 @@ namespace DSPTree
                     BuildingsRedScience.EMRailEjector(),
                     BuildingsRedScience.RayReceiver(),
                     BuildingsRedScience.PlanetaryLogisticsStation(),
+                    BuildingsRedScience.LogisticsDrone(),
 
                     BuildingsYellowScience.SatelliteSubstation(),
                     BuildingsYellowScience.MiniFusionPowerPlant(),
@@ -181,12 +186,16 @@ namespace DSPTree
                     BuildingsYellowScience.MiniatureParticleCollider(),
                     BuildingsYellowScience.InterstellarLogisticsStation(),
                     BuildingsYellowScience.OrbitalCollector(),
+                    BuildingsYellowScience.AutomaticPiler(),
+                    BuildingsYellowScience.LogisticsVessel(),
 
                     BuildingsPurpleScience.AssemblingMachineMkIII(),
                     BuildingsPurpleScience.PlaneSmelter(),
                     BuildingsPurpleScience.VerticalLaunchingSilo(),
+                    BuildingsPurpleScience.SmallCarrierRocket(),
 
                     BuildingsGreenScience.ArtificialStar(),
+                    BuildingsGreenScience.AdvancedMiningMachine(),
 
                     //BuildingsWhiteScience.(),
                 };
@@ -224,6 +233,57 @@ namespace DSPTree
                     items = filteredItems;
                 }
             }
+
+            //If enabled, only show the direct inputs to product an item
+            if (showOnlyDirectDependencies == true)
+            {
+                Dictionary<string, int> inputs = new();
+                List<Item> filteredItems = new();
+                foreach (Item? item in items)
+                {
+                    if (item.ItemType != ItemType.Building)
+                    {
+                        //If the item is not a building, hide it's recipe
+                        item.Recipes = new List<Recipe>();
+                    }
+                    else
+                    {
+                        //If it is a building, log all of it's inputs
+                        foreach (Recipe? recipe in item.Recipes)
+                        {
+                            foreach (KeyValuePair<string, int> input in recipe.Inputs)
+                            {
+                                if (inputs.ContainsKey(input.Key) == false)
+                                {
+                                    inputs.Add(input.Key, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //Add each item to the filter.
+                foreach (Item? item in items)
+                {
+                    if (!filteredItems.Contains(item) &&
+                        (item.ItemType == ItemType.Building ||
+                        inputs.ContainsKey(item.Name)))
+                    {
+                        filteredItems.Add(item);
+                    }
+                }
+
+                items = filteredItems;
+            }
+
+            //for (int i = 0; i < items.Count; i++)
+            //{
+            //    Item? item = items[i];
+            //    if (item.Name == "Accumulator")
+            //    {
+            //        int j = i;
+            //    }
+            //}
 
             return items;
         }
