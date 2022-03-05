@@ -62,7 +62,8 @@ public class BuildingTests
                 {
                     StringBuilder sb = new();
                     sb.Append(item.Name);
-                    foreach (System.Collections.Generic.KeyValuePair<string, int> input in recipe.Inputs)
+                    sb.Append(',');
+                    foreach (KeyValuePair<string, int> input in recipe.Inputs)
                     {
                         sb.Append(input.Key);
                         sb.Append(',');

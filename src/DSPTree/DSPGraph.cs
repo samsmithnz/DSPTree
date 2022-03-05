@@ -113,7 +113,6 @@ namespace DSPTree
                 ItemPoolLevel6.ParticleContainer(),
                 ItemPoolLevel6.CasimirCrystal(),
                 ItemPoolLevel6.ReinforcedThruster(),
-                ItemPoolLevel6.LogisticsDrone(),
                 ItemPoolLevel6.SolarSail(),
                 ItemPoolLevel6.ProliferatorMkIII(),
 
@@ -123,7 +122,6 @@ namespace DSPTree
                 ItemPoolLevel7.PlaneFilter(),
                 ItemPoolLevel7.FrameMaterial(),
                 ItemPoolLevel7.AnnihilationConstraintSphere(),
-                ItemPoolLevel7.LogisticsVessel(),
                 ItemPoolLevel7.DeuteronFuelRod(),
 
                 //Level 8 items
@@ -180,6 +178,7 @@ namespace DSPTree
                     BuildingsRedScience.EMRailEjector(),
                     BuildingsRedScience.RayReceiver(),
                     BuildingsRedScience.PlanetaryLogisticsStation(),
+                    BuildingsRedScience.LogisticsDrone(),
 
                     BuildingsYellowScience.SatelliteSubstation(),
                     BuildingsYellowScience.MiniFusionPowerPlant(),
@@ -189,6 +188,7 @@ namespace DSPTree
                     BuildingsYellowScience.InterstellarLogisticsStation(),
                     BuildingsYellowScience.OrbitalCollector(),
                     BuildingsYellowScience.AutomaticPiler(),
+                    BuildingsYellowScience.LogisticsVessel(),
 
                     BuildingsPurpleScience.AssemblingMachineMkIII(),
                     BuildingsPurpleScience.PlaneSmelter(),
@@ -241,6 +241,10 @@ namespace DSPTree
                 Dictionary<string, int> inputs = new();
                 foreach (Item? item in items)
                 {
+                    if (item.Name == "Arc Smelter")
+                    {
+                        int i = 9;
+                    }
                     foreach (Recipe? recipe in item.Recipes)
                     {
                         foreach (KeyValuePair<string, int> input in recipe.Inputs)
@@ -257,11 +261,15 @@ namespace DSPTree
                     }
                 }
 
-                //Add in the missing values
+                //Add in the missing items
                 foreach (Item? item in items)
                 {
                     if (inputs.ContainsKey(item.Name) == false)
                     {
+                        if (item.Name == "Arc Smelter")
+                        {
+                            int i = 9;
+                        }
                         inputs.Add(item.Name, 0);
                     }
                 }
@@ -273,6 +281,10 @@ namespace DSPTree
                 {
                     if (item.Value == 0)
                     {
+                        if (item.Key == "Arc Smelter")
+                        {
+                            int i = 9;
+                        }
                         Item? rootItem = FindItem(items, item.Key);
                         if (rootItem != null && rootItem.ItemType == ItemType.Building)
                         {
@@ -290,10 +302,17 @@ namespace DSPTree
                 //now add the direct inputs
                 foreach (string item in inputList)
                 {
+                    if (item == "Arc Smelter")
+                    {
+                        int i = 9;
+                    }
                     Item? inputItem = FindItem(items, item);
                     if (inputItem != null)
                     {
-                        inputItem.Recipes = new List<Recipe>();
+                        if (inputItem.ItemType != ItemType.Building)
+                        {
+                            inputItem.Recipes = new List<Recipe>();
+                        }
                         if (!filteredItems.Contains(inputItem))
                         {
                             filteredItems.Add(inputItem);

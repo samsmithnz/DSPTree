@@ -210,5 +210,30 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item LogisticsVessel()
+        {
+            return new Item(7, "Logistics Vessel",
+                "Icon_Logistics_Vessel.png",
+                ItemType.Building,
+                ResearchType.YellowScience)
+            {
+                Recipes =
+                {
+                    new Recipe(6,
+                        new()
+                        {
+                            { "Titanium Alloy", 10 },
+                            { "Processor", 10 },
+                            { "Reinforced Thruster", 2 }
+                        },
+                        new()
+                        {
+                            { "Logistics Vessel", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 }
