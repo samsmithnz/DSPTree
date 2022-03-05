@@ -47,6 +47,27 @@ public class BuildingTests
     }
 
     [TestMethod]
+    public void BuildingCountTest()
+    {
+        //Arrange
+        DSPGraph graph = new("", ResearchType.WhiteScience, true);
+
+        //Act
+        int buildingCount = 0;
+        foreach (Item? item in graph.Items)
+        {
+            if (item.ItemType == ItemType.Building)
+            {
+                buildingCount++;
+            }
+        }
+
+        //Assert
+        Assert.IsNotNull(graph);
+        Assert.AreEqual(47, buildingCount);
+    }
+
+    [TestMethod]
     public void GetBuildingMaterialsTest()
     {
         //Arrange
@@ -79,6 +100,27 @@ public class BuildingTests
         foreach (string item in items)
         {
             Debug.WriteLine(item);
+        }
+    }
+
+    [TestMethod]
+    public void GetOnlyBuildingAndDirectInputsTest()
+    {
+        //Arrange
+        DSPGraph graph = new("", ResearchType.WhiteScience, true, true);
+
+        //Act
+
+        //Assert
+        Assert.IsNotNull(graph.Items);
+        Assert.AreEqual(72, graph.Items.Count);
+        foreach (Item? item in graph.Items)
+        {
+            if (item.Name == "Accumulator")
+            {
+                Assert.AreEqual(1, item.Recipes.Count);
+                Assert.AreEqual(3, item.Recipes[0].Inputs.Count);
+            }
         }
 
     }

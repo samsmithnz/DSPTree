@@ -131,7 +131,6 @@ namespace DSPTree
 
                 //Level 9 items
                 ItemPoolLevel9.GravityMatrix(),
-                ItemPoolLevel9.SmallCarrierRocket(),
                 ItemPoolLevel9.SpaceWarper(),
 
                 //Level 10 items
@@ -193,6 +192,7 @@ namespace DSPTree
                     BuildingsPurpleScience.AssemblingMachineMkIII(),
                     BuildingsPurpleScience.PlaneSmelter(),
                     BuildingsPurpleScience.VerticalLaunchingSilo(),
+                    BuildingsPurpleScience.SmallCarrierRocket(),
 
                     BuildingsGreenScience.ArtificialStar(),
                     BuildingsGreenScience.AdvancedMiningMachine(),
@@ -237,74 +237,109 @@ namespace DSPTree
             //If enabled, only show the direct inputs to product an item
             if (showOnlyDirectDependencies == true)
             {
-                //get a list of each item and the number of items that need it
-                Dictionary<string, int> inputs = new();
-                foreach (Item? item in items)
-                {
-                    foreach (Recipe? recipe in item.Recipes)
-                    {
-                        foreach (KeyValuePair<string, int> input in recipe.Inputs)
-                        {
-                            if (inputs.ContainsKey(input.Key))
-                            {
-                                inputs[input.Key]++;
-                            }
-                            else
-                            {
-                                inputs.Add(input.Key, 1);
-                            }
-                        }
-                    }
-                }
-
-                //Add in the missing items
-                foreach (Item? item in items)
-                {
-                    if (inputs.ContainsKey(item.Name) == false)
-                    {
-                        inputs.Add(item.Name, 0);
-                    }
-                }
-
                 List<Item> filteredItems = new();
-                List<string> inputList = new();
-                //Add the top level items
-                foreach (KeyValuePair<string, int> item in inputs)
+                foreach (Item? item in items)
                 {
-                    if (item.Value == 0)
+                    if (item.ItemType != ItemType.Building)
                     {
-                        Item? rootItem = FindItem(items, item.Key);
-                        if (rootItem != null && rootItem.ItemType == ItemType.Building)
-                        {
-                            filteredItems.Add(rootItem);
-                            foreach (Recipe? recipe in rootItem.Recipes)
-                            {
-                                foreach (KeyValuePair<string, int> input in recipe.Inputs)
-                                {
-                                    inputList.Add(input.Key);
-                                }
-                            }
-                        }
+                        item.Recipes = new List<Recipe>();
+                    }
+                    if (!filteredItems.Contains(item))
+                    {
+                        filteredItems.Add(item);
                     }
                 }
-                //now add the direct inputs
-                foreach (string item in inputList)
-                {
-                    Item? inputItem = FindItem(items, item);
-                    if (inputItem != null)
-                    {
-                        if (inputItem.ItemType != ItemType.Building)
-                        {
-                            inputItem.Recipes = new List<Recipe>();
-                        }
-                        if (!filteredItems.Contains(inputItem))
-                        {
-                            filteredItems.Add(inputItem);
-                        }
-                    }
-                }
+
+                ////Create a list of each input, initializing the count to 0
+                //Dictionary<string, int> inputs = new();
+                //foreach (Item? item in items)
+                //{
+                //    if (inputs.ContainsKey(item.Name) == false)
+                //    {
+                //        inputs.Add(item.Name, 0);
+                //    }
+                //}
+
+                ////Look at every item, counting each input
+                //foreach (Item? item in items)
+                //{
+                //    foreach (Recipe? recipe in item.Recipes)
+                //    {
+                //        foreach (KeyValuePair<string, int> input in recipe.Inputs)
+                //        {
+                //            if (input.Key == "Accumulator")
+                //            {
+                //                int j = 0;
+                //            }
+                //            if (inputs.ContainsKey(input.Key))
+                //            {
+                //                inputs[input.Key]++;
+                //            }
+                //            else
+                //            {
+                //                int i = 0;
+                //            }
+                //            //else
+                //            //{
+                //            //    inputs.Add(input.Key, 1);
+                //            //}
+                //        }
+                //    }
+                //}
+
+                //List<Item> filteredItems = new();
+                //List<string> inputList = new();
+
+                ////Identify the top level items - these are not inputs
+                //foreach (KeyValuePair<string, int> item in inputs)
+                //{
+                //    if (item.Value == 0)
+                //    {
+                //        Item? rootItem = FindItem(items, item.Key);
+                //        if (rootItem != null && rootItem.ItemType == ItemType.Building)
+                //        {
+                //            filteredItems.Add(rootItem);
+                //            foreach (Recipe? recipe in rootItem.Recipes)
+                //            {
+                //                foreach (KeyValuePair<string, int> input in recipe.Inputs)
+                //                {
+                //                    inputList.Add(input.Key);
+                //                }
+                //            }
+                //        }
+                //    }
+                //}
+                ////now add the direct inputs
+                //foreach (string item in inputList)
+                //{
+                //    if (item == "Accumulator")
+                //    {
+                //        int j = 0;
+                //    }
+                //    Item? inputItem = FindItem(items, item);
+                //    if (inputItem != null)
+                //    {
+                //        if (inputItem.ItemType != ItemType.Building)
+                //        {
+                //            inputItem.Recipes = new List<Recipe>();
+                //        }
+                //        if (!filteredItems.Contains(inputItem))
+                //        {
+                //            filteredItems.Add(inputItem);
+                //        }
+                //    }
+                //}
                 items = filteredItems;
             }
+
+            //for (int i = 0; i < items.Count; i++)
+            //{
+            //    Item? item = items[i];
+            //    if (item.Name == "Accumulator")
+            //    {
+            //        int j = i;
+            //    }
+            //}
 
             return items;
         }

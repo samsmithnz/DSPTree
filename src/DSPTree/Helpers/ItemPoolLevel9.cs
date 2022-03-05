@@ -31,31 +31,6 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item SmallCarrierRocket()
-        {
-            return new Item(9, "Small Carrier Rocket",
-                "Icon_Small_Carrier_Rocket.png",
-                ItemType.Item,
-                ResearchType.PurpleScience)
-            {
-                Recipes =
-                {
-                    new Recipe(6,
-                        new()
-                        {
-                            { "Dyson Sphere Component", 2 },
-                            { "Deuteron Fuel Rod", 4 },
-                            { "Quantum Chip", 2 }
-                        },
-                        new()
-                        {
-                            { "Small Carrier Rocket", 1 }
-                        },
-                        BuildingType.AssemblingMachine)
-                }
-            };
-        }
-
         public static Item SpaceWarper()
         {
             return new Item(9, "Space Warper",
