@@ -241,10 +241,6 @@ namespace DSPTree
                 Dictionary<string, int> inputs = new();
                 foreach (Item? item in items)
                 {
-                    if (item.Name == "Arc Smelter")
-                    {
-                        int i = 9;
-                    }
                     foreach (Recipe? recipe in item.Recipes)
                     {
                         foreach (KeyValuePair<string, int> input in recipe.Inputs)
@@ -266,10 +262,6 @@ namespace DSPTree
                 {
                     if (inputs.ContainsKey(item.Name) == false)
                     {
-                        if (item.Name == "Arc Smelter")
-                        {
-                            int i = 9;
-                        }
                         inputs.Add(item.Name, 0);
                     }
                 }
@@ -281,10 +273,6 @@ namespace DSPTree
                 {
                     if (item.Value == 0)
                     {
-                        if (item.Key == "Arc Smelter")
-                        {
-                            int i = 9;
-                        }
                         Item? rootItem = FindItem(items, item.Key);
                         if (rootItem != null && rootItem.ItemType == ItemType.Building)
                         {
@@ -302,10 +290,6 @@ namespace DSPTree
                 //now add the direct inputs
                 foreach (string item in inputList)
                 {
-                    if (item == "Arc Smelter")
-                    {
-                        int i = 9;
-                    }
                     Item? inputItem = FindItem(items, item);
                     if (inputItem != null)
                     {
