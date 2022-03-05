@@ -237,14 +237,37 @@ namespace DSPTree
             //If enabled, only show the direct inputs to product an item
             if (showOnlyDirectDependencies == true)
             {
+                Dictionary<string, int> inputs = new();
                 List<Item> filteredItems = new();
                 foreach (Item? item in items)
                 {
                     if (item.ItemType != ItemType.Building)
                     {
+                        //If the item is not a building, hide it's recipe
                         item.Recipes = new List<Recipe>();
                     }
-                    if (!filteredItems.Contains(item))
+                    else
+                    {
+                        //If it is a building, log all of it's inputs
+                        foreach (Recipe? recipe in item.Recipes)
+                        {
+                            foreach (KeyValuePair<string, int> input in recipe.Inputs)
+                            {
+                                if (inputs.ContainsKey(input.Key) == false)
+                                {
+                                    inputs.Add(input.Key, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //Add each item to the filter.
+                foreach (Item? item in items)
+                {
+                    if (!filteredItems.Contains(item) &&
+                        (item.ItemType == ItemType.Building ||
+                        inputs.ContainsKey(item.Name)))
                     {
                         filteredItems.Add(item);
                     }
