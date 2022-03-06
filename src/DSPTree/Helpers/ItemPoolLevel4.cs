@@ -56,31 +56,6 @@ namespace DSPTree.Helpers
             };
         }
 
-        public static Item Foundation()
-        {
-            return new Item(4, "Foundation",
-                "Icon_Foundation.png",
-                ItemType.Item,
-                ResearchType.BlueScience)
-            {
-                Recipes =
-                {
-                    new Recipe(1,
-                        new()
-                        {
-                            { "Iron Ingot", 1 },
-                            { "Glass", 2 },
-                            { "Circuit Board", 1 }
-                        },
-                        new()
-                        {
-                            { "Foundation", 1 }
-                        },
-                        BuildingType.AssemblingMachine)
-                }
-            };
-        }
-
         public static Item Prism()
         {
             return new Item(4, "Prism",

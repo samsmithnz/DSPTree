@@ -311,5 +311,29 @@ namespace DSPTree.Helpers
             };
         }
 
+        public static Item Foundation()
+        {
+            return new Item(4, "Foundation",
+                "Icon_Foundation.png",
+                ItemType.Building,
+                ResearchType.BlueScience)
+            {
+                Recipes =
+                {
+                    new Recipe(1,
+                        new()
+                        {
+                            { "Stone Brick", 3 },
+                            { "Steel", 1 }
+                        },
+                        new()
+                        {
+                            { "Foundation", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
     }
 }

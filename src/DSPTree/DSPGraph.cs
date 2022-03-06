@@ -87,7 +87,6 @@ namespace DSPTree
                 //Level 4 items
                 ItemPoolLevel4.ElectromagneticMatrix(),
                 ItemPoolLevel4.ElectricMotor(),
-                ItemPoolLevel4.Foundation(),
                 ItemPoolLevel4.Prism(),
                 ItemPoolLevel4.CrystalSilicon(),
                 ItemPoolLevel4.MicrocrystallineComponent(),
@@ -166,6 +165,7 @@ namespace DSPTree
                     BuildingsBlueScience.TrafficMonitor(),
                     BuildingsBlueScience.ChemicalPlant(),
                     BuildingsBlueScience.SprayCoater(),
+                    BuildingsBlueScience.Foundation(),
 
                     BuildingsRedScience.Accumulator(),
                     BuildingsRedScience.StorageMkII(),
