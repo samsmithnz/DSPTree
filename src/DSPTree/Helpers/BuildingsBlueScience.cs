@@ -41,12 +41,12 @@ namespace DSPTree.Helpers
             {
                 Recipes =
                 {
-                    new Recipe(1,
+                    new Recipe(6,
                         new()
                         {
-                            { "Magnetic Coil", 1 },
-                            { "Gear", 1 },
-                            { "Iron Ingot", 2 }
+                            { "Copper Ingot", 10 },
+                            { "High-Purity Silicon", 10 },
+                            { "Circuit Board", 5 }
                         },
                         new()
                         {
@@ -121,7 +121,7 @@ namespace DSPTree.Helpers
                             { "Steel", 12 },
                             { "Stone Brick", 12 },
                             { "Circuit Board", 6 },
-                            { "Plasma Exciter", 2 }
+                            { "Plasma Exciter", 4 }
                         },
                         new()
                         {
