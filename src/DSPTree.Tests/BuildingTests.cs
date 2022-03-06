@@ -64,7 +64,7 @@ public class BuildingTests
 
         //Assert
         Assert.IsNotNull(graph);
-        Assert.AreEqual(47, buildingCount);
+        Assert.AreEqual(48, buildingCount);
     }
 
     [TestMethod]
