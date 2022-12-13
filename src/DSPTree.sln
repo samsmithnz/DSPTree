@@ -7,10 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSPTree.Tests", "DSPTree.Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSPTree", "DSPTree\DSPTree.csproj", "{7F7A9BBD-2D68-4170-9057-9661A5BD9B87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSPTree.Web", "DSPTree.Web\DSPTree.Web.csproj", "{CEF02DA2-9056-4B26-AD31-CCE8BC0356A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSPTree.Web", "DSPTree.Web\DSPTree.Web.csproj", "{CEF02DA2-9056-4B26-AD31-CCE8BC0356A5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2476877E-F188-4D2B-9B1B-F8BDF762F076}"
 	ProjectSection(SolutionItems) = preProject
+		..\GitVersion.yml = ..\GitVersion.yml
 		..\README.md = ..\README.md
 		..\.github\workflows\workflow.yml = ..\.github\workflows\workflow.yml
 	EndProjectSection
