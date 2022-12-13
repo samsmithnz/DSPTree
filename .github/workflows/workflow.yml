@@ -93,3 +93,30 @@ jobs:
           dotnet build src/DSPTree.Tests/DSPTree.Tests.csproj
           dotnet build src/DSPTree.Web/DSPTree.Web.csproj
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+
+
+
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    needs:
+    - build
+    - sonarCloud
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - uses: actions/checkout@v3
+    - name: Download the build artifacts
+      uses: actions/download-artifact@v3
+    - name: Display GitVersion outputs
+      run: |
+        echo "Version: ${{ needs.build.outputs.Version }}" 
+        echo "CommitsSinceVersionSource: ${{ needs.build.outputs.CommitsSinceVersionSource }}" 
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      if: github.ref == 'refs/heads/main' && needs.build.outputs.CommitsSinceVersionSource > 0 #Only create a release if there has been a commit/version change
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      with:
+        tag_name: ${{ needs.build.outputs.Version }}
+        release_name: Release ${{ needs.build.outputs.Version }}        
