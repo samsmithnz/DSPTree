@@ -39,11 +39,11 @@
                             {
                                 Link newLink = new()
                                 {
-                                    source = FindIndex(data, item.Name), //item.Name.Replace(" ", "_"),
-                                    target = FindIndex(data, itemInput.Key), // itemInput.Key.Replace(" ", "_"),
-                                    value = itemInput.Value //The width of the connection
+                                    Source = FindIndex(data, item.Name), //item.Name.Replace(" ", "_"),
+                                    Target = FindIndex(data, itemInput.Key), // itemInput.Key.Replace(" ", "_"),
+                                    Value = itemInput.Value //The width of the connection
                                 };
-                                if (newLink.source >= 0 && newLink.target >= 0 && !Links.Any(n => n.source == newLink.source && n.target == newLink.target))
+                                if (newLink.Source >= 0 && newLink.Target >= 0 && !Links.Any(n => n.Source == newLink.Source && n.Target == newLink.Target))
                                 {
                                     Links.Add(newLink);
                                 }
