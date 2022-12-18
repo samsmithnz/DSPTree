@@ -12,8 +12,8 @@ namespace DSPTree.Web.Controllers
 
         public IActionResult Index()
         {
-            //Build the DSP graph
-            string filter = "";// "Gravity Matrix";
+            //Build the DSP graph. To filter, add the item name, e.g. "Copper Ingot", or "Gravity Matrix"
+            string filter = "";
             DSPGraph dSPGraph = new(filter, 
                 ResearchType.PreBlueScience, 
                 true,

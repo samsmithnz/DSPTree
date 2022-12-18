@@ -2,13 +2,13 @@
 {
     public class Graph
     {
-        public List<Node> nodes;
-        public List<Link> links;
+        public List<Node> Nodes { get; set; }
+        public List<Link> Links { get; set; }
 
         public Graph(List<Item> data)
         {
-            nodes = new();
-            links = new();
+            Nodes = new();
+            Links = new();
      
             //Build the graph
             foreach (Item item in data)
@@ -16,14 +16,14 @@
                 //Create first item
                 Node newNode = new()
                 {
-                    name = item.Name.Replace(" ", "_"),
-                    group = item.Level,
-                    image = item.Image
+                    Name = item.Name.Replace(" ", "_"),
+                    Group = item.Level,
+                    Image = item.Image
                 };
                 //Add the node if it has an ID and the graph doesn't already contain an Id of that name
-                if (newNode.name != null && !nodes.Any(n => n.name == newNode.name))
+                if (newNode.Name != null && !Nodes.Any(n => n.Name == newNode.Name))
                 {
-                    nodes.Add(newNode);
+                    Nodes.Add(newNode);
                 }
 
                 //Create a link between this item and any pre-reqs
@@ -31,7 +31,7 @@
                 {
                     foreach (Recipe recipe2 in item.Recipes)
                     {
-                        //recipe2.PrimaryMethodOfManufacture == true &&
+                        //recipe2.PrimaryMethodOfManufacture &&
 
                         if (recipe2.ManufactoringMethod != ManufactoringMethodType.Gathered)
                         {
@@ -39,13 +39,13 @@
                             {
                                 Link newLink = new()
                                 {
-                                    source = FindIndex(data, item.Name), //item.Name.Replace(" ", "_"),
-                                    target = FindIndex(data, itemInput.Key), // itemInput.Key.Replace(" ", "_"),
-                                    value = itemInput.Value //The width of the connection
+                                    Source = FindIndex(data, item.Name), //item.Name.Replace(" ", "_"),
+                                    Target = FindIndex(data, itemInput.Key), // itemInput.Key.Replace(" ", "_"),
+                                    Value = itemInput.Value //The width of the connection
                                 };
-                                if (newLink.source >= 0 && newLink.target >= 0 && !links.Any(n => n.source == newLink.source && n.target == newLink.target))
+                                if (newLink.Source >= 0 && newLink.Target >= 0 && !Links.Any(n => n.Source == newLink.Source && n.Target == newLink.Target))
                                 {
-                                    links.Add(newLink);
+                                    Links.Add(newLink);
                                 }
                             }
                         }
@@ -54,7 +54,7 @@
             }
         }
 
-        private int FindIndex(List<Item> data, string name)
+        private static int FindIndex(List<Item> data, string name)
         {
             for (int i = 0; i < data.Count; i++)
             {

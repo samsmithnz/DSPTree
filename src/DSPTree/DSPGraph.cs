@@ -138,7 +138,7 @@ namespace DSPTree
             };
 
             //Include buildings
-            if (includeBuildings == true)
+            if (includeBuildings)
             {
                 List<Item> buildings = new()
                 {
@@ -212,7 +212,7 @@ namespace DSPTree
             }
 
             //Filter by name
-            if (string.IsNullOrEmpty(nameFilter) == false)
+            if (!string.IsNullOrEmpty(nameFilter))
             {
                 Item? filteredItem = FindItem(items, nameFilter);
                 if (filteredItem == null)
@@ -221,9 +221,11 @@ namespace DSPTree
                 }
                 else
                 {
-                    List<Item> filteredItems = new();
-                    //Add the root - this is the final item
-                    filteredItems.Add(filteredItem);
+                    List<Item> filteredItems = new()
+                    {
+                        //Add the root - this is the final item
+                        filteredItem
+                    };
 
                     //Get all of the inputs leading up to it
                     filteredItems.AddRange(GetInputs(items, filteredItem.Recipes));
@@ -235,7 +237,7 @@ namespace DSPTree
             }
 
             //If enabled, only show the direct inputs to product an item
-            if (showOnlyDirectDependencies == true)
+            if (showOnlyDirectDependencies)
             {
                 Dictionary<string, int> inputs = new();
                 List<Item> filteredItems = new();
@@ -253,7 +255,7 @@ namespace DSPTree
                         {
                             foreach (KeyValuePair<string, int> input in recipe.Inputs)
                             {
-                                if (inputs.ContainsKey(input.Key) == false)
+                                if (!inputs.ContainsKey(input.Key))
                                 {
                                     inputs.Add(input.Key, 1);
                                 }
@@ -297,13 +299,13 @@ namespace DSPTree
                 foreach (KeyValuePair<string, int> item in recipe.Inputs)
                 {
                     Item? inputItem = FindItem(items, item.Key);
-                    if (inputItem != null && inputs.Contains(inputItem) == false)
+                    if (inputItem != null && !inputs.Contains(inputItem))
                     {
                         inputs.Add(inputItem);
                         List<Item> newItems = GetInputs(items, inputItem.Recipes);
                         foreach (Item newItem in newItems)
                         {
-                            if (newItem != null && inputs.Contains(newItem) == false)
+                            if (newItem != null && !inputs.Contains(newItem))
                             {
                                 inputs.Add(newItem);
                             }
