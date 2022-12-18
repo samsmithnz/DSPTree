@@ -2,8 +2,8 @@
 {
     public class Link
     {
-        public int Source { get; set; }
-        public int Target { get; set; }
-        public int Value { get; set; }
+        public int source { get; set; }
+        public int target { get; set; }
+        public int value { get; set; }
     }
 }

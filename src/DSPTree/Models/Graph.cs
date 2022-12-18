@@ -2,13 +2,13 @@
 {
     public class Graph
     {
-        public List<Node> Nodes { get; set; }
-        public List<Link> Links { get; set; }
+        public List<Node> nodes { get; set; }
+        public List<Link> links { get; set; }
 
         public Graph(List<Item> data)
         {
-            Nodes = new();
-            Links = new();
+            nodes = new();
+            links = new();
      
             //Build the graph
             foreach (Item item in data)
@@ -16,14 +16,14 @@
                 //Create first item
                 Node newNode = new()
                 {
-                    Name = item.Name.Replace(" ", "_"),
-                    Group = item.Level,
-                    Image = item.Image
+                    name = item.Name.Replace(" ", "_"),
+                    group = item.Level,
+                    image = item.Image
                 };
                 //Add the node if it has an ID and the graph doesn't already contain an Id of that name
-                if (newNode.Name != null && !Nodes.Any(n => n.Name == newNode.Name))
+                if (newNode.name != null && !nodes.Any(n => n.name == newNode.name))
                 {
-                    Nodes.Add(newNode);
+                    nodes.Add(newNode);
                 }
 
                 //Create a link between this item and any pre-reqs
@@ -39,13 +39,13 @@
                             {
                                 Link newLink = new()
                                 {
-                                    Source = FindIndex(data, item.Name), //item.Name.Replace(" ", "_"),
-                                    Target = FindIndex(data, itemInput.Key), // itemInput.Key.Replace(" ", "_"),
-                                    Value = itemInput.Value //The width of the connection
+                                    source = FindIndex(data, item.Name), //item.Name.Replace(" ", "_"),
+                                    target = FindIndex(data, itemInput.Key), // itemInput.Key.Replace(" ", "_"),
+                                    value = itemInput.Value //The width of the connection
                                 };
-                                if (newLink.Source >= 0 && newLink.Target >= 0 && !Links.Any(n => n.Source == newLink.Source && n.Target == newLink.Target))
+                                if (newLink.source >= 0 && newLink.target >= 0 && !links.Any(n => n.source == newLink.source && n.target == newLink.target))
                                 {
-                                    Links.Add(newLink);
+                                    links.Add(newLink);
                                 }
                             }
                         }
