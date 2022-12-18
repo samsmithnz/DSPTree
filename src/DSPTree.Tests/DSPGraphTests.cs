@@ -129,7 +129,7 @@ public class DSPGraphTests
 
         //Assert
         Assert.IsTrue(graph.Items.Count > 1);
-        Assert.AreEqual(filter, graph.Items[graph.Items.Count - 1].Name);
+        Assert.AreEqual(filter, graph.Items[^1].Name);
     }
 
     [TestMethod]
@@ -143,7 +143,7 @@ public class DSPGraphTests
 
         //Assert
         Assert.IsTrue(graph.Items.Count > 1);
-        Assert.AreEqual(filter, graph.Items[graph.Items.Count - 1].Name);
+        Assert.AreEqual(filter, graph.Items[^1].Name);
     }
 
     [TestMethod]
