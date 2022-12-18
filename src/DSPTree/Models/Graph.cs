@@ -16,12 +16,12 @@
                 //Create first item
                 Node newNode = new()
                 {
-                    name = item.Name.Replace(" ", "_"),
-                    group = item.Level,
-                    image = item.Image
+                    Name = item.Name.Replace(" ", "_"),
+                    Group = item.Level,
+                    Image = item.Image
                 };
                 //Add the node if it has an ID and the graph doesn't already contain an Id of that name
-                if (newNode.name != null && !Nodes.Any(n => n.name == newNode.name))
+                if (newNode.Name != null && !Nodes.Any(n => n.Name == newNode.Name))
                 {
                     Nodes.Add(newNode);
                 }
