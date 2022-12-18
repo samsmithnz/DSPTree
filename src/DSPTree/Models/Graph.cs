@@ -2,13 +2,13 @@
 {
     public class Graph
     {
-        public List<Node> nodes;
-        public List<Link> links;
+        public List<Node> Nodes { get; set; }
+        public List<Link> Links { get; set; }
 
         public Graph(List<Item> data)
         {
-            nodes = new();
-            links = new();
+            Nodes = new();
+            Links = new();
      
             //Build the graph
             foreach (Item item in data)
@@ -21,9 +21,9 @@
                     image = item.Image
                 };
                 //Add the node if it has an ID and the graph doesn't already contain an Id of that name
-                if (newNode.name != null && !nodes.Any(n => n.name == newNode.name))
+                if (newNode.name != null && !Nodes.Any(n => n.name == newNode.name))
                 {
-                    nodes.Add(newNode);
+                    Nodes.Add(newNode);
                 }
 
                 //Create a link between this item and any pre-reqs
@@ -43,9 +43,9 @@
                                     target = FindIndex(data, itemInput.Key), // itemInput.Key.Replace(" ", "_"),
                                     value = itemInput.Value //The width of the connection
                                 };
-                                if (newLink.source >= 0 && newLink.target >= 0 && !links.Any(n => n.source == newLink.source && n.target == newLink.target))
+                                if (newLink.source >= 0 && newLink.target >= 0 && !Links.Any(n => n.source == newLink.source && n.target == newLink.target))
                                 {
-                                    links.Add(newLink);
+                                    Links.Add(newLink);
                                 }
                             }
                         }
@@ -54,7 +54,7 @@
             }
         }
 
-        private int FindIndex(List<Item> data, string name)
+        private static int FindIndex(List<Item> data, string name)
         {
             for (int i = 0; i < data.Count; i++)
             {
