@@ -31,7 +31,7 @@
                 {
                     foreach (Recipe recipe2 in item.Recipes)
                     {
-                        //recipe2.PrimaryMethodOfManufacture == true &&
+                        //recipe2.PrimaryMethodOfManufacture &&
 
                         if (recipe2.ManufactoringMethod != ManufactoringMethodType.Gathered)
                         {

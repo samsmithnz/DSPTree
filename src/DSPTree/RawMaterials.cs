@@ -23,7 +23,7 @@ namespace DSPTree
             foreach (Recipe recipe in item.Recipes)
             {
                 //get each items materials recursively, summing up all of the items
-                if (recipe.PrimaryMethodOfManufacture == true)
+                if (recipe.PrimaryMethodOfManufacture)
                 {
                     foreach (KeyValuePair<string, int> input in recipe.Inputs)
                     {
@@ -32,7 +32,7 @@ namespace DSPTree
                         {
                             foreach (Recipe inputItemRecipe in inputItem.Recipes)
                             {
-                                if (inputItemRecipe.PrimaryMethodOfManufacture == true)
+                                if (inputItemRecipe.PrimaryMethodOfManufacture)
                                 {
                                     //We don't want to include veins
                                     if (inputItem.Level == 1)
@@ -56,7 +56,7 @@ namespace DSPTree
                                             foreach (Recipe detailedRecipe in detailedItem.Recipes)
                                             {
                                                 //get each items materials recursively, summing up all of the items
-                                                if (detailedRecipe.PrimaryMethodOfManufacture == true)
+                                                if (detailedRecipe.PrimaryMethodOfManufacture)
                                                 {
                                                     detailedCount = recipe.Inputs[detailedItem.Name];
                                                 }
