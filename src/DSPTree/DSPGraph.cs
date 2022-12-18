@@ -221,9 +221,11 @@ namespace DSPTree
                 }
                 else
                 {
-                    List<Item> filteredItems = new();
-                    //Add the root - this is the final item
-                    filteredItems.Add(filteredItem);
+                    List<Item> filteredItems = new()
+                    {
+                        //Add the root - this is the final item
+                        filteredItem
+                    };
 
                     //Get all of the inputs leading up to it
                     filteredItems.AddRange(GetInputs(items, filteredItem.Recipes));
