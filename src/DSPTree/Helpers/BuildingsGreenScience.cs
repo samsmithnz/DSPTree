@@ -61,7 +61,7 @@ namespace DSPTree.Helpers
 
         public static Item LogisticsDistributor()
         {
-            return new Item(8, "Logistics Distributor,
+            return new Item(8, "Logistics Distributor",
                 "Logistics_Distributor.png",
                 ItemType.Building,
                 ResearchType.GreenScience)
