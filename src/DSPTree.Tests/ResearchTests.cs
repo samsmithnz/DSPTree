@@ -46,4 +46,30 @@ public class ResearchTests
         Assert.AreEqual(75, graph.Items.Count);
     }
 
+    [TestMethod]
+    public void WhiteScienceAllItemsTest()
+    {
+        //Arrange
+        DSPGraph graph = new("", ResearchType.WhiteScience, true);
+
+        //Act
+
+        //Assert
+        Assert.IsNotNull(graph);
+        Assert.AreEqual(137, graph.Items.Count);
+    }
+
+    [TestMethod]
+    public void WhiteScienceAllItemsNoBuildingsTest()
+    {
+        //Arrange
+        DSPGraph graph = new("", ResearchType.WhiteScience, false);
+
+        //Act
+
+        //Assert
+        Assert.IsNotNull(graph);
+        Assert.AreEqual(137, graph.Items.Count);
+    }
+
 }
