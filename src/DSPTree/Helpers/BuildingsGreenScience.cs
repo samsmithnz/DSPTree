@@ -64,18 +64,16 @@ namespace DSPTree.Helpers
             return new Item(8, "Logistics Distributor",
                 "Logistics_Distributor.png",
                 ItemType.Building,
-                ResearchType.GreenScience)
+                ResearchType.RedScience)
             {
                 Recipes =
                 {
-                    new Recipe(20,
+                    new Recipe(8,
                         new()
                         {
-                            { "Titanium Alloy", 20 },
-                            { "Frame Material", 10 },
-                            { "Super-Magnetic Ring", 10 },
-                            { "Quantum Chip", 4 },
-                            { "Optical Grating Crystal", 40 }
+                            { "Iron Ingot", 6},
+                            { "Plasma Exciter", 4},
+                            { "Processor", 4 }
                         },
                         new()
                         {
@@ -91,18 +89,16 @@ namespace DSPTree.Helpers
             return new Item(8, "Logistics Bot",
                 "Logistics_Bot.png",
                 ItemType.Building,
-                ResearchType.GreenScience)
+                ResearchType.RedScience)
             {
                 Recipes =
                 {
-                    new Recipe(20,
+                    new Recipe(2,
                         new()
                         {
-                            { "Titanium Alloy", 20 },
-                            { "Frame Material", 10 },
-                            { "Super-Magnetic Ring", 10 },
-                            { "Quantum Chip", 4 },
-                            { "Optical Grating Crystal", 40 }
+                            { "Iron Ingot", 2 },
+                            { "Electromagnetic Turbine", 1 },
+                            { "Processor", 1 }
                         },
                         new()
                         {
