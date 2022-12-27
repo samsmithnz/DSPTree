@@ -64,7 +64,7 @@ public class BuildingTests
 
         //Assert
         Assert.IsNotNull(graph);
-        Assert.AreEqual(48, buildingCount);
+        Assert.AreEqual(51, buildingCount);
     }
 
     [TestMethod]
@@ -113,7 +113,7 @@ public class BuildingTests
 
         //Assert
         Assert.IsNotNull(graph.Items);
-        Assert.AreEqual(82, graph.Items.Count);
+        Assert.AreEqual(87, graph.Items.Count);
         foreach (Item? item in graph.Items)
         {
             if (item.Name == "Accumulator")
