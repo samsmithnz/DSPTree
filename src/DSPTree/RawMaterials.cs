@@ -37,14 +37,14 @@ namespace DSPTree
                                     //We don't want to include veins
                                     if (inputItem.Level == 1)
                                     {
-                                        if (rawMaterials.ContainsKey(input.Key))
-                                        {
-                                            rawMaterials[input.Key] += input.Value;
-                                        }
-                                        else
-                                        {
-                                            rawMaterials.Add(input.Key, input.Value);
-                                        }
+                                        //if (rawMaterials.ContainsKey(input.Key))
+                                        //{
+                                        //    rawMaterials[input.Key] += input.Value;
+                                        //}
+                                        //else
+                                        //{
+                                        rawMaterials.Add(input.Key, input.Value);
+                                        //}
                                     }
                                     else
                                     {
