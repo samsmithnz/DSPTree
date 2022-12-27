@@ -195,6 +195,7 @@ namespace DSPTree
                     BuildingsPurpleScience.PlaneSmelter(),
                     BuildingsPurpleScience.VerticalLaunchingSilo(),
                     BuildingsPurpleScience.SmallCarrierRocket(),
+                    BuildingsPurpleScience.QuantumChemicalPlant(),
 
                     BuildingsGreenScience.ArtificialStar(),
                     BuildingsGreenScience.AdvancedMiningMachine(),

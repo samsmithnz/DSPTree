@@ -117,20 +117,19 @@ namespace DSPTree.Helpers
             {
                 Recipes =
                 {
-                    new Recipe(20,
+                    new Recipe(10,
                         new()
                         {
-                            { "Titanium Alloy", 20 },
-                            { "Frame Material", 10 },
-                            { "Super-Magnetic Ring", 10 },
-                            { "Quantum Chip", 4 },
-                            { "Optical Grating Crystal", 40 }
+                            { "Chemical Plant", 1},
+                            { "Titanium Glass", 10 },
+                            { "Strange Matter", 3 },
+                            { "Quantum Chip", 3 }
                         },
                         new()
                         {
                             { "Quantum Chemical Plant", 1 }
                         },
-                        BuildingType.ChemicalPlant)
+                        BuildingType.AssemblingMachine)
                 }
             };
         }
