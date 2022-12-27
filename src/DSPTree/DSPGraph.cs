@@ -178,6 +178,8 @@ namespace DSPTree
                     BuildingsRedScience.RayReceiver(),
                     BuildingsRedScience.PlanetaryLogisticsStation(),
                     BuildingsRedScience.LogisticsDrone(),
+                    BuildingsRedScience.LogisticsDistributor(),
+                    BuildingsRedScience.LogisticsBot(),
 
                     BuildingsYellowScience.SatelliteSubstation(),
                     BuildingsYellowScience.MiniFusionPowerPlant(),
@@ -193,6 +195,7 @@ namespace DSPTree
                     BuildingsPurpleScience.PlaneSmelter(),
                     BuildingsPurpleScience.VerticalLaunchingSilo(),
                     BuildingsPurpleScience.SmallCarrierRocket(),
+                    BuildingsPurpleScience.QuantumChemicalPlant(),
 
                     BuildingsGreenScience.ArtificialStar(),
                     BuildingsGreenScience.AdvancedMiningMachine(),

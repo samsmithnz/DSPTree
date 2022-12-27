@@ -282,5 +282,55 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item LogisticsDistributor()
+        {
+            return new Item(8, "Logistics Distributor",
+                "Logistics_Distributor.png",
+                ItemType.Building,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(8,
+                        new()
+                        {
+                            { "Iron Ingot", 6},
+                            { "Plasma Exciter", 4},
+                            { "Processor", 4 }
+                        },
+                        new()
+                        {
+                            { "Logistics Distributor", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
+
+        public static Item LogisticsBot()
+        {
+            return new Item(8, "Logistics Bot",
+                "Logistics_Bot.png",
+                ItemType.Building,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                {
+                    new Recipe(2,
+                        new()
+                        {
+                            { "Iron Ingot", 2 },
+                            { "Electromagnetic Turbine", 1 },
+                            { "Processor", 1 }
+                        },
+                        new()
+                        {
+                            { "Logistics Bot", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }

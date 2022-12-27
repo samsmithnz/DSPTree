@@ -56,14 +56,16 @@
 
         private static int FindIndex(List<Item> data, string name)
         {
+            int result = 0;
             for (int i = 0; i < data.Count; i++)
             {
                 if (data[i].Name == name)
                 {
-                    return i;
+                    result = i;
+                    break;
                 }
             }
-            return 0;
+            return result;
         }
     }
 }

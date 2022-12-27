@@ -21,7 +21,13 @@ public class D3GraphTests
         //Assert
         Assert.IsNotNull(graph);
         Assert.IsTrue(graph.nodes.Count > 0);
+        Assert.IsTrue(graph.nodes[0].name != null);
+        Assert.IsTrue(graph.nodes[0].group >= 0);
+        Assert.IsTrue(graph.nodes[0].image != null);
         Assert.IsTrue(graph.links.Count > 0);
+        Assert.IsTrue(graph.links[0].source >= 0);
+        Assert.IsTrue(graph.links[0].target >= 0);
+        Assert.IsTrue(graph.links[0].value > 0);
         //Assert.AreEqual("Iron Ore Vein", graph.Items[0].Name);
         //Assert.AreEqual("80px-Icon_Iron_Ore_Vein.png", graph.Items[0].Image);
         //Assert.AreEqual(0, graph.Items[0].Level);

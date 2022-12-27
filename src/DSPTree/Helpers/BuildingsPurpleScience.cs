@@ -107,5 +107,31 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item QuantumChemicalPlant()
+        {
+            return new Item(8, "Quantum Chemical Plant",
+                "Quantum_Chemical_Plant.png",
+                ItemType.Building,
+                ResearchType.PurpleScience)
+            {
+                Recipes =
+                {
+                    new Recipe(10,
+                        new()
+                        {
+                            { "Chemical Plant", 1},
+                            { "Titanium Glass", 10 },
+                            { "Strange Matter", 3 },
+                            { "Quantum Chip", 3 }
+                        },
+                        new()
+                        {
+                            { "Quantum Chemical Plant", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }
