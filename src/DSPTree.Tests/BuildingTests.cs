@@ -120,6 +120,7 @@ public class BuildingTests
             {
                 Assert.AreEqual(1, item.Recipes.Count);
                 Assert.AreEqual(3, item.Recipes[0].Inputs.Count);
+                Assert.AreEqual(5, item.Recipes[0].ProcessingTimeInSeconds);
             }
         }
 
