@@ -47,7 +47,7 @@ namespace DSPTree.Tests
 
             //Assert
             Assert.IsNotNull(graph);
-            Assert.AreEqual(2, graph.Items.Count);
+            Assert.AreEqual(17, graph.Items.Count);
             OutputList(graph.Items);
         }
 
@@ -61,7 +61,7 @@ namespace DSPTree.Tests
 
             //Assert
             Assert.IsNotNull(graph);
-            Assert.AreEqual(2, graph.Items.Count);
+            Assert.AreEqual(16, graph.Items.Count);
             OutputList(graph.Items);
         }
 
@@ -75,7 +75,7 @@ namespace DSPTree.Tests
 
             //Assert
             Assert.IsNotNull(graph);
-            Assert.AreEqual(2, graph.Items.Count);
+            Assert.AreEqual(14, graph.Items.Count);
             OutputList(graph.Items);
         }
 
@@ -103,7 +103,7 @@ namespace DSPTree.Tests
 
             //Assert
             Assert.IsNotNull(graph);
-            Assert.AreEqual(2, graph.Items.Count);
+            Assert.AreEqual(4, graph.Items.Count);
             OutputList(graph.Items);
         }
 
