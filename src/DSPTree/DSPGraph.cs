@@ -9,18 +9,21 @@ namespace DSPTree
         public DSPGraph(string filter = "",
             ResearchType researchType = ResearchType.WhiteScience,
             bool includeBuildings = false,
-            bool showOnlyDirectDependencies = false)
+            bool showOnlyDirectDependencies = false,
+            bool onlyShowCurrentResearchLevel = false)
         {
             Items = BuildDSPTree(filter,
                 researchType,
                 includeBuildings,
-                showOnlyDirectDependencies);
+                showOnlyDirectDependencies,
+                onlyShowCurrentResearchLevel);
         }
 
         private static List<Item> BuildDSPTree(string nameFilter,
             ResearchType researchType,
             bool includeBuildings,
-            bool showOnlyDirectDependencies)
+            bool showOnlyDirectDependencies,
+            bool onlyShowCurrentResearchLevel)
         {
             List<Item> items = new()
             {
@@ -209,6 +212,10 @@ namespace DSPTree
             for (int i = items.Count - 1; i >= 0; i--)
             {
                 if (items[i].ResearchType > researchType)
+                {
+                    items.RemoveAt(i);
+                }
+                else if (onlyShowCurrentResearchLevel == true && items[i].ResearchType < researchType)
                 {
                     items.RemoveAt(i);
                 }
