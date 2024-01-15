@@ -332,5 +332,31 @@ namespace DSPTree.Helpers
                 }
             };
         }
+
+        public static Item GeothermalPowerStation()
+        {
+            return new Item(8, "Geothermal Power Station",
+                "",
+                ItemType.Building,
+                ResearchType.RedScience)
+            {
+                Recipes =
+                { 
+                    new Recipe(6,
+                        new()
+                        {
+                            {"Steel", 15 },
+                            {"Copper Ingot", 20 },
+                            {"Photon Combiner", 4 },
+                            {"Super-Magnetic Ring", 1 }
+                        },
+                        new()
+                        {
+                            {"Geothermal Power Station", 1 }
+                        },
+                        BuildingType.AssemblingMachine)
+                }
+            };
+        }
     }
 }

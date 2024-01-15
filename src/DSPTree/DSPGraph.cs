@@ -183,6 +183,7 @@ namespace DSPTree
                     BuildingsRedScience.LogisticsDrone(),
                     BuildingsRedScience.LogisticsDistributor(),
                     BuildingsRedScience.LogisticsBot(),
+                    BuildingsRedScience.GeothermalPowerStation(),
 
                     BuildingsYellowScience.SatelliteSubstation(),
                     BuildingsYellowScience.MiniFusionPowerPlant(),
