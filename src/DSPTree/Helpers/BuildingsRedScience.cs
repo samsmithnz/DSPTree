@@ -336,7 +336,7 @@ namespace DSPTree.Helpers
         public static Item GeothermalPowerStation()
         {
             return new Item(8, "Geothermal Power Station",
-                "",
+                "Geothermal_Power_Station.webp",
                 ItemType.Building,
                 ResearchType.RedScience)
             {
