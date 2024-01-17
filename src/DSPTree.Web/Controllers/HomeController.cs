@@ -15,9 +15,9 @@ namespace DSPTree.Web.Controllers
             //Build the DSP graph. To filter, add the item name, e.g. "Copper Ingot", or "Gravity Matrix"
             string filter = "";
             DSPGraph dSPGraph = new(filter, 
-                ResearchType.PreBlueScience, 
+                ResearchType.RedScience, 
                 true,
-                false);
+                true);
 
             //Convert the DSP graph to a D3 graph object
             Graph graph = new(dSPGraph.Items);
